@@ -12,8 +12,7 @@ D) El diseño de bases de datos
 Q: Which of the following best describes why the TOGAF Standard is suitable as a framework for Enterprise Architecture?
 A) *It de-risks a technically complex process.
 B) It contains an extensive body of knowledge called the TOGAF Library.
-C) The TOGAF documentation includes the universal concepts of Enterprise
-A)chitecture.
+C) The TOGAF documentation includes the universal concepts of Enterprise Architecture.
 D. It enables more effective decision-making by business leaders.
 
 Q: Complete the sentence: Three of the four architecture domains that are commonly accepted as subsets of an overall Enterprise Architecture are ?
@@ -89,15 +88,133 @@ C) Requirement
 D) Work package
 
 #BLOCK 2
-Q: ¿Qué significa ADM en TOGAF?
-A) Architecture Decision Model
-B) *Architecture Development Method
-C) Agile Development Methodology
-D) Application Design Model
+Q: Which of the ADM phases finalizes a detailed plan for moving from the Baseline Architecture to the Target Architecture?
+A) Phase B: Business Architecture
+B) Phase C: Information Systems Architectures
+C) Phase E: Opportunities and Solutions
+D) *Phase F: Migration Planning
+
+Q: Which of the ADM phases includes customization of the TOGAF framework and definition of Architecture Principles?
+A) Phase A: Architecture Vision
+B) Phase C: Information Systems Architectures
+C) Phase F: Migration Planning
+D) *Preliminary Phase
+
+Q: Complete the sentence: A document that is under development that has not undergone any formal review is known as …
+A) *a draft document.
+B) an initial document.
+C) a preliminary document.
+D) an unapproved document.
+
+Q: Complete the sentence: The purpose of the Preliminary Phase is to …
+A) *develop the Enterprise Architecture Capability.
+B) identify key stakeholders.
+C) obtain agreement on a summary of the target.
+D) manage architecture requirements.
+
+Q: Consider the TOGAF ADM graphic of the architecture development cycle: Select the correct phase names corresponding to Labels 1, 2, and 3.
+<image>assets/q5_block2_image.png</image>
+
+A) 1-Architecture Vision, 2-Preliminary, 3-Business Architecture
+B) *1-Implementation Governance, 2-Requirements Management, 3-Opportunities and Solutions
+C) 1-Business Architecture, 2-Technology Architecture, 3-Migration Planning
+D) 1-Architecture Change Management, 2-Opportunities and Solutions, 3-Architecture Governance
+
+Q: When scoping an architecture, which aspect of the scope describes the level of detail the architecting effort should go to?
+A) Architecture domains
+B) Breadth
+C) *Depth
+D) Time period
+
+Q: Refer to Figure 7. Which of the following best describes the ADM graphic?
+A) An activity sequence for developing an Enterprise Architecture
+B) A process model for developing mandatory inputs and outputs
+C) *A representation showing information flows
+D) A set of practices for managing requirements
+
+Q: Why are architecture alternatives and trade-off needed?
+A) *To present different possibilities with their trade-offs to stakeholders
+B) To enable the architects to decide which alternative to select
+C) To confirm that the baseline architecture is correct
+D) To follow the set of practices for managing requirements
+
+Q: Which concept does the TOGAF Standard provide to govern the Target Architecture?
+A) Architecture Continuum
+B) Architecture Development Method (ADM)
+C) Architecture Landscape
+D) *Architecture Project
+
+Q: Which of the following is an objective of Phase A?
+A) To review the stakeholders, their requirements, and priorities
+B) *To develop a high-level vision of the business value to be delivered
+C) To generate and gain consensus on an outline Implementation and Migration Strategy
+D) To formulate recommendations for each implementation project
+
+Q: Consider the following ADM phases objectives:
+<image>assets/q11_block2_image.png</image>
+Which phase(s) does each objective match?
+A) 1E, 2F, 3F, 4H
+B) 1F, 2G, 3G, 4F
+C) 1F, 2H, 3H, 4G
+D) *1H, 2G, 3F, 4H
+
+Q: Refer to the following table:
+<image>assets/q12_block2_image.png</image>
+Which ADM phase(s) does this describe?
+A) Phase A
+B) *Phases B, C, and D
+C) Phase E
+D) Phase F
+
+Q: Consider the following statements about ADM phases:
+<image>assets/q13_block2_image.png</image>
+Which phase(s) does each statement match?
+A) *1-Preliminary, 2-E, 3-G
+B) 1-A, 2F, 3-H
+C) 1-A, 2-E, 3-G
+D) 1-H, 2-A, 3-G
+
+Q: Which ADM phase aligns with Agile Software Development?
+A) Preliminary
+B) Phase A
+C) Phase E
+D) *Phase G
 
 #BLOCK 3
-Q: ¿Qué técnica está asociada con la identificación de interesados?
-A) *Stakeholder Map
-B) Data Modeling
-C) Network Topology
-D) Regression Testing
+Q: Which of the following is a purpose of Architecture Principles?
+A) Assessing readiness for change
+B) *Enabling decision-making
+C) Identifying business requirements
+D) Mitigating risk
+
+Q: Which part of the TOGAF template for defining Architecture Principles should highlight the business benefits of adhering to the principle?
+A) Implications
+B) Name
+C) *Rationale
+D) Statement
+
+Q: Where can the Business Scenario method be used to define requirements for establishing an Enterprise Architecture Capability?
+A) *Preliminary Phase
+B) Phase A: Architecture Vision
+C) Phase F: Migration Planning
+D) Phase H: Architecture Change Management
+
+Q: Which of the following statements best describes the Business Transformation Readiness Assessment technique?
+A) A technique to define the degree to which information and services are to be shared.
+B) A technique used to identify and understand the business requirements an architecture must address.
+C) A technique used to develop general rules and guidelines for the architecture being developed.
+D) *A technique used to understand the readiness of an organization to accept change
+
+Q: Consider the following diagram:
+<image>assets/q5_block3_image.png</image>
+What is Item 1?
+A) ADM Techniques
+B) TOGAF Standard
+C) TOGAF Library
+D) *TOGAF Series Guides
+
+Q: Where are risks identified as part of the initial Business Transformation Readiness Assesment?
+A) Preliminary
+B) *Phase A
+C) Phase B
+D) Phase E

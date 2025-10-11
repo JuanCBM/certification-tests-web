@@ -9,8 +9,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:gh-pages": "ng build --configuration production --base-href=/certification-tests-web/",
-    "postbuild:gh-pages": "node -e \"require('fs').writeFileSync('dist/certification-tests-web/browser/.nojekyll', '')\"",
-    "deploy:gh-pages": "npx angular-cli-ghpages --dir=dist/certification-tests-web/browser --no-silent"
+    "postbuild:gh-pages": "node -e \"require('fs').mkdirSync('dist/certification-tests-web', { recursive: true }); require('fs').writeFileSync('dist/certification-tests-web/.nojekyll', '')\"",
+    "deploy:gh-pages": "npx angular-cli-ghpages --dir=dist/certification-tests-web --no-silent"
 
   },
   "dependencies": {

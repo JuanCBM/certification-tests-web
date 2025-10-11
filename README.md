@@ -55,3 +55,25 @@ Requisitos: Node 18+.
 - Puedes preparar diferentes archivos por certificación; la app no fuerza un esquema específico de certificación.
 
 @JuanCBM
+
+## Despliegue en GitHub Pages y URL pública
+- Ruta base (base href) de la app: `/certification-tests-web`
+- URL pública: https://juancbm.github.io/certification-tests-web/
+- Rutas internas bajo esa base:
+  - Inicio (por defecto): `/certification-tests-web` o `/certification-tests-web/home`
+  - Examen: `/certification-tests-web/quiz`
+  - Resultados: `/certification-tests-web/results`
+
+Scripts útiles:
+- `npm run build:gh-pages` ? compila con `--base-href=/certification-tests-web/`
+- `npm run deploy:gh-pages` ? publica el contenido de `dist/certification-tests-web/browser` en GitHub Pages
+
+Notas:
+- En local (ng serve) la app responde en la raíz (`/`), pero en producción (GitHub Pages) todas las rutas cuelgan de `/certification-tests-web`.
+
+### Solución a 404 en GitHub Pages
+Si ves "There isn't a GitHub Pages site here" o 404 en https://juancbm.github.io/certification-tests-web/:
+1) Asegúrate de que el workflow haya corrido y publicado a la rama `gh-pages` (Actions -> Deploy to GitHub Pages).  
+2) En Settings -> Pages, selecciona como Source: "Deploy from a branch" y Branch: `gh-pages` (carpeta raíz). Guarda.
+3) Espera 1-2 minutos a que GitHub propague el deploy y recarga la URL.
+4) Para rutas internas (deep links), el `src/404.html` redirige automáticamente a `index.html`.

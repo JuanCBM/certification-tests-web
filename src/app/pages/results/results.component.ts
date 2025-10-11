@@ -11,7 +11,7 @@ import { QuizService } from '../../services/quiz.service';
     <div class="card" *ngIf="loaded; else empty">
       <h1>Resultados</h1>
       <p class="badge">Puntuación: {{ score.correct }} / {{ score.total }}</p>
-      <a class="button" routerLink="/certification-tests-web">Nuevo examen</a>
+      <a class="button" routerLink="/">Nuevo examen</a>
     </div>
 
     <div class="card" *ngFor="let item of review">
@@ -29,7 +29,7 @@ import { QuizService } from '../../services/quiz.service';
     <ng-template #empty>
       <div class="card">
         <h2>No hay resultados para mostrar.</h2>
-        <a class="button" routerLink="/certification-tests-web">Ir al inicio</a>
+        <a class="button" routerLink="/">Ir al inicio</a>
       </div>
     </ng-template>
   `

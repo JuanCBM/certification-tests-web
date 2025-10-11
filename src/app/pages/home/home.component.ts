@@ -137,6 +137,6 @@ export class HomeComponent {
       feedbackMode: this.mode
     };
     this.quiz.startQuiz(cfg);
-    this.router.navigate(['/certification-tests-web', 'quiz']);
+    this.router.navigate(['/quiz']);
   }
 }

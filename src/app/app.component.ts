@@ -9,7 +9,7 @@ import { RouterOutlet, RouterLink } from '@angular/router';
     <nav>
       <div class="container">
         <div>
-          <a routerLink="/certification-tests-web">Certification Tests</a>
+          <a routerLink="/">Certification Tests</a>
         </div>
       </div>
     </nav>

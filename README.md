@@ -53,3 +53,5 @@ Requisitos: Node 18+.
 - Si no indicas `#BLOCK`, las preguntas se consideran del conjunto general y entran en "Todos".
 - El máximo de preguntas permitido se ajusta automáticamente al número de preguntas disponibles del bloque elegido.
 - Puedes preparar diferentes archivos por certificación; la app no fuerza un esquema específico de certificación.
+
+@JuanCBM

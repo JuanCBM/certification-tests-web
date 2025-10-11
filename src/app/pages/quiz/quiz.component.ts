@@ -53,7 +53,7 @@ export class QuizComponent {
   constructor(private quiz: QuizService, private router: Router) {
     const state = this.quiz.getState();
     if (!state) {
-      this.router.navigate(['/']);
+      this.router.navigate(['/certification-tests-web']);
       return;
     }
     this.showImmediate = state.config.feedbackMode === 'immediate';
@@ -133,6 +133,6 @@ export class QuizComponent {
     }
 
     this.quiz.finish();
-    this.router.navigate(['/results']);
+    this.router.navigate(['/certification-tests-web', 'results']);
   }
 }

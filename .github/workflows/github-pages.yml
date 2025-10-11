@@ -3,27 +3,21 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
       - master
-  workflow_dispatch:
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pages: write
       id-token: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: '20'
           cache: 'npm'
@@ -37,23 +31,10 @@ jobs:
         run: npm run build:gh-pages
 
       - name: Add .nojekyll file
-        run: node -e "require('fs').writeFileSync('dist/certification-tests-web/browser/.nojekyll', '')"
+        run: node -e "require('fs').writeFileSync('dist/coleccion-vinos-web/browser/.nojekyll', '')"
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist/certification-tests-web/browser
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    steps:
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist/coleccion-vinos-web/browser  # The folder the action should deploy.
+          branch: gh-pages  # The branch the action should deploy to.

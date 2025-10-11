@@ -9,30 +9,26 @@ B) *El desarrollo y la gestión de arquitectura empresarial
 C) La administración de redes
 D) El diseño de bases de datos
 
-Q: Which of the following best describes why the TOGAF Standard is suitable as a
-framework for Enterprise Architecture?
+Q: Which of the following best describes why the TOGAF Standard is suitable as a framework for Enterprise Architecture?
 A) *It de-risks a technically complex process.
 B) It contains an extensive body of knowledge called the TOGAF Library.
 C) The TOGAF documentation includes the universal concepts of Enterprise
 A)chitecture.
 D. It enables more effective decision-making by business leaders.
 
-Q: Complete the sentence: Three of the four architecture domains that are
-commonly accepted as subsets of an overall Enterprise Architecture are ?
+Q: Complete the sentence: Three of the four architecture domains that are commonly accepted as subsets of an overall Enterprise Architecture are ?
 A) Baseline, Transition, Target.
 B) *Data, Application, Technology.
 C) Capability, Segment, Strategic.
 D) Abstract, Logical, Physical.
 
-Q: Which architecture abstraction level answers why an enterprise undertakes
-architecture work, and what is the scope of work?
+Q: Which architecture abstraction level answers why an enterprise undertakes architecture work, and what is the scope of work?
 A) Conceptual
 B) *Contextual
 C) Logical
 D) Physical
 
-Q: Which of the following is a structural framework that allows an enterprise to
-distinguish between different types of architectural assets?
+Q: Which of the following is a structural framework that allows an enterprise to distinguish between different types of architectural assets?
 A) Architecture Framework
 B) *Architecture Repository
 C) Governance Repository
@@ -50,8 +46,7 @@ B) architecture views and viewpoints.
 C) risk categorizations.
 D) services and information systems.
 
-Q: Which does the TOGAF Standard define as a collection of organizations that have
-common goals?
+Q: Which does the TOGAF Standard define as a collection of organizations that have common goals?
 A) An architecture
 B) *An enterprise
 C) A federation
@@ -69,24 +64,19 @@ B) about predicting future shortfalls in a Target Architecture.
 C) *striking a balance between positive and negative outcomes.
 D) the effect of uncertainty on objectives.
 
-Q: Which of the following is defined as the highest level (typically) of description of
-an organization and typically covers all missions and functions?
+Q: Which of the following is defined as the highest level (typically) of description of an organization and typically covers all missions and functions?
 A) Business Architecture
 B) Digital Architecture
 C) *Enterprise
 D) Target Architecture
 
-Q: Which of the following is defined as a specification that has been formally
-reviewed and agreed upon, that thereafter serves as the basis for further
-development?
+Q: Which of the following is defined as a specification that has been formally reviewed and agreed upon, that thereafter serves as the basis for further development?
 A) *Baseline
 B) Deliverable
 C) Requirement
 D) Work package
 
-Q: Which of the following is defined as the fundamental concepts or properties of a
-system in its environment embodied in its elements, relationships, and in the
-principles of its design and evolution?
+Q: Which of the following is defined as the fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution?
 A) *Architecture
 B) Architecture domain
 C) Architecture Framework

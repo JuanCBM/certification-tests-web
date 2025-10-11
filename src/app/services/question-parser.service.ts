@@ -29,15 +29,19 @@ export class QuestionParserService {
     let qText: string | null = null;
     let options: AnswerOption[] = [];
     let correctId: string | null = null;
+    let imageUrls: string[] = [];
 
     const flush = () => {
       if (qText && options.length >= 2 && correctId) {
         const id = `${questions.length + 1}`;
-        questions.push({ id, text: qText.trim(), options: [...options], correctAnswerId: correctId, blockId: currentBlock });
+        const q: Question = { id, text: qText.trim(), options: [...options], correctAnswerId: correctId, blockId: currentBlock };
+        if (imageUrls.length) q.imageUrls = [...imageUrls];
+        questions.push(q);
       }
       qText = null;
       options = [];
       correctId = null;
+      imageUrls = [];
     };
 
     for (const raw of lines) {
@@ -53,6 +57,15 @@ export class QuestionParserService {
       if (line.startsWith('Q:')) {
         flush();
         qText = line.replace(/^Q:\s*/, '');
+        continue;
+      }
+      // Handle reference image tags like <image>assets/path.png</image>
+      const imgMatch = /^<image>(.+?)<\/image>$/i.exec(line);
+      if (imgMatch) {
+        const path = imgMatch[1].trim();
+        if (path) {
+          imageUrls.push(path);
+        }
         continue;
       }
       const optMatch = /^([A-Z])[\)\.]\s*(\*?)(.+)$/.exec(line);

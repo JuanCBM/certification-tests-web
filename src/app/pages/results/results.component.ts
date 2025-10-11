@@ -16,6 +16,9 @@ import { QuizService } from '../../services/quiz.service';
 
     <div class="card" *ngFor="let item of review">
       <div class="question">{{ item.q.text }}</div>
+      <div class="images" *ngIf="item.q.imageUrls?.length">
+        <img *ngFor="let url of item.q.imageUrls" [src]="url" alt="Referencia" style="max-width: 100%; margin: 8px 0; border: 1px solid #ddd; border-radius: 4px;" />
+      </div>
       <ul>
         <li *ngFor="let opt of item.q.options"
             [class]="opt.id === item.q.correctAnswerId ? 'badge' : ''">

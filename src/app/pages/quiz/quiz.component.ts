@@ -12,6 +12,9 @@ import { Question } from '../../models';
     <div class="card" *ngIf="question; else empty">
       <div class="badge">Pregunta {{ index + 1 }} / {{ total }}</div>
       <div class="question">{{ question.text }}</div>
+      <div class="images" *ngIf="question.imageUrls?.length">
+        <img *ngFor="let url of question.imageUrls" [src]="url" alt="Referencia" style="max-width: 100%; margin: 8px 0; border: 1px solid #ddd; border-radius: 4px;" />
+      </div>
       <div class="answers">
         <div
           class="answer"

@@ -15,6 +15,7 @@ Archivo de texto plano. Reglas:
 - Marca la opción correcta anteponiendo un `*` justo después del paréntesis, por ejemplo: `B) *Texto correcto`.
 - Opcional: indica el bloque al que pertenecen con una línea `#BLOCK n` (n = 1..6).
 - Las líneas vacías separan preguntas. Las líneas que empiezan por `//` son comentarios.
+- Puedes añadir imágenes de referencia en medio de la pregunta usando etiquetas `<image>...</image>` con rutas bajo `assets/`, por ejemplo: `<image>assets/q5_image.png</image>`. Se soportan múltiples imágenes por pregunta.
 
 Ejemplo: `src/assets/examples/togaf-sample.txt`.
 

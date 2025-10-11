@@ -23,6 +23,7 @@ export interface Question {
   correctAnswerId: string;
   blockId?: number; // 1..6 per TOGAF block
   explanation?: string;
+  imageUrls?: string[]; // optional reference images shown with the question
 }
 
 export type FeedbackMode = 'immediate' | 'end';

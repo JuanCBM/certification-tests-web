@@ -1,9 +1,9 @@
 {
-  "$schema": "https://json.schemastore.org/angular-cli",
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "defaultProject": "certification-tests",
+  "newProjectRoot": "projects",
   "projects": {
-    "certification-tests": {
+    "certification-tests-web": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -11,16 +11,23 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/certification-tests-web/",
             "outputPath": "dist/certification-tests-web",
             "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": [],
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "public"
+              },
+              "src/assets",
+              "src/404.html"
             ],
             "styles": [
               "src/styles.css"
@@ -29,41 +36,80 @@
           },
           "configurations": {
             "production": {
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
+              "extractLicenses": false,
               "sourceMap": true,
-              "vendorChunk": true
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "certification-tests-web:build:production"
+            },
+            "development": {
+              "buildTarget": "certification-tests-web:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "browserTarget": "certification-tests:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "certification-tests:build:production"
-            },
-            "development": {
-              "browserTarget": "certification-tests:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              },
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "dde76472-a3e3-491a-bb72-0ce026ee59ab"
+    "analytics": false
   }
 }

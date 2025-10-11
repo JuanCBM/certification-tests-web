@@ -35,8 +35,8 @@ D) El diseño de bases de datos
 Requisitos: Node 18+.
 
 ## Estructura principal
-- `src/app/app.component.ts` Shell con router.
-- `src/app/app.routes.ts` Rutas: home, setup, quiz, results.
+- `src/app/app.component.ts` Shell con router.[package.json](../coleccion-vinos-web/package.json)
+- `src/app/app.routes.ts` Rutas: home, setup, quiz, results.[angular.json](../coleccion-vinos-web/angular.json)
 - `src/app/models.ts` Modelos tipados.
 - `src/app/services/question-parser.service.ts` Parser del archivo de preguntas.
 - `src/app/services/quiz.service.ts` Estado y flujo del examen.

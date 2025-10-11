@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test"
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "build:gh-pages": "ng build --configuration production --base-href=/coleccion-vinos-web/",
+    "postbuild:gh-pages": "node -e \"require('fs').writeFileSync('dist/coleccion-vinos-web/browser/.nojekyll', '')\"",
+    "deploy:gh-pages": "npx angular-cli-ghpages --dir=dist/coleccion-vinos-web/browser --no-silent"
+
   },
   "dependencies": {
     "@angular/animations": "17.3.8",

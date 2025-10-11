@@ -8,9 +8,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:gh-pages": "ng build --configuration production --base-href=/coleccion-vinos-web/",
-    "postbuild:gh-pages": "node -e \"require('fs').writeFileSync('dist/coleccion-vinos-web/browser/.nojekyll', '')\"",
-    "deploy:gh-pages": "npx angular-cli-ghpages --dir=dist/coleccion-vinos-web/browser --no-silent"
+    "build:gh-pages": "ng build --configuration production --base-href=/certification-tests-web/",
+    "postbuild:gh-pages": "node -e \"require('fs').writeFileSync('dist/certification-tests-web/browser/.nojekyll', '')\"",
+    "deploy:gh-pages": "npx angular-cli-ghpages --dir=dist/certification-tests-web/browser --no-silent"
 
   },
   "dependencies": {

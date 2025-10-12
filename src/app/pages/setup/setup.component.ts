@@ -13,7 +13,7 @@ import { QuizConfig } from '../../models';
   template: `
     <div class="card">
       <h1>Configurar examen</h1>
-      <p>Sube tu archivo de preguntas en texto plano. Marca la respuesta correcta con un *. Opcionalmente usa #BLOCK n para indicar el bloque.</p>
+      <p>Sube tu archivo de preguntas en texto plano. Marca la respuesta correcta con un *. Opcionalmente usa #BLOCK n para indicar el bloque (incluido #BLOCK 0). Si no indicas bloque, se asigna el bloque 0 por defecto y entra en "Todos".</p>
       <input type="file" (change)="onFile($event)" accept=".txt,.md,.text" />
       <div *ngIf="totalQuestions > 0" class="badge">{{ totalQuestions }} preguntas cargadas</div>
     </div>

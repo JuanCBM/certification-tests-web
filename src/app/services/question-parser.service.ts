@@ -16,7 +16,7 @@ import { Question, AnswerOption } from '../models';
  * A) *Correct
  * B) Wrong
  *
- * - Blocks are optional; if provided as "#BLOCK n" they will be assigned as blockId=n
+ * - Blocks are optional; if provided as "#BLOCK n" they will be assigned as blockId=n (including 0 for unassigned)
  * - Empty lines separate questions. Lines starting with // are comments.
  */
 @Injectable({ providedIn: 'root' })
@@ -25,7 +25,8 @@ export class QuestionParserService {
     const lines = text.split(/\r?\n/);
     const questions: Question[] = [];
 
-    let currentBlock: number | undefined = undefined;
+    // Default block is 0 (unassigned). You can also explicitly set "#BLOCK 0"
+    let currentBlock: number | undefined = 0;
     let qText: string | null = null;
     let options: AnswerOption[] = [];
     let correctId: string | null = null;
@@ -51,7 +52,7 @@ export class QuestionParserService {
       const blockMatch = /^#BLOCK\s+(\d+)/i.exec(line);
       if (blockMatch) {
         flush();
-        currentBlock = parseInt(blockMatch[1], 10);
+        currentBlock = parseInt(blockMatch[0], 10);
         continue;
       }
       if (line.startsWith('Q:')) {

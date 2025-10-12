@@ -1,9 +1,9 @@
 // Ejemplo de archivo de preguntas para TOGAF 10
 // Usa #BLOCK n para indicar bloque, Q: para la pregunta y A)/B)/C)/D) para opciones.
-// Marca con * la respuesta correctA)
+// Marca con * la respuesta correcta
 
 #BLOCK 1
-Q: TOGAF se define como un marco de trabajo parA)..
+Q: TOGAF se define como un marco de trabajo para..
 A) La gestión de proyectos
 B) *El desarrollo y la gestión de arquitectura empresarial
 C) La administración de redes
@@ -18,7 +18,7 @@ D) It enables more effective decision-making by business leaders.
 Q: Complete the sentence: Three of the four architecture domains that are commonly accepted as subsets of an overall Enterprise Architecture are ?
 A) Baseline, Transition, Target.
 B) *Data, Application, Technology.
-C) Capability, Segment, StrategiC)
+C) Capability, Segment, Strategic
 D) Abstract, Logical, Physical.
 
 Q: Which architecture abstraction level answers why an enterprise undertakes architecture work, and what is the scope of work?
@@ -200,9 +200,9 @@ C) Phase F: Migration Planning
 D) Phase H: Architecture Change Management
 
 Q: Which of the following statements best describes the Business Transformation Readiness Assessment technique?
-A) A technique to define the degree to which information and services are to be shareD)
+A) A technique to define the degree to which information and services are to be shared
 B) A technique used to identify and understand the business requirements an architecture must address.
-C) A technique used to develop general rules and guidelines for the architecture being developeD)
+C) A technique used to develop general rules and guidelines for the architecture being developed
 D) *A technique used to understand the readiness of an organization to accept change
 
 Q: Consider the following diagram:
@@ -342,8 +342,8 @@ C) Determining the scope of an architecture compliance review
 D) *Enforcement of architecture compliance
 
 Q: Which statement best applies to an Architecture Repository?
-A) A complete Architecture Repository is required to capture all artifacts listed in the TOGAF StandarD)
-B) *A well-run Architecture Repository leads to the minimization of information gathered and maintaineD)
+A) A complete Architecture Repository is required to capture all artifacts listed in the TOGAF Standard
+B) *A well-run Architecture Repository leads to the minimization of information gathered and maintained
 C) Agile organizations are not able to use an Architecture Repository.
 D) An Architecture Repository contains materials that are only used by the Enterprise Architecture team.
 
@@ -439,8 +439,8 @@ D) To plan the migration steps needed to achieve the transformation
 
 Q: Consider the following statement: In the ADM, documents which have been reviewed and approved are designated “approved” in accordance with the organization’s governance practices. Which statement about approved documents is also true?
 A) Approved documents are finalized after a phase.
-B) Approved documents are marked as draft until they are finalizeD)
-C) *Approved documents are not always finalizeD)
+B) Approved documents are marked as draft until they are finalized
+C) *Approved documents are not always finalized
 D) Approved documents may not be changed in subsequent phases.
 
 Q: Which one of the following best describes the purpose of a Change Request?

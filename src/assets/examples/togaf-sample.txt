@@ -127,6 +127,7 @@ C) *Depth
 D) Time period
 
 Q: Refer to Figure 7. Which of the following best describes the ADM graphic?
+<image>assets/q5_block2_image.png</image>
 A) An activity sequence for developing an Enterprise Architecture
 B) A process model for developing mandatory inputs and outputs
 C) *A representation showing information flows
@@ -553,3 +554,64 @@ A) *It defines the scope and approach to complete an architecture development cy
 B) It is sent from the sponsor and triggers the start of an architecture development cycle
 C) It provides a high-level aspirational view of the end architecture project
 D) It provides a schedule for implementation of the Target Architecture
+
+Q: What is defined as the effect of uncertainty on objectives?
+A) Threat
+B) Continuity
+C) *Risk
+D) Vulnerability
+
+Q: In Phase A a business capability map and a core set of value streams were created while developing the Architecture Vision. Why would such Architecture Descriptions need to be updated in Phase B?
+A) Phase B requires that all Architecture Descriptions be updated.
+B) *The development of Business Architecture Descriptions is always iterative.
+C) Phase B is an ADM Architecture Development phase.
+D) A new value stream was assessed as in the project scope.
+
+Q: Which of the following best describes a TOGAF business scenario?
+A) A business case.
+B) *A technique to elaborate an architecture effort.
+C) A method to develop a business model.
+D) A use-case providing detailed descriptions.
+
+Q: Consider the following Business Capability Example: (see image)
+A) Organization Data
+B) Who, What
+C) *Roles, Information
+D) Actors, Actions
+
+Q: Which of the following is a difference between an organization map and an organization chart?
+A) An organization map highlights where in the organization that stakeholder concerns are not being addressed by a business architecture.
+B) *An organization map can be impacted by a business model change.
+C) An organization map reduces the time, cost, and risk of business operations.
+D) An organization map is limited to formal relationships between business units.
+
+Q: Which of the following best describes where business scenarios are used in the TOGAF ADM?
+A) They are used to resolve impacts across the Architecture Landscape in Phases B, C, and D.
+B) *They are used in the Preliminary Phase, Phase A, and Phase B.
+C) They are used as part of the lessons learned activity at the end of Phase F.
+D) They are used as part of a business transformation readiness assessment in Phase E.
+
+Q: Complete the sentence. The TOGAF standard covers the development of four architecture domains. Business, Data, Technology and ________.
+A) Capability
+B) *Application
+C) Transition
+D) Segment
+
+Q: Which of the following best describe the relationship between business models and business architecture?
+A) Business Architecture provides a conceptual summary view, whereas business models support in-depth analysis.
+B) *Business Architecture breaks a business model down into the core functional elements that describe how the business works.
+C) Business models are useful for impact analysis, however Business Architecture is needed for scenario analysis.
+D) Business model development is a prerequisite for a Business Architecture development.
+
+Q: In what TOGAF ADM phase is the information map linked to other business blueprints?
+A) *Phase B
+B) Phase E
+C) Phase A
+D) Preliminary Phase
+
+Q: Consider the following statements: A whole corporation or a division of a corporation. A government agency or a single government department. Partnerships and alliances of businesses working together, such as consortium or supply chain. What are those examples of according to the TOGAF Standard?
+A) Organizations
+B) Architecture Scopes
+C) Business Unit
+D) *Enterprises
+

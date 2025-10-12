@@ -1,9 +1,9 @@
 // Ejemplo de archivo de preguntas para TOGAF 10
 // Usa #BLOCK n para indicar bloque, Q: para la pregunta y A)/B)/C)/D) para opciones.
-// Marca con * la respuesta correcta.
+// Marca con * la respuesta correctA)
 
 #BLOCK 1
-Q: TOGAF se define como un marco de trabajo para...
+Q: TOGAF se define como un marco de trabajo parA)..
 A) La gestión de proyectos
 B) *El desarrollo y la gestión de arquitectura empresarial
 C) La administración de redes
@@ -13,12 +13,12 @@ Q: Which of the following best describes why the TOGAF Standard is suitable as a
 A) *It de-risks a technically complex process.
 B) It contains an extensive body of knowledge called the TOGAF Library.
 C) The TOGAF documentation includes the universal concepts of Enterprise Architecture.
-D. It enables more effective decision-making by business leaders.
+D) It enables more effective decision-making by business leaders.
 
 Q: Complete the sentence: Three of the four architecture domains that are commonly accepted as subsets of an overall Enterprise Architecture are ?
 A) Baseline, Transition, Target.
 B) *Data, Application, Technology.
-C) Capability, Segment, Strategic.
+C) Capability, Segment, StrategiC)
 D) Abstract, Logical, Physical.
 
 Q: Which architecture abstraction level answers why an enterprise undertakes architecture work, and what is the scope of work?
@@ -200,9 +200,9 @@ C) Phase F: Migration Planning
 D) Phase H: Architecture Change Management
 
 Q: Which of the following statements best describes the Business Transformation Readiness Assessment technique?
-A) A technique to define the degree to which information and services are to be shared.
+A) A technique to define the degree to which information and services are to be shareD)
 B) A technique used to identify and understand the business requirements an architecture must address.
-C) A technique used to develop general rules and guidelines for the architecture being developed.
+C) A technique used to develop general rules and guidelines for the architecture being developeD)
 D) *A technique used to understand the readiness of an organization to accept change
 
 Q: Consider the following diagram:
@@ -218,3 +218,80 @@ A) Preliminary
 B) *Phase A
 C) Phase B
 D) Phase E
+
+#BLOCK 4
+Q: Where in the TOGAF Standard is detailed guidance on applying the standard
+provided?
+A) TOGAF Fundamental Content
+B) TOGAF Library
+C) *TOGAF Series Guides
+D) TOGAF White Papers
+
+Q: Complete the sentence: The levels of the Architecture Landscape are Strategic, Segment, and …
+A) *Capability.
+B) Enterprise.
+C) Solution.
+D) Transition.
+
+Q: Why does partitioning help simplify the development of an Enterprise Architecture?
+A) It is designed to support organizations with more than 75 architects.
+B) *To enable different teams to work on different elements of an architecture.
+C) To match the levels and concepts of the Architecture Continuum.
+D) By providing a standard partitioning model for adoption.
+
+Q: Complete the sentence: The four purposes of Enterprise Architecture that can be used to frame the planning horizon, depth, and breadth of an Architecture Project, and the contents of the Enterprise Architecture Repository, are Architecture to Support Strategy, Portfolio, Project, and …
+A) Capability.
+B) Enterprise.
+C) Segment.
+D) *Solution Delivery
+
+#BLOCK 5
+Q: Which of the following is a responsibility of an Architecture Board?
+A) Allocating resources for architecture projects
+B) Conducting assessments of the maturity level of architecture discipline within the organization
+C) Decision rights about Target Architectures
+D) *Establishing targets for re-use of components
+
+Q: What is the practice by which Enterprise Architectures are managed and controlled at an enterprise-wide level?
+A) *Architecture Governance
+B) Corporate Governance
+C) IT Governance
+D) Technology Governance
+
+Q: When considering Architecture Governance, what is the benefit that derives from transparency?
+A) *Actions implemented and their decision support will be available for inspection
+B) All parties will have a commitment to adhere to procedures and process
+C) All decision-making will be established so as to minimize conflicts of interest
+D) Groups within the organization are accountable for their actions
+
+#BLOCK 6
+Q: Complete the sentence by selecting the applicable pair of words: A(n) … is a representation of a system from the perspective of a(n) …
+A) *architecture view, related set of concerns.
+B) architecture viewpoint, architecture view.
+C) concern, architecture view.
+D) architecture, set of elements.
+
+Q: Which of the following best describes the purpose of the Request for Architecture Work?
+A) It defines the scope and approach to complete an architecture development cycle.
+B) *It is sent from the sponsor and triggers the start of an architecture development cycle.
+C) It provides a high-level aspirational view of the end architecture project.
+D) It provides a schedule for implementation of the Target Architecture.
+
+Q: Which of the following is created in Phase A with the purpose to agree at the outset what the desired outcome should be for the architecture, so that architects can then focus on the detail necessary to validate feasibility?
+A) Architecture Roadmap
+B) Architecture Contract
+C) Architecture Principles
+D) *Architecture Vision
+
+Q: Which of the following is a package of functionality defined to meet business needs across an organization?
+A) Architecture Description
+B) *Building block
+C) Model Kind
+D) System
+
+Q: Consider the following descriptions of deliverables consumed and produced across the TOGAF Architecture Development Method (ADM) cycle: Which deliverables match these descriptions?
+<image>assets/q5_block6_image.png</image>
+A. *1-Architecture Requirements Specification, 2-Architecture Contract, 3-Request for Architecture Work, 4-Architecture Principles
+B. 1-Architecture Vision, 2-Request for Architecture Work, 3-Architecture Vision, 4 Architecture Principles
+C. 1-Change Request, 2-Architecture Contract, 3-Architecture Definition Document, 4-Request for Architecture Work
+D. 1-Architecture Requirements Specification, 2-Architecture Definition Document, 3-Architecture Contract, 4-Architecture Vision

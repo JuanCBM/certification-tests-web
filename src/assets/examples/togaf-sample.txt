@@ -291,7 +291,265 @@ D) System
 
 Q: Consider the following descriptions of deliverables consumed and produced across the TOGAF Architecture Development Method (ADM) cycle: Which deliverables match these descriptions?
 <image>assets/q5_block6_image.png</image>
-A. *1-Architecture Requirements Specification, 2-Architecture Contract, 3-Request for Architecture Work, 4-Architecture Principles
-B. 1-Architecture Vision, 2-Request for Architecture Work, 3-Architecture Vision, 4 Architecture Principles
-C. 1-Change Request, 2-Architecture Contract, 3-Architecture Definition Document, 4-Request for Architecture Work
-D. 1-Architecture Requirements Specification, 2-Architecture Definition Document, 3-Architecture Contract, 4-Architecture Vision
+A) *1-Architecture Requirements Specification, 2-Architecture Contract, 3-Request for Architecture Work, 4-Architecture Principles
+B) 1-Architecture Vision, 2-Request for Architecture Work, 3-Architecture Vision, 4 Architecture Principles
+C) 1-Change Request, 2-Architecture Contract, 3-Architecture Definition Document, 4-Request for Architecture Work
+D) 1-Architecture Requirements Specification, 2-Architecture Definition Document, 3-Architecture Contract, 4-Architecture Vision
+
+#BLOCK 0
+Q: Complete the sentence: The TOGAF Standard covers the development of four architecture domains, Application, Data, Technology, and …
+A) *Business
+B) Capability
+C) Transformation
+D) Transition
+
+Q: Consider the following descriptions of deliverables consumed and produced across the TOGAF Architecture Development Method (ADM) cycle:
+<image>assets/q2_block0_image.png</image>
+Which deliverables match these descriptions?
+A) *1-Architecture Vision, 2-Architecture Contract, 3-Request for Architecture Work, 4-Architecture Definition Document
+B) 1-Architecture Vision, 2-Request for Architecture Work, 3-Architecture Vision, 4 Architecture Definition Document
+C) 1-Change Request, 2-Architecture Contract, 3-Architecture Definition Document, 4-Request for Architecture Work
+D) 1-Request for Architecture Work, 2-Architecture Definition Document, 3 Architecture Contract, 4-Architecture Vision
+
+Q: Where is the practical guidance on how to apply the TOGAF Standard provided?
+A) The TOGAF Fundamental Content
+B) The TOGAF Library
+C) *The TOGAF Series Guides
+D) The ADM Techniques
+
+Q: You have been asked to explain why Enterprise Architecture can be beneficial. Which of the following is the best answer?
+A) It guides the architects to make appropriate technology choices to maximize shareholder value.
+B) It optimizes the enterprise business strategy making all components work together.
+C) *It provides a strategic context for the evolution of the enterprise in response to constantly changing needs.
+D) It sets the range, scope, and scale of the changes defined by the strategy.
+
+Q: What is an objective of the Preliminary Phase?
+A) To develop the Architecture Vision document
+B) To develop the Implementation and Migration Plan
+C) *To establish the Architecture Governance process
+D) To operate the governance framework
+
+Q: Which of the following describes a purpose of Architecture Principles?
+A) To control the business in pursuit of strategic objectives
+B) To describe likely impacts resulting from successful deployment of the Target Architecture
+C) To form a contract between the sponsoring organization and the Enterprise Architect
+D) *To set precedence during trade-off discussions
+
+Q: Which of the following is a responsibility of an Architecture Board?
+A) Allocating resources for architecture projects
+B) Conducting assessments of the maturity level of architecture discipline within the organization
+C) Determining the scope of an architecture compliance review
+D) *Enforcement of architecture compliance
+
+Q: Which statement best applies to an Architecture Repository?
+A) A complete Architecture Repository is required to capture all artifacts listed in the TOGAF StandarD)
+B) *A well-run Architecture Repository leads to the minimization of information gathered and maintaineD)
+C) Agile organizations are not able to use an Architecture Repository.
+D) An Architecture Repository contains materials that are only used by the Enterprise Architecture team.
+
+Q: What ADM phase includes obtaining approval for the Statement of Architecture Work?
+A) Preliminary Phase
+B) *Architecture Vision
+C) Technology Architecture
+D) Migration Planning
+
+Q: Refer to the following table. Which ADM phase(s) does this describe?
+<image>assets/q10_block0_image.png</image>
+A) Phase A
+B) Phases B, C, and D
+C) Phase E
+D) *Phase F
+
+Q: Complete the sentence: A set of Architecture Principles that are enduring and yet able to accommodate change meet the recommended criteria of …
+A) Consistency
+B) Completeness
+C) Robustness
+D) *Stability
+
+Q: Which of the following describes how the Enterprise Continuum is used when developing an Enterprise Architecture?
+A) To coordinate with the other management frameworks in use
+B) To describe how an architecture addresses stakeholder concerns
+C) To identify and understand business requirements
+D) *To structure re-usable architecture and solution assets
+
+Q: Consider the following ADM phases objectives.  Which phase does each objective match?
+<image>assets/q13_block0_image.png</image>
+A) 1-A, 2-B, 3-C, 4-D
+B) 1-B, 2-D, 3-A, 4-C
+C) 1-C, 2-D, 3-B, 4-A
+D) *1-D, 2-C, 3-B, 4-A
+
+Q: According to the TOGAF Standard, which of the following best describes the purpose of an Architecture Definition Document?
+A) *To act as a deliverable container for artifacts created during a project
+B) To ensure that architecture information is communicated to the right stakeholders at the right time
+C) To provide a high-level view of the end architecture product
+D) To show progression of change from the Baseline Architecture to the Target Architecture
+
+Q: Complete the sentence by selecting the applicable pair of words: A/an … is used in the Business Architecture phase to help identify and understand business … that the architecture has to address.
+A) activity model, perspective
+B) *business scenario, requirements
+C) use-case, interconnections
+D) business transformation readiness assessment, constraints
+
+Q: Which statement about architecture partitioning is correct?
+A) A partitioning model is a necessity for Agile enterprises.
+B) An enterprise should develop a partitioning model that reflects its organization structure.
+C) *Each enterprise needs to adopt a partitioning model that reflects its operating model.
+D) The TOGAF Standard mandates the use of its partitioning model.
+
+Q: Which of the following best describes the ADM diagram?
+<image>assets/q17_block0_image.png</image>
+A) A linear waterfall process model
+B) A sequenced approach to develop an Enterprise Architecture
+C) *A stylized representation showing essential information flows
+D) An iteration cycle
+
+Q: According to the TOGAF Standard, which of the following best describes the purpose of an Architecture Roadmap?
+A) To ensure that architecture information is communicated to the right stakeholders at the right time
+B) To govern the architecture throughout its implementation process
+C) To provide a high-level view of the end architecture product
+D) *To show progression of change from the Baseline Architecture to the Target Architecture
+
+Q: Consider the following image: What does this show?
+<image>assets/q19_block0_image.png</image>
+A) *A Content Framework
+B) A Digital Business
+C) An Architecture Repository
+D) An Enterprise Repository
+
+Q: In which phase of the ADM does the TOGAF Standard align with Agile development?
+A) Phase B
+B) Phase E
+C) Phase F
+D) *Phase G
+
+Q: Consider the following ADM phases objectives:
+<image>assets/q21_block0_image.png</image>
+Which phase does each objective match?
+A) *1-E, 2-F, 3-E, 4-F
+B) 1-E, 2-F, 3-F, 4-G
+C) 1-F, 2-G, 3-F, 4-F
+D) 1-G, 2-G, 3-E, 4-F
+
+Q: Which of the following best describes the purpose of the Business Transformation Readiness Assessment technique?
+A) *To determine if the organization is ready to undergo change
+B) To determine if the stakeholders support the implementation plan
+C) To ensure that there are adequate trained engineers to develop the solution
+D) To plan the migration steps needed to achieve the transformation
+
+Q: Consider the following statement: In the ADM, documents which have been reviewed and approved are designated “approved” in accordance with the organization’s governance practices. Which statement about approved documents is also true?
+A) Approved documents are finalized after a phase.
+B) Approved documents are marked as draft until they are finalizeD)
+C) *Approved documents are not always finalizeD)
+D) Approved documents may not be changed in subsequent phases.
+
+Q: Which one of the following best describes the purpose of a Change Request?
+A) To ensure that information is communicated to the right stakeholders at the right time
+B) To ensure that the results of a Compliance Assessment are distributed to the Architecture Board
+C) *To request a dispensation or to kick-start a further cycle of architecture work
+D) To review project progress and ensure the implementation is in line with the objectives
+
+Q: Why is it important to use iteration when applying the TOGAF ADM?
+A) It enables the capture of stakeholder requirements through the ADM cycle.
+B) It helps identify business scenarios to choose from.
+C) *It supports returning to previous phases to update work products with new information.
+D) It supports the selection of alternative Target Architectures.
+
+Q: What level of risk is the risk categorization prior to determining and implementing mitigating actions?
+A) *Initial
+B) Low
+C) Marginal
+D) Residual
+
+Q: Consider the following image: Which of the following does it illustrate?
+<image>assets/q27_block0_image.png</image>
+A) *An Enterprise Architecture Capability
+B) An Enterprise Architecture
+C) An Enterprise Architecture framework
+D) An Enterprise Architecture metamodel
+
+Q: Which of the following statements related to governance in Enterprise Architecture is the most correct?
+A) *The architecture practitioner and implementer are directed and both are controlled by the stakeholder.
+B) The architecture practitioner governs the architecture development and controls the implementer.
+C) The CEO governs the architecture and directs the architecture practitioner and implementer.
+D) The stakeholder directs the architecture development and controls the architecture changes.
+
+Q: Refer to the following table: Which ADM phase does this describe?
+<image>assets/q29_block0_image.png</image>
+A) Phase B
+B) Phase E
+C) Phase G
+D) *Phase H
+
+Q: What should be put in place to make sure that architectural artifacts are developed and used with accountability and responsibility?
+A) Governance of the Architecture Definition Document
+B) Governance of the Architecture Vision
+C) *Governance of the management of Architecture Contracts
+D) Governance of the Statement of Architecture Work
+
+Q: Consider the following ADM phases objectives: Which phase does each objective match?
+<image>assets/q31_block0_image.png</image>
+A) 1E, 2F, 3F, 4H
+B) 1F, 2G, 3G, 4F
+C) 1F, 2H, 3H, 4G
+D) *1H, 2G, 3F, 4G
+
+Q: Consider the following description:
+• The first part uses the vision, principles, requirements, and other information to select sets of criteria fitting for different alternatives
+• The second part defines alternatives based on the criteria and builds an understanding of each
+• The third part will either select one of the alternatives, or else combine features from more than one, to create the proposed alternative
+What does this describe?
+A) Architecture Partitioning
+B) Iteration
+C) *The Architecture Trade-Off method
+D) The Business Scenario method
+
+Q: When considering the scope of an architecture, what dimension considers the appropriate level of detail to be captured based on intended use of the Enterprise Architecture?
+A) Breadth
+B) *Depth
+C) Project
+D) Segment
+
+Q: Consider the following illustration of an architecture development cycle:
+<image>assets/q34_block0_image.png</image>
+Select the correct phase names corresponding to the Labels 1, 2, and 3.
+A) 1-Architecture Vision, 2-Technology Architecture, 3-Migration Planning
+B) 1-Business Architecture; 2-Data Architecture, 3-Opportunities and Solutions
+C) *1-Business Architecture, 2-Technology Architecture, 3-Migration Planning
+D) 1-Information Systems Architectures, 2-Opportunities and Solutions, 3-Architecture Governance
+
+Q: Which of the following best describes a purpose of the Gap Analysis technique?
+A) To catch errors in a project architecture early
+B) To guide decision-making throughout the enterprise
+C) To help identify and understand business requirements
+D) *To highlight shortfalls between the Baseline and Target Architectures
+
+Q: Which section of the TOGAF template for Architecture Principles highlights the requirements for the Business and IT, for carrying out the principle?
+A) *Implications
+B) Name
+C) Rationale
+D) Statement
+
+Q: The strategy for a hardware store chain includes expanding its sales from physical stores to include online sales and services. You have been asked if they should use an Enterprise Architecture to support this change and why? (Select the best answer)
+A) No, as this is a Digital Transformation, using an Enterprise Architecture is not suitable as it will slow down the Agile solution development.
+B) No, Enterprise Architecture helps to describe the future state and the current state of the enterprise, but is not suitable for such a strategic change.
+C) *Yes, a good Enterprise Architecture facilitates effective governance, management, risk management, and exploitation opportunities.
+D) Yes, an Enterprise Architecture team experienced in current technology will be able to take the key decisions needed for such a change.
+
+Q: What are the levels of the Architecture Landscape?
+A) Baseline, Transition, and Target Architectures
+B) Business, Data, Application, and Technology Architectures
+C) *Capability, Segment, and Strategic Architectures
+D) Foundation, Common, and Solution Architectures
+
+Q: Which of the following best describes how Architecture Governance typically operates?
+A) At the top level of the organization
+B) In isolation
+C) In Phase G of the ADM
+D) *Within a hierarchy of governance structure
+
+Q: Which of the following best describes the purpose of the Statement of Architecture Work?
+A) *It defines the scope and approach to complete an architecture development cycle
+B) It is sent from the sponsor and triggers the start of an architecture development cycle
+C) It provides a high-level aspirational view of the end architecture project
+D) It provides a schedule for implementation of the Target Architecture

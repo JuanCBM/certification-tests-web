@@ -33,7 +33,7 @@ import { QuizConfig } from '../../models';
           </select>
         </div>
         <div>
-          <label>N� de preguntas</label>
+          <label>Nºde preguntas</label>
           <input type="number" [(ngModel)]="count" min="1" [max]="maxCount" />
           <div class="badge">Máx: {{ maxCount }}</div>
         </div>

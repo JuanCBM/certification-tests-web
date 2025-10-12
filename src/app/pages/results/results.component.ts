@@ -10,7 +10,7 @@ import { QuizService } from '../../services/quiz.service';
   template: `
     <div class="card" *ngIf="loaded; else empty">
       <h1>Resultados</h1>
-      <p class="badge">Puntuación: {{ score.correct }} / {{ score.total }}</p>
+      <p class="badge">Puntuación: {{ score.correct }} / {{ score.total }} ({{ getPercent() }}%)</p>
       <a class="button" routerLink="/">Nuevo examen</a>
     </div>
 
@@ -51,5 +51,10 @@ export class ResultsComponent {
       userAnswer: state.answers.find(a => a.questionId === q.id)?.selectedAnswerId || null
     }));
     this.loaded = true;
+  }
+
+  getPercent(): string {
+    if (!this.score.total) return '0';
+    return ((this.score.correct / this.score.total) * 100).toFixed(1);
   }
 }

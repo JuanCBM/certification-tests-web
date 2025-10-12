@@ -28,12 +28,12 @@ import { QuizService } from '../../services/quiz.service';
 
     <div class="card" *ngIf="selectedCertId">
       <h2>Configurar examen</h2>
-      <p class="badge" *ngIf="totalQuestions > 0">{{ totalQuestions }} preguntas disponibles</p>
+      <p class="badge" *ngIf="availableQuestions > 0">{{ availableQuestions }} preguntas disponibles</p>
 
       <div class="row">
         <div>
           <label>Bloque</label>
-          <select [(ngModel)]="block">
+          <select [(ngModel)]="block" (ngModelChange)="onBlockChange()">
             <option [ngValue]="'all'">0. Todos (aleatorio)</option>
             <option [ngValue]="1">1. Concepts</option>
             <option [ngValue]="2">2. Introduction to the ADM</option>
@@ -126,6 +126,17 @@ export class HomeComponent {
     if (this.block === 'all') return this.totalQuestions;
     const byBlock = this.quiz.getQuestionBank().filter(q => q.blockId === this.block).length;
     return byBlock || this.totalQuestions;
+  }
+
+  get availableQuestions() {
+    return this.maxCount;
+  }
+
+  onBlockChange() {
+    // Clamp count to new max when block changes
+    if (this.count > this.maxCount) {
+      this.count = this.maxCount || 1;
+    }
   }
 
   start() {

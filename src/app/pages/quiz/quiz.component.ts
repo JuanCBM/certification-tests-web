@@ -52,6 +52,7 @@ export class QuizComponent {
   total = 0;
   selectedId: string | null = null;
   revealed = false; // show feedback only after pressing Siguiente/Finalizar in immediate mode
+  locked = false;
 
   constructor(private quiz: QuizService, private router: Router) {
     const state = this.quiz.getState();
@@ -72,9 +73,14 @@ export class QuizComponent {
     const ua = state.answers.find(a => a.questionId === this.question?.id);
     this.selectedId = ua?.selectedAnswerId || null;
     this.revealed = this.showImmediate && !!ua; // reveal if this question was already answered
+    this.locked = this.question ? this.quiz.isQuestionLocked(this.question.id) : false;
   }
 
   select(id: string) {
+    // Prevent changes if locked or already revealed in immediate mode
+    if (this.locked || (this.showImmediate && this.revealed)) {
+      return;
+    }
     // Only select; do not answer/evaluate until pressing Siguiente/Finalizar
     this.selectedId = id;
   }

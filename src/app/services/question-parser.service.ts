@@ -52,7 +52,7 @@ export class QuestionParserService {
       const blockMatch = /^#BLOCK\s+(\d+)/i.exec(line);
       if (blockMatch) {
         flush();
-        currentBlock = parseInt(blockMatch[0], 10);
+        currentBlock = parseInt(blockMatch[1], 10);
         continue;
       }
       if (line.startsWith('Q:')) {

@@ -5,6 +5,7 @@ import { QuizConfig, QuizState, Question, UserAnswer } from '../models';
 export class QuizService {
   private state: QuizState | null = null;
   private questionBank: Question[] = [];
+  private lockedQuestions = new Set<string>();
 
   setQuestionBank(questions: Question[]) {
     this.questionBank = questions;
@@ -17,6 +18,8 @@ export class QuizService {
   startQuiz(config: QuizConfig) {
     // Filter by block
     let pool = this.questionBank;
+    // reset locks
+    this.lockedQuestions.clear();
     if (config.blockId !== 'all') {
       pool = pool.filter(q => q.blockId === config.blockId);
     }
@@ -40,15 +43,31 @@ export class QuizService {
     return this.state.questions[this.state.currentIndex] || null;
   }
 
+  isQuestionLocked(questionId: string): boolean {
+    return this.lockedQuestions.has(questionId);
+  }
+
+  isCurrentQuestionLocked(): boolean {
+    const q = this.getCurrentQuestion();
+    return !!(q && this.isQuestionLocked(q.id));
+  }
+
   answerCurrentQuestion(answerId: string): UserAnswer | null {
     if (!this.state) return null;
     const q = this.getCurrentQuestion();
     if (!q) return null;
+    // If question is locked, do not allow changes
+    if (this.lockedQuestions.has(q.id)) {
+      const existing = this.state.answers.find(a => a.questionId === q.id) || null;
+      return existing;
+    }
     const isCorrect = q.correctAnswerId === answerId;
     const ua: UserAnswer = { questionId: q.id, selectedAnswerId: answerId, isCorrect };
     // Record or update
     const idx = this.state.answers.findIndex(a => a.questionId === q.id);
     if (idx >= 0) this.state.answers[idx] = ua; else this.state.answers.push(ua);
+    // Lock after answering so it cannot be changed later
+    this.lockedQuestions.add(q.id);
     return ua;
   }
 

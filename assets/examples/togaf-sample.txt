@@ -615,3 +615,303 @@ B) Architecture Scopes
 C) Business Unit
 D) *Enterprises
 
+Q: Which of the following is NOT a phase in the TOGAF ADM?  
+A) Architecture Vision  
+B) Requirements Management  
+C) Architecture Change Management  
+D) *Strategy Implementation
+
+Q: Which of the following is NOT an architecture domain in TOGAF?  
+A) Business  
+B) *Security  
+C) Data  
+D) Application
+
+Q: What is the main output of the Architecture Vision phase?  
+A) *Architecture Vision Document  
+B) Implementation Roadmap  
+C) Architecture Requirements Specification  
+D) Solution Building Blocks
+
+Q: What is the Enterprise Continuum in TOGAF?  
+A) *A classification method for architecture artifacts  
+B) The process of architecture governance  
+C) An architecture repository  
+D) A corporate catalog
+
+Q: Which of the following is NOT a key activity in the Requirements Management phase?  
+A) Capture requirements  
+B) Analyze requirements  
+C) Prioritize requirements  
+D) *Deploy solutions
+
+Q: Which phase aims to ensure the architecture is implemented correctly?  
+A) *Implementation Governance (Phase G)  
+B) Architecture Vision (Phase A)  
+C) Technology Architecture (Phase D)  
+D) Opportunities and Solutions (Phase E)
+
+Q: What is the objective of Migration Planning (Phase F)?  
+A) *Develop work packages and transition architectures  
+B) Establish the architecture vision  
+C) Define business requirements  
+D) Assess solution building blocks
+
+Q: In TOGAF, which is NOT a key purpose of the Preliminary Phase?  
+A) Define architecture principles  
+B) Establish the architecture team  
+C) *Create the solution vision  
+D) Set up the Architecture Repository
+
+Q: Which of the following best describes a Solution Building Block (SBB)?  
+A) *A reusable component in a solution  
+B) The governance process  
+C) Stakeholder analysis  
+D) Requirements prioritization
+
+Q: Which phase assesses if the implemented solution meets the architecture intent?  
+A) *Implementation Governance (Phase G)  
+B) Technology Architecture (Phase D)  
+C) Migration Planning (Phase F)  
+D) Requirements Management
+
+Q: Which of the following is a main component of the Architecture Content Framework?  
+A) *Architecture Building Blocks  
+B) Project Portfolio  
+C) Business Principles  
+D) Change Requests
+
+Q: What is a key deliverable of the Preliminary Phase?  
+A) *Architecture Principles  
+B) Solutions Architecture  
+C) Target Architecture  
+D) Performance Metrics
+
+Q: Which domain is NOT defined by TOGAF as part of enterprise architecture?  
+A) Business  
+B) Application  
+C) *Networking  
+D) Data
+
+Q: What type of artifact is a Stakeholder Map?  
+A) *Catalog  
+B) Matrix  
+C) Diagram  
+D) Principle
+
+Q: The purpose of the Requirements Management phase is to:  
+A) *Manage architecture requirements throughout the ADM cycle  
+B) Develop the business case  
+C) Define solution architecture  
+D) Identify stakeholders
+
+Q: Which document describes the work to be done in the ADM cycle?  
+A) *Statement of Architecture Work  
+B) Implementation Roadmap  
+C) Architecture Contract  
+D) Migration Plan
+
+Q: Which of the following is an example of a reusable solution element?  
+A) *Solution Building Block  
+B) Architecture Principle  
+C) Business Scenarios  
+D) Risk Log
+
+Q: In TOGAF, the Architecture Board has responsibility for:  
+A) *Architecture governance  
+B) Solution development  
+C) Change management  
+D) Portfolio planning
+
+Q: Which phase ensures the transition from baseline to target architecture is planned and managed?  
+A) *Opportunities and Solutions  
+B) Architecture Vision  
+C) Preliminary Phase  
+D) Architecture Change Management
+
+Q: What is the primary focus of the Technology Architecture phase?  
+A) *Defining the logical and physical technology infrastructure  
+B) Selecting business applications  
+C) Defining the migration roadmap  
+D) Managing stakeholders
+
+Q: What is the TOGAF Resource Base?  
+A) *A set of guidelines, templates, and reference materials  
+B) The enterprise meta-model  
+C) A catalog of target architectures  
+D) Project management documentation
+
+Q: Which of the following is produced in the Business Architecture phase?  
+A) *Business Architecture Model  
+B) Architectural Principles  
+C) Technology Requirements  
+D) Solution Contracts
+
+Q: What is meant by “Architecture Repository”?  
+A) *A structured store of architectural output and resources  
+B) A stakeholder management tool  
+C) A requirements backlog  
+D) A list of design patterns
+
+Q: What is the correct order of the four architecture domains in ADM cycle?  
+A) Business, Data, Application, Technology  
+B) *Business, Data, Application, Technology  
+C) Technology, Business, Application, Data  
+D) Data, Application, Business, Technology
+
+Q: Who is responsible for communicating the architecture vision to stakeholders?  
+A) *Architecture Sponsor  
+B) Solution Architect  
+C) Business Analyst  
+D) Service Manager
+
+Q: What does the Architecture Contract specify?  
+A) *Agreements on deliverables, quality, and conformance  
+B) List of implemented solutions  
+C) Project cost breakdown  
+D) Technical constraints only
+
+Q: What is a deliverable?  
+A) *A contractually specified work product  
+B) A reusable repository entry  
+C) A matrix or diagram  
+D) A stakeholder request
+
+Q: Which phase addresses changes after implementation?  
+A) *Architecture Change Management (Phase H)  
+B) Preliminary Phase  
+C) Technology Architecture  
+D) Requirements Management
+
+Q: What is the purpose of Business Scenarios in TOGAF?  
+A) *To discover and document business requirements  
+B) To identify technical solutions  
+C) To define organization charts  
+D) To allocate work packages
+
+Q: A concern of an architecture stakeholder is best described as:  
+A) *An area of interest or worry  
+B) A process  
+C) A project plan  
+D) A budget line item
+
+Q: Who is accountable for architecture compliance in TOGAF?
+A) Architecture Governance Board
+B) Architecture Sponsor
+C) *Architecture Board
+D) Solution Architect
+
+Q: Which phase addresses unsolved business requirements?
+A) Migration Planning
+B) *Requirements Management
+C) Technology Architecture
+D) Preliminary
+
+Q: What is the primary focus of the Data Architecture phase?
+A) Solution selection
+B) Stakeholder analysis
+C) *Definition and sourcing of data structures
+D) Quality review
+
+Q: What does the Architecture Contract formalize?
+A) Budget reconciliation
+B) Solution selection
+C) *Agreements on deliverables and conformance
+D) Stakeholder sign-off
+
+Q: Which artifact type records roles and responsibilities?
+A) Matrix
+B) Catalog
+C) *Diagram
+D) Principle
+
+Q: What is the Architecture Content Framework used for?
+A) *Classifying architecture artifacts and their relationships
+B) Managing business cases
+C) Roadmap creation
+D) Requirements prioritization
+
+Q: When should the Architecture Change Management phase be triggered?
+A) At the start of every cycle
+B) *When major changes impact architecture
+C) After stakeholder sign-off
+D) During migration only
+
+Q: What is the purpose of the Architecture Vision phase?
+A) Roadmap definition
+B) *Stakeholder buy-in and high-level solution definition
+C) Team formation
+D) Risk mitigation
+
+Q: Which element describes reusable standards and guidelines?
+A) Matrix
+B) Principle
+C) *Architecture Building Block
+D) Catalog
+
+Q: What is the deliverable of the Opportunities and Solutions phase?
+A) Implementation report
+B) *Work packages and solution roadmap
+C) Requirements backlog
+D) Technology contracts
+
+Q: The Preliminary Phase primarily establishes:
+A) Solution contracts
+B) Implementation schedules
+C) *Architecture principles and governance structures
+D) Data models
+
+Q: What document provides an overview of the transformation strategy?
+A) Stakeholder map
+B) *Architecture Vision Document
+C) Principle catalog
+D) Requirements register
+
+Q: In TOGAF, “concerns” refer to:
+A) Risks only
+B) Technical constraints
+C) *Stakeholder interests and areas of focus
+D) Team feedback
+
+Q: What is the main role of the Solution Building Block?
+A) Documentation generation
+B) *Reusable architecture components for solutions
+C) Business stakeholder engagement
+D) Data model enumeration
+
+Q: What defines the legal agreement about solution development?
+A) Stakeholder Matrix
+B) Implementation Roadmap
+C) *Architecture Contract
+D) Solution Building Block
+
+Q: What drives changes in the Requirements Management phase?
+A) Baseline architecture
+B) *Unmet stakeholder or business needs
+C) Data architecture
+D) Migration planning
+
+Q: Who validates and signs off the final Architecture Vision?
+A) Solution Architect
+B) Architecture Board
+C) *Architecture Sponsor
+D) Technology Lead
+
+Q: The Implementation Governance phase is responsible for:
+A) Vendor selection
+B) *Ensuring consistent implementation with architecture
+C) Data migration
+D) Initial project funding
+
+Q: What is the purpose of Migration Planning?
+A) Technology selection
+B) *Define and prioritize work packages for transition
+C) Establishing principles
+D) Capturing requirements
+
+Q: What is a key deliverable of the Business Architecture phase?
+A) Process catalog
+B) *Business Architecture Model
+C) Implementation contract
+D) Architecture roadmap
+

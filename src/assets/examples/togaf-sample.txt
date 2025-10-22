@@ -373,7 +373,7 @@ B) To describe how an architecture addresses stakeholder concerns
 C) To identify and understand business requirements
 D) *To structure re-usable architecture and solution assets
 
-Q: Consider the following ADM phases objectives.  Which phase does each objective match?
+Q: Consider the following ADM phases objectives. Which phase does each objective match?
 <image>assets/q13_block0_image.png</image>
 A) 1-A, 2-B, 3-C, 4-D
 B) 1-B, 2-D, 3-A, 4-C
@@ -537,11 +537,6 @@ B) No, Enterprise Architecture helps to describe the future state and the curren
 C) *Yes, a good Enterprise Architecture facilitates effective governance, management, risk management, and exploitation opportunities.
 D) Yes, an Enterprise Architecture team experienced in current technology will be able to take the key decisions needed for such a change.
 
-Q: What are the levels of the Architecture Landscape?
-A) Baseline, Transition, and Target Architectures
-B) Business, Data, Application, and Technology Architectures
-C) *Capability, Segment, and Strategic Architectures
-D) Foundation, Common, and Solution Architectures
 
 Q: Which of the following best describes how Architecture Governance typically operates?
 A) At the top level of the organization
@@ -1172,3 +1167,74 @@ A) To define project timelines
 B) To manage stakeholder communication
 C) *To organize and classify architecture artifacts
 D) To store implementation contracts
+
+Q: What is the III-RM in TOGAF?
+A) *Information Infrastructure Reference Model
+B) Integrated Information Reference Model
+C) International Infrastructure Reference Model
+D) Internet Infrastructure Reference Model
+
+Q: What is the relationship between Foundation Architectures and Organization-Specific Architectures in the Enterprise Continuum?
+A) They are completely separate
+B) *Foundation Architectures are more generic, Organization-Specific are more specific
+C) Organization-Specific Architectures are more generic
+D) They are identical
+
+Q: What is the primary purpose of the Baseline Architecture?
+A) To define future requirements
+B) *To represent the current state of the organization
+C) To manage project risks
+D) To control implementation costs
+
+Q: Which TOGAF component provides guidance on architecture governance?
+A) ADM only
+B) Enterprise Continuum only
+C) *Architecture Capability Framework
+D) TRM only
+
+Q: What is the purpose of Architecture Contracts?
+A) To define legal agreements between vendors
+B) *To formalize governance and compliance responsibilities
+C) To manage software licenses
+D) To control project budgets
+
+Q: What does SIB stand for in TOGAF?
+A) *Standards Information Base
+B) System Integration Board
+C) Strategic Implementation Blueprint
+D) Service Interface Boundary
+
+Q: What is the purpose of Architecture Landscape?
+A) To design gardens
+B) *To provide a holistic view of the architecture across time
+C) To manage physical infrastructure
+D) To plan office layouts
+
+Q: Complete the sentence. The TOGAF Standard covers the development of four architecture domains, Application, Data, Technology, and …………
+A) *Business
+B) Capability
+C) Transformation
+D) Transition
+
+Q: Consider the following descriptions of deliverables consumed and produced across the TOGAF Architecture Development Method (ADM) cycle:
+1 It provides a summary of the changes to the enterprise that will accrue from successful deployment of the Target Architecture.
+2 The joint agreement between development partners and sponsors on the deliverables, quality, and fitness-for-purpose of an architecture.
+3 A document that is sent from the sponsoring organization to the architecture organization to trigger the start of an architecture development cycle.
+4 The deliverable container for the core architectural artifacts created during a project and for important related information.
+Which deliverables match these descriptions?
+A) *1 Architecture Vision – 2 Architecture Contract – 3 Request for Architecture Work – 4 Architecture Definition Document
+B) 1 Architecture Vision – 2 Request for Architecture Work – 3 Architecture Vision – 4 Architecture Definition Document
+C) 1 Change Request – 2 Architecture Contract – 3. Architecture Definition Document - 4 Request for Architecture Work
+D) 1 Request for Architecture Work – 2 Architecture Definition Document – 3 Architecture Contract – 4 Architecture Vision
+
+Q: What are the levels of the Architecture Landscape?
+A) Baseline, Transition, and Target Architectures
+B) Business, Data, Application, and Technology Architectures
+C) *Capability, Segment, and Strategic Architectures
+D) Foundation, Common, and Solution Architecture
+
+Q: Complete the sentence. Architecture Contracts …………
+A) provide a quantitative view of the effort to produce the solution
+B) *ensure monitoring and audit of implementation-related activities of the architecture
+C) should include agreements with all parties involved in delivery of the architecture
+D) permit deviations from the principles, standards, and requirements of the architecture

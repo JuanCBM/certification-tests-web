@@ -1,2 +1,0 @@
-// Bloque 0 - Nuevas preguntas añadidas el 2025-10-12
-#BLOCK 0

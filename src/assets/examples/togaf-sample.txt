@@ -915,3 +915,254 @@ B) *Business Architecture Model
 C) Implementation contract
 D) Architecture roadmap
 
+Q: What is the primary purpose of TOGAF?
+A) To manage IT projects
+B) To implement software solutions
+C) To design databases
+D) *To provide a framework for enterprise architecture
+
+Q: How many phases are there in the TOGAF ADM (Architecture Development Method)?
+A) 7
+B) 8
+C) *9
+D) 10
+
+Q: What is the Enterprise Continuum?
+A) A method for project management
+B) *A view of the Architecture Repository
+C) A software development methodology
+D) A database design pattern
+
+Q: Which ADM phase focuses on establishing the Architecture Vision?
+A) Preliminary Phase
+B) *Phase A
+C) Phase B
+D) Phase C
+
+Q: What is the primary role of the Architecture Board?
+A) To implement technology solutions
+B) *To provide governance for architecture activities
+C) To manage software development
+D) To handle project budgets
+
+Q: Which of the following is NOT one of the four architecture domains in TOGAF?
+A) Business Architecture
+B) Data Architecture
+C) *Process Architecture
+D) Technology Architecture
+
+Q: What is the purpose of Phase B in the ADM?
+A) Technology Architecture development
+B) *Business Architecture development
+C) Implementation governance
+D) Architecture change management
+
+Q: What does TRM stand for in TOGAF?
+A) *Technology Reference Model
+B) Technical Requirements Matrix
+C) Technology Resource Management
+D) Technical Risk Model
+
+Q: Which ADM phase deals with Migration Planning?
+A) Phase E
+B) *Phase F
+C) Phase G
+D) Phase H
+
+Q: What is a key characteristic of the Requirements Management process?
+A) It only occurs at the beginning of the ADM
+B) *It runs continuously throughout the ADM cycle
+C) It only occurs at the end of the ADM
+D) It is optional in the ADM
+
+Q: What is the primary output of the Preliminary Phase?
+A) Architecture Vision
+B) Business Architecture
+C) *Architecture Framework customized for the organization
+D) Technology Architecture
+
+Q: Which ADM phase focuses on Technology Architecture?
+A) Phase B
+B) Phase C
+C) *Phase D
+D) Phase E
+
+Q: What is the purpose of architecture governance?
+A) To increase project costs
+B) *To ensure architecture compliance and effectiveness
+C) To slow down development processes
+D) To eliminate the need for documentation
+
+Q: What does ADM stand for?
+A) *Architecture Development Method
+B) Application Design Model
+C) Advanced Data Management
+D) Automated Development Methodology
+
+Q: Which phase in the ADM deals with Implementation Governance?
+A) Phase F
+B) *Phase G
+C) Phase H
+D) Requirements Management
+
+Q: What is the Architecture Repository?
+A) A software development tool
+B) *A holding area for architecture-related deliverables
+C) A project management system
+D) A database design pattern
+
+Q: What is a Stakeholder in TOGAF context?
+A) Only the project manager
+B) *Anyone with interests in or concerns about the architecture
+C) Only the IT department
+D) Only external customers
+
+Q: What is the purpose of Phase C in the ADM?
+A) Business Architecture development
+B) *Information Systems Architectures development
+C) Technology Architecture development
+D) Implementation planning
+
+Q: What is an Architecture Principle?
+A) A specific technology solution
+B) *A general rule and guideline for architecture work
+C) A project management methodology
+D) A software development pattern
+
+Q: What is the primary focus of Phase E in the ADM?
+A) Technology selection
+B) Business requirements
+C) *Opportunities and Solutions
+D) Architecture governance
+
+Q: In TOGAF, what is the relationship between the Architecture Vision and the Business Architecture?
+A) The Architecture Vision is derived from the Business Architecture
+B) The Business Architecture is developed before the Architecture Vision
+C) *The Architecture Vision sets the direction for the Business Architecture
+D) They are unrelated phases in the ADM
+
+Q: Which component of the Architecture Repository contains reusable building blocks?
+A) Architecture Requirements Repository
+B) *Architecture Building Blocks (ABBs)
+C) Standards Information Base
+D) Governance Log
+
+Q: What is the role of the Enterprise Continuum in TOGAF?
+A) To define project timelines
+B) To manage stakeholder communication
+C) *To classify and organize architectural artifacts
+D) To store implementation contracts
+
+Q: How does TOGAF recommend handling stakeholder concerns?
+A) Ignore concerns not related to IT
+B) *Capture and address concerns through views and viewpoints
+C) Only consider concerns during Phase A
+D) Use a fixed template for all stakeholders
+
+Q: What distinguishes Architecture Building Blocks (ABBs) from Solution Building Blocks (SBBs)?
+A) ABBs are used only in Phase G
+B) SBBs are theoretical models
+C) *ABBs are abstract and reusable; SBBs are concrete and implementable
+D) There is no difference
+
+Q: What is the purpose of the Architecture Content Framework?
+A) To define project budgets
+B) *To provide a structured metamodel for architectural artifacts
+C) To manage software development
+D) To document stakeholder meetings
+
+Q: In which ADM phase is the Transition Architecture defined?
+A) Phase B
+B) Phase D
+C) *Phase E
+D) Phase H
+
+Q: What is the role of the Architecture Contract in TOGAF?
+A) To define legal terms with vendors
+B) *To govern implementation and ensure compliance with architecture
+C) To manage stakeholder expectations
+D) To document project risks
+
+Q: Which TOGAF concept helps ensure traceability from requirements to implementation?
+A) Architecture Vision
+B) *Architecture Requirements Repository
+C) Architecture Board
+D) Architecture Principles
+
+Q: What is the benefit of using TOGAF’s Capability-Based Planning approach?
+A) It focuses only on IT systems
+B) It ignores business goals
+C) *It aligns architecture with business capabilities and outcomes
+D) It simplifies stakeholder analysis
+
+Q: What is the role of the Architecture Development Cycle in TOGAF?
+A) To define business goals
+B) *To guide the creation and evolution of enterprise architecture
+C) To manage project budgets
+D) To implement software solutions
+
+Q: Which ADM phase is responsible for monitoring the implementation and ensuring it conforms to the architecture?
+A) Phase F
+B) *Phase G
+C) Phase H
+D) Phase E
+
+Q: What is the purpose of the Architecture Vision phase?
+A) To define the final solution architecture
+B) *To establish a high-level aspirational view of the capabilities and value
+C) To implement the architecture
+D) To manage stakeholder contracts
+
+Q: What is the difference between Foundation Architecture and Common Systems Architecture?
+A) Foundation Architecture is specific to a project
+B) Common Systems Architecture is more abstract
+C) *Foundation Architecture provides generic services; Common Systems Architecture provides reusable solutions
+D) There is no difference
+
+Q: What is the role of the Architecture Content Framework?
+A) To define the phases of the ADM
+B) *To provide a structured model for architectural deliverables
+C) To manage stakeholder concerns
+D) To document project timelines
+
+Q: Which of the following best describes a Capability in TOGAF?
+A) A software tool
+B) A stakeholder role
+C) *An ability that an organization, person, or system possesses
+D) A phase in the ADM
+
+Q: What is the purpose of the Requirements Management phase?
+A) To define business goals
+B) To implement architecture
+C) *To ensure requirements are identified, stored, and managed throughout the ADM
+D) To manage stakeholder contracts
+
+Q: What is the role of the Architecture Principles?
+A) To define project budgets
+B) *To guide decision-making and ensure consistency in architecture development
+C) To manage software development
+D) To document stakeholder feedback
+
+Q: Which of the following is a key benefit of using TOGAF?
+A) Faster software development
+B) *Standardized approach to enterprise architecture
+C) Reduced need for stakeholder engagement
+D) Elimination of documentation
+
+Q: What is the role of the Architecture Board?
+A) To manage IT operations
+B) To implement architecture
+C) *To provide governance and ensure compliance with architecture standards
+D) To define business strategy
+
+Q: What is the purpose of the Standards Information Base in TOGAF?
+A) To store architecture principles
+B) To define stakeholder roles
+C) *To provide a repository of industry standards and guidelines
+D) To document project timelines
+
+Q: What is the purpose of the Architecture Capability Framework in TOGAF?
+A) To define the phases of the ADM
+B) To provide tools for software development
+C) *To establish organizational structures, processes, and roles for architecture practice
+D) To manage stakeholder communication

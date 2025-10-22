@@ -1166,3 +1166,9 @@ A) To define the phases of the ADM
 B) To provide tools for software development
 C) *To establish organizational structures, processes, and roles for architecture practice
 D) To manage stakeholder communication
+
+Q: What is the purpose of the Enterprise Continuum in TOGAF?
+A) To define project timelines
+B) To manage stakeholder communication
+C) *To organize and classify architecture artifacts
+D) To store implementation contracts

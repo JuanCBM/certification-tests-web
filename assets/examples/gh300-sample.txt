@@ -71,4 +71,46 @@ B) GitHub Copilot Pro.
 C) *GitHub Copilot Pro+.
 D) GitHub Copilot for Business.
 
+#BLOCK 3
+Q: What's GitHub Copilot?
+A) A platform for code repositories.
+B) A model powered by machine learning.
+C) *An assistant for coding, powered by OpenAI.
+D) A service for web hosting.
 
+Q: How does GitHub Copilot handle personal data?
+A) It saves all personal data for future references.
+B) It shares personal data with other users for collaborative projects.
+C) It encrypts personal data.
+D) *It actively filters out personal data to protect user privacy.
+
+Q: What is LoRA in the context of fine-tuning Large Language Models (LLMs)?
+A) *A method that adds trainable elements to each layer of the pretrained model without a complete overhaul.
+B) A technology optimizing communication between different coding languages.
+C) A specialized software library enhancing Copilot's performance.
+D) A new programming paradigm supported exclusively by Copilot.
+
+Q: How does Copilot use the context to provide code suggestions?
+A) It considers only the prompt text you provide.
+B) It considers the file type but not the content of the file.
+C) *It considers the surrounding code, file type, and content of parallel open tabs in the code editor.
+D) It randomly selects context from the internet.
+
+#BLOCK 4
+Q: What role does prompting play in utilizing GitHub Copilot effectively?
+A) It generates instant bug fixes.
+B) *It enhances the quality of code suggestions.
+C) It automates the coding process entirely.
+D) It implements real-time collaboration.
+
+Q: Which of the following rules is a principle of the 4S Method of prompt engineering?
+A) Summarize code objectives concisely.
+B) *Specify instructions explicitly and in detail.
+C) Streamline processes for efficient code suggestions.
+D) Simplify coding languages for universal understanding.
+
+Q: Which of these strategies helps to improve prompt effectiveness in GitHub Copilot?
+A) *Providing detailed contextual information with clarity.
+B) Making the prompt as general as possible.
+C) Keeping the prompt lengthy and detailed.
+D) Avoiding examples in the prompt to not restrict Copilot's creativity.

@@ -1,6 +1,6 @@
 // Sample questions file for GH-300
 // Use #BLOCK n to indicate domain, Q: for the question and A)/B)/C)/D) for options.
-// Mark the correct answer with *
+// *Mark the correct answer with
 // Domains:
 // 1: Responsible AI (7%)
 // 2: GitHub Copilot plans and features (31%)
@@ -11,177 +11,64 @@
 // 7: Privacy fundamentals and context exclusions (15%)
 
 #BLOCK 1
-Q: What is the fundamental principle of Responsible AI?
-A) Maximize efficiency
-B) Minimize cost
-C) *Ensure fairness and transparency
-D) Automate processes
+Q: What is the primary goal of Responsible AI?
+A) To maximize profits from AI systems.
+B) To develop AI systems as quickly as possible.
+C) *To ensure AI systems are safe, trustworthy, and ethical.
+D) To replace human decision-making with AI.
 
-Q: What aspect is NOT part of Responsible AI?
-A) Transparency
-B) Fairness
-C) *Maximize profits
-D) Privacy
+Q: Which principle is NOT one of the six identified by Microsoft for Responsible AI?
+A) Fairness.
+B) *Innovation.
+C) Inclusiveness.
+D) Accountability.
 
-Q: Why is Responsible AI important?
-A) Only to comply with regulations
-B) *To build trust and minimize biases
-C) To accelerate development
-D) To reduce costs
+Q: What does the principle of Fairness in Responsible AI emphasize?
+A) Maximizing AI performance at all costs.
+B) *Ensuring AI systems perform equally well across all demographic groups.
+C) Prioritizing profitability over ethical concerns.
+D) Creating AI systems that are easy to understand.
+
+Q: How does Microsoft address potential biases in AI systems?
+A) By ignoring the issue and focusing on other areas.
+B) By providing AI systems with more data.
+C) *By reviewing training data, testing with balanced samples, and using adversarial debiasing.
+D) By allowing users to modify AI system outputs directly.
+
+Q: What is the role of transparency in Microsoft's Responsible AI principles?
+A) To keep AI operations secret from the public.
+B) *To make AI systems' operations and decisions understandable and clear.
+C) To hide the limitations of AI systems.
+D) To prioritize efficiency over ethical considerations.
+
+Q: Why is it important for developers to closely scrutinize AI-generated code?
+A) To reduce development time.
+B) *To ensure that the code aligns with project-specific conventions and requirements.
+C) To enhance the creative aspect of coding.
+D) To automatically improve system performance.
 
 #BLOCK 2
-Q: Which GitHub Copilot plan allows enterprise use?
-A) Personal
-B) *Business
-C) Free
-D) Student
+Q: What is GitHub Copilot?
+A) *An AI programming companion that can be used to get code suggestions.
+B) OpenAI Codex, a new artificial intelligence system created by OpenAI.
+C) A public JavaScript repository and one of the best supported languages.
+D) A tool that can write a comment describing the logic and suggest code to implement the solution.
 
-Q: What is a feature of the GitHub Copilot Business plan?
-A) Unlimited use without restrictions
-B) *Policy management at the organizational level
-C) Only available for students
-D) Does not include support
+Q: Which IDE extensions are supported by GitHub Copilot?
+A) VS Code and Visual Studio.
+B) GitHub.com, VS Code, Visual Studio, Neovim and JetBrains.
+C) *VS Code, Visual Studio, Neovim and JetBrains.
 
-Q: What does GitHub Copilot Individual include?
-A) *Real-time code suggestions
-B) Enterprise management
-C) Access to all private repositories
-D) 24/7 priority support
+Q: What is the difference between GitHub Copilot Business and GitHub Copilot Enterprise?
+A) GitHub Copilot Enterprise has code completions, while GitHub Copilot Business does not.
+B) GitHub Copilot Enterprise has IDE and mobile chat, while GitHub Copilot Business does not.
+C) *GitHub Copilot Enterprise has an additional layer of customization. Organizations use their own codebase to train GitHub Copilot.
+D) GitHub Copilot Enterprise has an additional level of security, with IP indemnification and enterprise-level security, protection and privacy.
 
-Q: GitHub Copilot is available as an extension for which IDEs?
-A) Only Visual Studio Code
-B) *VS Code, Visual Studio, JetBrains, Neovim
-C) Only JetBrains
-D) Only web browsers
+Q: Which plan includes all Pro features plus additional premium usage and access to priority infrastructure?
+A) GitHub Copilot Free.
+B) GitHub Copilot Pro.
+C) *GitHub Copilot Pro+.
+D) GitHub Copilot for Business.
 
-Q: Which languages does GitHub Copilot support best?
-A) Only Python
-B) Only JavaScript
-C) *Multiple languages including Python, JavaScript, TypeScript, Ruby, Go
-D) Only Microsoft languages
-
-Q: What is a limitation of GitHub Copilot?
-A) Does not work without internet
-B) *May suggest code with vulnerabilities if not reviewed
-C) Only works in English
-D) Requires a dedicated GPU
-
-Q: What type of suggestions can Copilot provide?
-A) Only simple lines
-B) Only comments
-C) *From individual lines to complete functions
-D) Only error correction
-
-#BLOCK 3
-Q: How does Copilot handle user data?
-A) Stores it indefinitely
-B) *Does not retain user code by default
-C) Shares it with third parties
-D) Publishes it on GitHub
-
-Q: Does GitHub Copilot train its models with user code?
-A) Yes, always
-B) *No by default, only with explicit consent
-C) Only for free users
-D) Only for public projects
-
-Q: What information does Copilot use to generate suggestions?
-A) All GitHub history
-B) *The context of the current file and related files
-C) All user repositories
-D) Only the selected code
-
-Q: How is data transmitted to GitHub Copilot?
-A) Without encryption
-B) *Through encrypted connections (HTTPS/TLS)
-C) By email
-D) Via FTP
-
-#BLOCK 4
-Q: What is important when creating a prompt for Copilot?
-A) Be vague
-B) *Be specific and clear
-C) Use only keywords
-D) Make it as long as possible
-
-Q: What technique improves Copilot suggestions?
-A) Write code without comments
-B) *Provide context through descriptive comments
-C) Use single-letter variable names
-D) Avoid using functions
-
-Q: What is a good example of a prompt?
-A) "function"
-B) *"// Function that validates an email and returns true if valid"
-C) "do something"
-D) "code"
-
-#BLOCK 5
-Q: What is Copilot NOT suitable for?
-A) Generate repetitive code
-B) *Replace security reviews
-C) Suggest code examples
-D) Help with unit tests
-
-Q: How can Copilot help in development?
-A) Completely replaces developers
-B) *Accelerates repetitive tasks and provides examples
-C) Guarantees error-free code
-D) Eliminates the need for testing
-
-Q: In what cases is Copilot useful?
-A) Only for beginners
-B) *To explore new APIs and generate boilerplate
-C) Only for experts
-D) Only for small projects
-
-Q: Can Copilot help with documentation?
-A) No, only generates code
-B) *Yes, can generate comments and documentation
-C) Only in English
-D) Only for Python code
-
-#BLOCK 6
-Q: How can Copilot help in testing?
-A) *Suggests test cases
-B) Runs tests automatically
-C) Publishes results
-D) Eliminates errors automatically
-
-Q: Can Copilot generate unit tests?
-A) No, never
-B) *Yes, can suggest tests based on code
-C) Only for JavaScript
-D) Only if you ask in English
-
-Q: What type of tests can Copilot help create?
-A) Only manual tests
-B) *Unit, integration and E2E tests
-C) Only performance tests
-D) None
-
-#BLOCK 7
-Q: What ensures privacy in Copilot?
-A) Share all context
-B) *Exclude sensitive information from context
-C) Enable public mode
-D) Use only long prompts
-
-Q: How can files be excluded from Copilot's context?
-A) Not possible
-B) *Through configuration files like .copilotignore
-C) Only by contacting support
-D) Uninstalling the extension
-
-Q: What should be excluded from Copilot's context?
-A) All code
-B) *Secrets, tokens, passwords and sensitive data
-C) Only comments
-D) Configuration files
-
-Q: Does GitHub Copilot respect code licenses?
-A) No, ignores licenses
-B) *May suggest code with different licenses, user must review
-C) Only suggests open source code
-D) Only suggests proprietary code
 

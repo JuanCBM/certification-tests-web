@@ -32,15 +32,12 @@ import { QuizService } from '../../services/quiz.service';
 
       <div class="row">
         <div>
-          <label>Bloque</label>
+          <label>Bloque/Dominio</label>
           <select [(ngModel)]="block" (ngModelChange)="onBlockChange()">
             <option [ngValue]="'all'">0. Todos (aleatorio)</option>
-            <option [ngValue]="1">1. Concepts</option>
-            <option [ngValue]="2">2. Introduction to the ADM</option>
-            <option [ngValue]="3">3. Introduction to ADM Techniques</option>
-            <option [ngValue]="4">4. Introduction to Applying the ADM</option>
-            <option [ngValue]="5">5. Introduction to Architecture Governance</option>
-            <option [ngValue]="6">6. Architecture Content</option>
+            <ng-container *ngFor="let b of currentBlocks">
+              <option [ngValue]="b.id">{{ b.id }}. {{ b.name }}</option>
+            </ng-container>
           </select>
         </div>
         <div>
@@ -64,6 +61,19 @@ import { QuizService } from '../../services/quiz.service';
 export class HomeComponent {
   certifications: Certification[] = [
     {
+      id: 'gh300',
+      title: 'GH-300 - GitHub Copilot',
+      blocks: [
+        { id: 1, name: 'Responsible AI (7%)' },
+        { id: 2, name: 'GitHub Copilot plans and features (31%)' },
+        { id: 3, name: 'How GitHub Copilot works and handles data (15%)' },
+        { id: 4, name: 'Prompt Crafting and Prompt Engineering (9%)' },
+        { id: 5, name: 'Developer use cases for AI (14%)' },
+        { id: 6, name: 'Testing with GitHub Copilot (9%)' },
+        { id: 7, name: 'Privacy fundamentals and context exclusions (15%)' }
+      ]
+    },
+    {
       id: 'togaf10',
       title: 'TOGAF 10 - Foundation',
       blocks: [
@@ -78,6 +88,7 @@ export class HomeComponent {
   ];
 
   selectedCertId: string | null = null;
+  currentBlocks: any[] = [];
   block: number | 'all' = 'all';
   count = 10;
   mode: 'immediate' | 'end' = 'immediate';
@@ -92,18 +103,20 @@ export class HomeComponent {
 
   selectCertification(certId: string) {
     this.selectedCertId = certId;
+    const cert = this.certifications.find(c => c.id === certId);
+    this.currentBlocks = cert ? cert.blocks : [];
+    this.block = 'all';
     this.loadQuestionsForCertification(certId);
   }
 
   private getAssetPath(certId: string): string {
     switch (certId) {
+      case 'gh300':
+        return 'assets/examples/gh300-sample.txt';
       case 'togaf10':
         return 'assets/examples/togaf-sample.txt';
-      case 'whatever':
-        // Usa el mismo sample como placeholder; sustituye por el tuyo si procede
-        return 'assets/examples/togaf-sample.txt';
       default:
-        return 'assets/examples/togaf-sample.txt';
+        return 'assets/examples/gh300-sample.txt';
     }
   }
 

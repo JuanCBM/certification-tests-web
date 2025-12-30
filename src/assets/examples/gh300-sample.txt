@@ -1,0 +1,187 @@
+// Sample questions file for GH-300
+// Use #BLOCK n to indicate domain, Q: for the question and A)/B)/C)/D) for options.
+// Mark the correct answer with *
+// Domains:
+// 1: Responsible AI (7%)
+// 2: GitHub Copilot plans and features (31%)
+// 3: How GitHub Copilot works and handles data (15%)
+// 4: Prompt Crafting and Prompt Engineering (9%)
+// 5: Developer use cases for AI (14%)
+// 6: Testing with GitHub Copilot (9%)
+// 7: Privacy fundamentals and context exclusions (15%)
+
+#BLOCK 1
+Q: What is the fundamental principle of Responsible AI?
+A) Maximize efficiency
+B) Minimize cost
+C) *Ensure fairness and transparency
+D) Automate processes
+
+Q: What aspect is NOT part of Responsible AI?
+A) Transparency
+B) Fairness
+C) *Maximize profits
+D) Privacy
+
+Q: Why is Responsible AI important?
+A) Only to comply with regulations
+B) *To build trust and minimize biases
+C) To accelerate development
+D) To reduce costs
+
+#BLOCK 2
+Q: Which GitHub Copilot plan allows enterprise use?
+A) Personal
+B) *Business
+C) Free
+D) Student
+
+Q: What is a feature of the GitHub Copilot Business plan?
+A) Unlimited use without restrictions
+B) *Policy management at the organizational level
+C) Only available for students
+D) Does not include support
+
+Q: What does GitHub Copilot Individual include?
+A) *Real-time code suggestions
+B) Enterprise management
+C) Access to all private repositories
+D) 24/7 priority support
+
+Q: GitHub Copilot is available as an extension for which IDEs?
+A) Only Visual Studio Code
+B) *VS Code, Visual Studio, JetBrains, Neovim
+C) Only JetBrains
+D) Only web browsers
+
+Q: Which languages does GitHub Copilot support best?
+A) Only Python
+B) Only JavaScript
+C) *Multiple languages including Python, JavaScript, TypeScript, Ruby, Go
+D) Only Microsoft languages
+
+Q: What is a limitation of GitHub Copilot?
+A) Does not work without internet
+B) *May suggest code with vulnerabilities if not reviewed
+C) Only works in English
+D) Requires a dedicated GPU
+
+Q: What type of suggestions can Copilot provide?
+A) Only simple lines
+B) Only comments
+C) *From individual lines to complete functions
+D) Only error correction
+
+#BLOCK 3
+Q: How does Copilot handle user data?
+A) Stores it indefinitely
+B) *Does not retain user code by default
+C) Shares it with third parties
+D) Publishes it on GitHub
+
+Q: Does GitHub Copilot train its models with user code?
+A) Yes, always
+B) *No by default, only with explicit consent
+C) Only for free users
+D) Only for public projects
+
+Q: What information does Copilot use to generate suggestions?
+A) All GitHub history
+B) *The context of the current file and related files
+C) All user repositories
+D) Only the selected code
+
+Q: How is data transmitted to GitHub Copilot?
+A) Without encryption
+B) *Through encrypted connections (HTTPS/TLS)
+C) By email
+D) Via FTP
+
+#BLOCK 4
+Q: What is important when creating a prompt for Copilot?
+A) Be vague
+B) *Be specific and clear
+C) Use only keywords
+D) Make it as long as possible
+
+Q: What technique improves Copilot suggestions?
+A) Write code without comments
+B) *Provide context through descriptive comments
+C) Use single-letter variable names
+D) Avoid using functions
+
+Q: What is a good example of a prompt?
+A) "function"
+B) *"// Function that validates an email and returns true if valid"
+C) "do something"
+D) "code"
+
+#BLOCK 5
+Q: What is Copilot NOT suitable for?
+A) Generate repetitive code
+B) *Replace security reviews
+C) Suggest code examples
+D) Help with unit tests
+
+Q: How can Copilot help in development?
+A) Completely replaces developers
+B) *Accelerates repetitive tasks and provides examples
+C) Guarantees error-free code
+D) Eliminates the need for testing
+
+Q: In what cases is Copilot useful?
+A) Only for beginners
+B) *To explore new APIs and generate boilerplate
+C) Only for experts
+D) Only for small projects
+
+Q: Can Copilot help with documentation?
+A) No, only generates code
+B) *Yes, can generate comments and documentation
+C) Only in English
+D) Only for Python code
+
+#BLOCK 6
+Q: How can Copilot help in testing?
+A) *Suggests test cases
+B) Runs tests automatically
+C) Publishes results
+D) Eliminates errors automatically
+
+Q: Can Copilot generate unit tests?
+A) No, never
+B) *Yes, can suggest tests based on code
+C) Only for JavaScript
+D) Only if you ask in English
+
+Q: What type of tests can Copilot help create?
+A) Only manual tests
+B) *Unit, integration and E2E tests
+C) Only performance tests
+D) None
+
+#BLOCK 7
+Q: What ensures privacy in Copilot?
+A) Share all context
+B) *Exclude sensitive information from context
+C) Enable public mode
+D) Use only long prompts
+
+Q: How can files be excluded from Copilot's context?
+A) Not possible
+B) *Through configuration files like .copilotignore
+C) Only by contacting support
+D) Uninstalling the extension
+
+Q: What should be excluded from Copilot's context?
+A) All code
+B) *Secrets, tokens, passwords and sensitive data
+C) Only comments
+D) Configuration files
+
+Q: Does GitHub Copilot respect code licenses?
+A) No, ignores licenses
+B) *May suggest code with different licenses, user must review
+C) Only suggests open source code
+D) Only suggests proprietary code
+

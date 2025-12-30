@@ -13,7 +13,12 @@ import { QuizConfig } from '../../models';
   template: `
     <div class="card">
       <h1>Configurar examen</h1>
-      <p>Sube tu archivo de preguntas en texto plano. Marca la respuesta correcta con un *. Opcionalmente usa #BLOCK n para indicar el bloque (incluido #BLOCK 0). Si no indicas bloque, se asigna el bloque 0 por defecto y entra en "Todos".</p>
+      <label>Certificación</label>
+      <select [(ngModel)]="certificationId" (ngModelChange)="onCertificationChange()">
+        <option value="gh300">GH-300 - GitHub Copilot</option>
+        <option value="togaf10">TOGAF 10 - Foundation</option>
+      </select>
+      <p>Sube tu archivo de preguntas en texto plano. Marca la respuesta correcta con un *. Usa #BLOCK n para indicar el bloque/dominio.</p>
       <input type="file" (change)="onFile($event)" accept=".txt,.md,.text" />
       <div *ngIf="totalQuestions > 0" class="badge">{{ totalQuestions }} preguntas cargadas</div>
     </div>
@@ -21,15 +26,12 @@ import { QuizConfig } from '../../models';
     <div class="card">
       <div class="row">
         <div>
-          <label>Bloque</label>
+          <label>Bloque/Dominio</label>
           <select [(ngModel)]="block">
             <option [ngValue]="'all'">0. Todos (aleatorio)</option>
-            <option [ngValue]="1">1. Concepts</option>
-            <option [ngValue]="2">2. Introduction to the ADM</option>
-            <option [ngValue]="3">3. Introduction to ADM Techniques</option>
-            <option [ngValue]="4">4. Introduction to Applying the ADM</option>
-            <option [ngValue]="5">5. Introduction to Architecture Governance</option>
-            <option [ngValue]="6">6. Architecture Content</option>
+            <ng-container *ngFor="let b of currentBlocks">
+              <option [ngValue]="b.id">{{ b.id }}. {{ b.name }}</option>
+            </ng-container>
           </select>
         </div>
         <div>
@@ -51,11 +53,37 @@ import { QuizConfig } from '../../models';
   `
 })
 export class SetupComponent {
-  certificationId = 'togaf10';
+  certifications = [
+    {
+      id: 'gh300',
+      blocks: [
+        { id: 1, name: 'Responsible AI (7%)' },
+        { id: 2, name: 'GitHub Copilot plans and features (31%)' },
+        { id: 3, name: 'How GitHub Copilot works and handles data (15%)' },
+        { id: 4, name: 'Prompt Crafting and Prompt Engineering (9%)' },
+        { id: 5, name: 'Developer use cases for AI (14%)' },
+        { id: 6, name: 'Testing with GitHub Copilot (9%)' },
+        { id: 7, name: 'Privacy fundamentals and context exclusions (15%)' }
+      ]
+    },
+    {
+      id: 'togaf10',
+      blocks: [
+        { id: 1, name: 'Concepts' },
+        { id: 2, name: 'Introduction to the ADM' },
+        { id: 3, name: 'Introduction to ADM Techniques' },
+        { id: 4, name: 'Introduction to Applying the ADM' },
+        { id: 5, name: 'Introduction to Architecture Governance' },
+        { id: 6, name: 'Architecture Content' }
+      ]
+    }
+  ];
+  certificationId = 'gh300';
   block: number | 'all' = 'all';
   count = 10;
   mode: 'immediate' | 'end' = 'immediate';
   totalQuestions = 0;
+  currentBlocks = this.certifications[0].blocks;
 
   constructor(
     private route: ActivatedRoute,
@@ -64,7 +92,16 @@ export class SetupComponent {
     private quiz: QuizService
   ) {
     const qp = this.route.snapshot.queryParamMap;
-    this.certificationId = qp.get('certificationId') || 'togaf10';
+    this.certificationId = qp.get('certificationId') || 'gh300';
+    this.onCertificationChange();
+  }
+
+  onCertificationChange() {
+    const cert = this.certifications.find(c => c.id === this.certificationId);
+    this.currentBlocks = cert ? cert.blocks : [];
+    this.block = 'all';
+    this.totalQuestions = 0;
+    this.quiz.setQuestionBank([]);
   }
 
   get maxCount() {

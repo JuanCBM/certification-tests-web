@@ -115,7 +115,7 @@ B) Making the prompt as general as possible.
 C) Keeping the prompt lengthy and detailed.
 D) Avoiding examples in the prompt to not restrict Copilot's creativity.
 
-# BLOCK 5
+#BLOCK 5
 Q: Which of the following describes how GitHub Copilot helps reduce context switching?
 A) By automatically committing code to GitHub.
 B) *By offering inline suggestions inside the IDE.
@@ -206,7 +206,7 @@ B) *Generated edge case test suggestions.
 C) Threat modeling.
 D) Database migration scripts.
 
-# BLOCK 0
+#BLOCK 0
 Q: Which command opens Copilot Chat?
 A) `/open chat`
 B) *`Ctrl+Shift+I`

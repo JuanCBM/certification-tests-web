@@ -115,6 +115,97 @@ B) Making the prompt as general as possible.
 C) Keeping the prompt lengthy and detailed.
 D) Avoiding examples in the prompt to not restrict Copilot's creativity.
 
+# BLOCK 5
+Q: Which of the following describes how GitHub Copilot helps reduce context switching?
+A) By automatically committing code to GitHub.
+B) *By offering inline suggestions inside the IDE.
+C) By generating deployment pipelines.
+D) By running debugging sessions automatically.
+
+Q: A developer is learning a new programming language and needs help understanding unfamiliar APIs. How can GitHub Copilot assist?
+A) By searching Stack Overflow automatically.
+B) By generating runnable executables.
+C) *By suggesting context-aware code examples.
+D) By rewriting entire projects without user input.
+
+Q: What documentation-related task can GitHub Copilot help automate?
+A) Writing legal license texts.
+B) Automatically publishing documentation online.
+C) *Generating README structure and inline comments.
+D) Changing version numbers in release notes.
+
+Q: Which of the following is a valid example of Copilot automating "the boring stuff"?
+A) Designing microservice architecture.
+B) *Generating boilerplate setup code.
+C) Creating marketing copy.
+D) Running unit tests on a CI server.
+
+Q: A team wants Copilot to generate ORM models, API endpoints, and test fixtures based on simple descriptions. Which capability best matches this scenario?
+A) Multi-file reasoning.
+B) *Advanced boilerplate automation.
+C) Context exclusion.
+D) Manual review mode.
+
+Q: What is a limitation of using Copilot to generate entire feature scaffolds (end-to-end)?
+A) It cannot generate database schemas.
+B) *It may misunderstand requirements or introduce security issues.
+C) It cannot generate tests.
+D) It cannot read project context.
+
+Q: Which task can GitHub Copilot assist with during PR reviews?
+A) Approving pull requests.
+B) *Drafting review comments with suggestions.
+C) Running CI pipelines.
+D) Deploying to production.
+
+Q: During the requirements phase, how can Copilot help?
+A) By gathering requirements from stakeholders.
+B) *By converting user stories into initial code structures.
+C) By creating production databases.
+D) By deploying pipelines.
+
+Q: Which SDLC phase benefits most from Copilot's ability to generate unit tests?
+A) Development.
+B) Deployment.
+C) *Testing & QA.
+D) Requirements.
+
+Q: Which of the following is a known limitation of GitHub Copilot?
+A) It cannot run inside VS Code.
+B) *It may generate outdated or insecure patterns.
+C) It rejects any incomplete prompts.
+D) It cannot translate between languages.
+
+Q: Which API endpoint allows organizations to track Copilot usage metrics?
+A) GET /orgs/{org}/users.
+B) GET /enterprise/{enterprise}/repos.
+C) *GET /orgs/{org}/copilot/usage.
+D) GET /orgs/{org}/actions/runs.
+
+Q: What does the GitHub Copilot Developer Survey measure?
+A) Financial cost per developer.
+B) *Developer satisfaction, usage challenges, and productivity gains.
+C) Code execution performance.
+D) Project deployment velocity.
+
+Q: A developer is unfamiliar with an older part of the codebase and needs to fix a bug quickly. Which Copilot feature helps most?
+A) *Explain this code.
+B) Repo synchronization.
+C) Automatic refactoring.
+D) Code exclusions.
+
+Q: Your team wants to know whether Copilot really increases productivity after 3 months of use. What should you use?
+A) GitHub Discussions.
+B) *GitHub Copilot usage metrics API.
+C) GitHub Sponsors.
+D) Audit logs.
+
+Q: A developer wants to create tests but is unsure about edge cases. What can Copilot provide?
+A) Test suite orchestration.
+B) *Generated edge case test suggestions.
+C) Threat modeling.
+D) Database migration scripts.
+
 # BLOCK 0
 Q: Which command opens Copilot Chat?
 A) `/open chat`

@@ -114,3 +114,449 @@ A) *Providing detailed contextual information with clarity.
 B) Making the prompt as general as possible.
 C) Keeping the prompt lengthy and detailed.
 D) Avoiding examples in the prompt to not restrict Copilot's creativity.
+
+# BLOCK 0
+Q: Which command opens Copilot Chat?
+A) `/open chat`
+B) *`Ctrl+Shift+I`
+C) `gh copilot chat`
+D) `copilot start`
+
+Q: What is the main goal of responsible AI usage in GitHub Copilot?
+A) Reduce development time regardless of quality.
+B) *Ensure generated code is safe and ethical.
+C) Avoid any human review of generated code.
+D) Automatically share all generated code.
+
+Q: Which practice helps reduce bias in AI-generated code?
+A) *Validate suggestions before accepting them.
+B) Always use generic prompts.
+C) Avoid unit testing.
+D) Disable Copilot in collaborative projects.
+
+Q: Why is it important to review Copilot suggestions before using them?
+A) *To comply with security and quality standards.
+B) Because Copilot guarantees perfect code.
+C) To avoid writing documentation.
+D) To eliminate the need for testing.
+
+Q: What does ?shared responsibility? mean in generative AI context?
+A) The model is solely responsible for the code.
+B) *Developer and AI share responsibility.
+C) The admin assumes all responsibility.
+D) GitHub assumes all responsibility.
+
+Q: Which action demonstrates ethical use of Copilot in collaborative projects?
+A) Hide the origin of generated code.
+B) *Inform teams about AI usage.
+C) Publish all code without review.
+D) Ignore company policies.
+
+Q: Which feature is exclusive to GitHub Copilot Enterprise?
+A) *Integration with internal systems.
+B) Unlimited personal licenses.
+C) Complete AI deactivation.
+D) Removal of telemetry.
+
+Q: Which languages are supported by GitHub Copilot?
+A) Only Python and Java.
+B) *Multiple popular languages like JavaScript, Python, Go.
+C) Exclusively C++.
+D) Only compiled languages.
+
+Q: What does ?context awareness? mean in Copilot?
+A) Ignore existing code.
+B) *Adapt suggestions based on file context.
+C) Generate random code.
+D) Disable AI in large projects.
+
+Q: What is the advantage of using Copilot in private repositories?
+A) *Greater security and control.
+B) Public access to code.
+C) Elimination of reviews.
+D) Automatic documentation without control.
+
+Q: What are ?slash commands? in Copilot Chat?
+A) Commands to execute scripts.
+B) *Shortcuts for actions like explaining code.
+C) Tools to disable Copilot.
+D) Commands to delete history.
+
+Q: How do you activate Copilot in Visual Studio Code?
+A) *Install the official extension.
+B) Configure GitHub Actions.
+C) Use CLI commands.
+D) Enable from GitHub Pages.
+
+Q: Which option allows disabling Copilot for specific files?
+A) *Add file to Copilot ignore list.
+B) Remove GitHub integration.
+C) Delete repository.
+D) Disable IDE completely.
+
+Q: What is the function of ?Explain code? in Copilot Chat?
+A) *Provides natural language explanation of code.
+B) Runs unit tests automatically.
+C) Deploys code to production.
+D) Configures security policies.
+
+Q: Which statement about telemetry in Copilot is correct?
+A) Telemetry is mandatory for all plans.
+B) *Telemetry can be disabled in Enterprise plans.
+C) Telemetry stores code permanently.
+D) Telemetry is unrelated to Copilot usage.
+
+Q: Which plan offers centralized policy management?
+A) GitHub Copilot Free.
+B) GitHub Copilot Pro.
+C) *GitHub Copilot for Business.
+D) GitHub Copilot Pro+.
+
+Q: How are licenses assigned in Copilot Business?
+A) *Through GitHub Admin Console.
+B) Via GitHub Pages.
+C) From the IDE settings.
+D) Using CLI only.
+
+Q: Which policies can be enforced in Copilot Enterprise?
+A) *Content exclusion.
+B) *Suggestion auditing.
+C) Automatic deployment.
+D) Disable IDE features.
+
+Q: Which report can admins generate for Copilot usage?
+A) *License consumption report.
+B) *Suggestion acceptance report.
+C) Automated deployment logs.
+D) GitHub Pages analytics.
+
+Q: Which command opens Copilot Chat in VS Code?
+A) `/open chat`
+B) *`Ctrl+Shift+I`
+C) `gh copilot chat`
+D) `copilot start`
+
+Q: How do you enable Copilot in JetBrains IDEs?
+A) *Install Copilot plugin from JetBrains Marketplace.
+B) Configure GitHub Actions.
+C) Use CLI only.
+D) Activate from GitHub Pages.
+
+Q: Which feature helps generate unit tests automatically?
+A) *Copilot inline suggestions.
+B) GitHub Actions.
+C) GitHub Pages.
+D) Disable telemetry.
+
+Q: What is the difference between inline and block completions?
+A) Inline completions suggest one line.
+B) *Block completions suggest multiple lines.
+C) Inline completions require CLI.
+D) Block completions only work in CLI.
+
+Q: Which command activates Copilot in CLI?
+A) `copilot start`
+B) `gh ai init`
+C) *`gh copilot enable`
+D) `copilot-cli activate`
+
+Q: What does the ?explain? mode in Copilot CLI do?
+A) *Explains shell commands in natural language.
+B) Executes scripts automatically.
+C) Deletes history.
+D) Configures IDE settings.
+
+Q: How does Copilot integrate with Git in CLI?
+A) *Suggests commit messages.
+B) Runs automated merges.
+C) Deletes branches.
+D) Configures GitHub Pages.
+
+Q: Which limitation applies to Copilot CLI?
+A) *Limited to shell and Git commands.
+B) Cannot run in VS Code.
+C) Requires Enterprise license.
+D) Works only offline.
+
+Q: How is Copilot implemented in corporate environments?
+A) *By configuring organizational policies.
+B) Using GitHub Pages.
+C) Activating from CLI only.
+D) Removing telemetry completely.
+
+Q: Which advantage does Copilot Enterprise offer over Business?
+A) *Integration with internal systems.
+B) Unlimited free licenses.
+C) Automatic deployment.
+D) Removal of IDE features.
+
+Q: How is security managed in Copilot Enterprise?
+A) *Through policy enforcement and auditing.
+B) By disabling Copilot completely.
+C) By removing GitHub integration.
+D) By deleting repositories.
+
+Q: Which customization options exist for enterprises?
+A) *Content exclusion.
+B) *Telemetry control.
+C) Automatic deployment.
+D) GitHub Pages analytics.
+
+Q: Which feature allows generating documentation automatically?
+A) *Copilot Chat ?Explain? command.
+B) GitHub Pages.
+C) GitHub Actions.
+D) CLI only.
+
+Q: What is prompt engineering in Copilot?
+A) *Crafting effective prompts for better suggestions.
+B) Writing random code.
+C) Disabling AI features.
+D) Configuring IDE themes.
+
+Q: Which languages benefit most from Copilot?
+A) *Popular languages like Python, JavaScript.
+B) Only compiled languages.
+C) Exclusively C++.
+D) Shell scripts only.
+
+Q: Which option disables Copilot temporarily in IDE?
+A) *Toggle Copilot in settings.
+B) Delete repository.
+C) Remove GitHub integration.
+D) Disable telemetry.
+
+Q: Which command generates documentation from IDE?
+A) `/doc`
+B) *`/explain`
+C) `/deploy`
+D) `/test`
+
+Q: Which feature improves multi-language projects?
+A) *Context-aware suggestions.
+B) Disable Copilot.
+C) Remove telemetry.
+D) CLI only.
+
+Q: Which role manages billing in Copilot Business?
+A) *Organization admin.
+B) Developer.
+C) GitHub Pages admin.
+D) CLI operator.
+
+Q: Which option allows auditing Copilot suggestions?
+A) *Enterprise policy settings.
+B) GitHub Pages.
+C) CLI only.
+D) IDE themes.
+
+Q: Which report helps track Copilot adoption?
+A) *Usage analytics report.
+B) GitHub Pages views.
+C) CLI logs.
+D) IDE themes.
+
+Q: Which command starts Copilot CLI session?
+A) `copilot start`
+B) *`gh copilot chat`
+C) `gh ai init`
+D) `copilot-cli activate`
+
+Q: Which feature explains shell commands in CLI?
+A) `/run`
+B) `/deploy`
+C) *`/explain`
+D) `/test`
+
+Q: Which plan includes centralized policy enforcement?
+A) GitHub Copilot Free.
+B) GitHub Copilot Pro.
+C) *GitHub Copilot for Business.
+D) GitHub Copilot Pro+.
+
+Q: Which feature is unique to Copilot Enterprise?
+A) *Integration with internal systems.
+B) Unlimited free licenses.
+C) Automatic deployment.
+D) Removal of IDE features.
+
+Q: Which option improves security in Copilot usage?
+A) *Review and test generated code.
+B) Accept all suggestions blindly.
+C) Disable unit tests.
+D) Share code publicly.
+
+Q: Which practice ensures ethical AI usage?
+A) *Inform teams about AI usage.
+B) Hide AI involvement.
+C) Publish code without review.
+D) Ignore company policies.
+
+Q: Which feature helps generate commit messages?
+A) *Copilot CLI integration.
+B) GitHub Pages.
+C) GitHub Actions.
+D) IDE themes.
+
+Q: Which command enables Copilot in CLI?
+A) `copilot start`
+B) *`gh copilot enable`
+C) `gh ai init`
+D) `copilot-cli activate`
+
+Q: Which customization is available in Enterprise?
+A) *Telemetry control.
+B) GitHub Pages analytics.
+C) Automatic deployment.
+D) CLI only.
+
+Q: Which feature explains code in natural language?
+A) *Copilot Chat ?Explain? command.
+B) GitHub Pages.
+C) GitHub Actions.
+D) CLI only.
+
+Q: Which option disables Copilot for specific files?
+A) *Add file to ignore list.
+B) Delete repository.
+C) Remove GitHub integration.
+D) Disable IDE completely.
+
+Q: Which languages are supported by Copilot?
+A) Only Python and Java.
+B) *Multiple popular languages like JavaScript, Python, Go.
+C) Exclusively C++.
+D) Only compiled languages.
+
+Q: Which role manages Copilot licenses?
+A) *Organization admin.
+B) Developer.
+C) GitHub Pages admin.
+D) CLI operator.
+
+Q: Which report tracks suggestion acceptance?
+A) *Enterprise usage report.
+B) GitHub Pages views.
+C) CLI logs.
+D) IDE themes.
+
+Q: Which command opens Copilot Chat?
+A) `/open chat`
+B) *`Ctrl+Shift+I`
+C) `gh copilot chat`
+D) `copilot start`
+
+Q: Which feature improves multi-line completions?
+A) *Block suggestions.
+B) Inline suggestions only.
+C) CLI only.
+D) Disable Copilot.
+
+Q: When is a GitHub Copilot Space the better choice than general or repo-wide chat?
+A) When you need broad discovery across many repositories.
+B) *When you want consistent, reproducible answers on a tightly scoped topic.
+C) When you want Copilot to automatically discover any relevant content in your org.
+D) When you have no specific task or domain in mind.
+
+Q: Which statement about Space ownership and description is true?
+A) A Space must be organization-owned; personal Spaces aren't supported.
+B) The description changes Copilot's answers in the Space.
+C) *You can choose personal or organization ownership (where available), and the description is for human readers.
+D) Ownership can't be changed once set, and descriptions affect answer quality.
+
+Q: Which action does NOT add usable context for Copilot in a Space?
+A) Attaching files or folders from a GitHub repository.
+B) Pasting URLs of GitHub issues and pull requests.
+C) Uploading a local file (for example, a text document or spreadsheet).
+D) *@-mentioning a Copilot extension so it can run in Space chat.
+
+Q: How do Spaces handle security and access to linked items?
+A) A Space grants temporary read access to all linked private repositories.
+B) *A Space mirrors GitHub permissions and surfaces only what a viewer can already see.
+C) A Space creates a copy of private content that anyone with the link can access.
+D) A Space requires repo admins to approved list each viewer manually.
+
+Q: You need branch-specific guidance or a historical snapshot in a Space. What should you do?
+A) Change the repository's default branch to lock Space answers to that branch.
+B) Rely on general chat to retrieve older versions automatically.
+C) *Narrow references to relevant files and add a brief example, or attach a text file with the exact content.
+D) Paste the sensitive historical content into free-text notes for convenience.
+
+Q: Which prompting pattern best supports runnable, verifiable outputs in a Space?
+A) Ask for a summary without constraints to keep the model creative.
+B) *Confirm intent, add concrete constraints (formats, ranges, file paths), and request executable outputs with references.
+C) Use many broad instructions to widen the context as much as possible.
+D) Avoid referencing attached sources to prevent overfitting.
+
+Q: You notice size warnings and increasingly vague answers from your Space. What's the best next step?
+A) Add more examples to increase context so the model has more to learn from.
+B) *Reduce sources or split the Space into smaller, single-job Spaces.
+C) Start @-mentioning people to pull in their expertise.
+D) Turn off repository linking so the Space doesn't change.
+
+
+Q: What is ghost text in GitHub Copilot?
+A) *Ghost text are suggestions that appear in your text editor as you type.
+B) Ghost text are options used when typing to provide suggestions.
+C) Ghost text involves using prompts and natural language questions within your code or documentation.
+D) Ghost text are automated commit messages generated by Copilot.
+
+Q: How do you access GitHub Copilot's inline chat?
+A) Access the inline chat by clicking on the chat icon in the left sidebar of Visual Studio Code.
+B) *Use Ctrl+i on Windows or Command+i on a Mac to open the inline chat.
+C) Access the inline chat by using Alt+i on Windows or Option+i on a Mac.
+D) Type `/chat` in the command palette to open inline chat.
+
+Q: What are slash commands used for in GitHub Copilot?
+A) Slash commands are used to format your codebase according to best practices.
+B) Slash commands are used to debug code and detect security vulnerabilities within your projects.
+C) *Slash commands are shortcuts to quickly solve common development tasks within the chat or inline pane.
+D) Slash commands are used to configure GitHub repository settings.
+
+Q: What are the benefits of using agents like '@terminal' or '@workspace' when interacting with GitHub Copilot?
+A) *Agents help you ask questions within a specific context, allowing for more precise and relevant answers from GitHub Copilot.
+B) Agents help enforce a consistent code format based on best practices within Visual Studio Code for improved readability.
+C) Agents provide extra security features for detecting vulnerabilities and intrusions within Visual Studio Code projects.
+D) Agents automatically deploy code to production environments.
+
+Q: What are the benefits of using implicit prompts with slash commands in inline chat for fixing code issues with GitHub Copilot?
+A) Implicit prompts help enforce a consistent naming convention and syntax based on best practices within Visual Studio Code projects for improved readability.
+B) *Implicit prompts help get better responses from GitHub Copilot without writing longer prompts, making it easier to interact and fix code issues.
+C) Implicit prompts help detect security vulnerabilities and potential malicious activities within Visual Studio Code projects for increased safety.
+D) Implicit prompts automatically generate documentation for all code changes.
+
+Q: Which of the following choices isn't mentioned as one of the programming languages receiving strong support from GitHub Copilot?
+A) Python.
+B) JavaScript.
+C) *Rust.
+D) Ruby.
+
+Q: Which slash command in GitHub Copilot Chat is used to generate unit tests for selected code?
+A) /generate.
+B) /test.
+C) */tests.
+D) /unittest.
+
+Q: What is the purpose of the @workspace agent in GitHub Copilot Chat?
+A) To focus only on the current file.
+B) *To extend the context of questions to the whole project.
+C) To run terminal commands.
+D) To change Visual Studio Code settings.
+
+Q: What command would you use to get an explanation of a specific command using GitHub Copilot CLI?
+A) gh copilot suggest.
+B) *gh copilot explain.
+C) gh copilot clarify.
+D) gh copilot describe.
+
+Q: Which of the following is NOT a common use case for GitHub Copilot agent tasks on GitHub.com?
+A) Generating pull request summaries.
+B) Explaining repository code and structure.
+C) *Compiling and deploying applications.
+D) Suggesting code review comments.
+
+Q: When using Copilot Code Review on GitHub.com, what important billing consideration should you be aware of?
+A) It's completely free with no usage limits.
+B) *It consumes Premium Request Units (PRUs).
+C) It only works with paid GitHub Enterprise accounts.
+D) It requires a separate subscription beyond GitHub Copilot.

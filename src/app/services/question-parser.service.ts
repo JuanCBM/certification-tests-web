@@ -16,7 +16,12 @@ import { Question, AnswerOption } from '../models';
  * A) *Correct
  * B) Wrong
  *
+ * #BLOCK -1 (Special: Koenig Questions - maps to block 8)
+ * Q: Koenig question?
+ * A) *Answer
+ *
  * - Blocks are optional; if provided as "#BLOCK n" they will be assigned as blockId=n (including 0 for unassigned)
+ * - BLOCK -1 is special and maps to block 8 (Koenig Questions)
  * - Empty lines separate questions. Lines starting with // are comments.
  */
 @Injectable({ providedIn: 'root' })
@@ -49,10 +54,12 @@ export class QuestionParserService {
       const line = raw.trim();
       if (!line) { flush(); continue; }
       if (line.startsWith('//')) { continue; }
-      const blockMatch = /^#BLOCK\s+(\d+)/i.exec(line);
+      const blockMatch = /^#BLOCK\s+(-?\d+)/i.exec(line);
       if (blockMatch) {
         flush();
-        currentBlock = parseInt(blockMatch[1], 10);
+        const blockNum = parseInt(blockMatch[1], 10);
+        // Map BLOCK -1 to block 8 (Koenig Questions)
+        currentBlock = blockNum === -1 ? 8 : blockNum;
         continue;
       }
       if (line.startsWith('Q:')) {

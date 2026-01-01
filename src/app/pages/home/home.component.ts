@@ -39,27 +39,47 @@ import { QuizService } from '../../services/quiz.service';
               <option [ngValue]="b.id">{{ b.id }}. {{ b.name }}</option>
             </ng-container>
           </select>
+          <div class="info-message" *ngIf="block === 'all'">
+            <small>ℹ️ El bloque "Todos" puede contener más preguntas que la suma de los bloques individuales, ya que incluye preguntas sin categorizar.</small>
+          </div>
         </div>
-        <div>
+        <div *ngIf="mode !== 'review'">
           <label>Nº de preguntas</label>
           <input type="number" [(ngModel)]="count" min="1" [max]="maxCount" />
           <div class="badge">Máx: {{ maxCount }}</div>
+        </div>
+        <div *ngIf="mode === 'review'">
+          <label>Modo Revisión</label>
+          <div class="badge">Se mostrarán todas las {{ maxCount }} preguntas</div>
         </div>
         <div>
           <label>Modo de feedback</label>
           <select [(ngModel)]="mode">
             <option value="immediate">Mostrar al responder</option>
             <option value="end">Mostrar al final</option>
+            <option value="review">Modo Revisión</option>
           </select>
         </div>
       </div>
       <hr />
-      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-        <button class="button" (click)="start()" [disabled]="totalQuestions === 0">Comenzar</button>
-        <button class="button secondary" (click)="startReview()" [disabled]="totalQuestions === 0">Modo Revision ({{ maxCount }} preguntas)</button>
-      </div>
+      <button class="button" (click)="start()" [disabled]="totalQuestions === 0">Comenzar</button>
     </div>
-  `
+  `,
+  styles: [`
+    .info-message {
+      margin-top: 8px;
+      padding: 10px;
+      background-color: #e3f2fd;
+      border-left: 4px solid #2196f3;
+      border-radius: 4px;
+    }
+    
+    .info-message small {
+      color: #1565c0;
+      line-height: 1.5;
+      display: block;
+    }
+  `]
 })
 export class HomeComponent {
   certifications: Certification[] = [
@@ -95,7 +115,7 @@ export class HomeComponent {
   currentBlocks: any[] = [];
   block: number | 'all' = 'all';
   count = 10;
-  mode: 'immediate' | 'end' = 'immediate';
+  mode: 'immediate' | 'end' | 'review' = 'immediate';
   totalQuestions = 0;
 
   constructor(
@@ -158,6 +178,14 @@ export class HomeComponent {
 
   start() {
     if (!this.selectedCertId) return;
+
+    // Si es modo revisión, ir a la página de revisión con todas las preguntas
+    if (this.mode === 'review') {
+      this.startReview();
+      return;
+    }
+
+    // Modo normal (immediate o end)
     const cfg: QuizConfig = {
       certificationId: this.selectedCertId,
       blockId: this.block,

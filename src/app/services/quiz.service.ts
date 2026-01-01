@@ -36,6 +36,18 @@ export class QuizService {
     };
   }
 
+  startQuizWithQuestions(config: QuizConfig, questions: Question[]) {
+    // Start a quiz with specific questions (e.g., incorrect ones)
+    this.lockedQuestions.clear();
+    this.state = {
+      config,
+      questions,
+      currentIndex: 0,
+      answers: [],
+      startedAt: new Date()
+    };
+  }
+
   getState(): QuizState | null { return this.state; }
 
   getCurrentQuestion(): Question | null {

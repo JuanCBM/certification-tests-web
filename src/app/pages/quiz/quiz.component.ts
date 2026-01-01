@@ -41,7 +41,7 @@ import { Question } from '../../models';
     <ng-template #empty>
       <div class="card">
         <h2>No hay preguntas cargadas.</h2>
-        <p>Vuelve al inicio y selecciona una certificación para empezar.</p>
+        <p>Vuelve al inicio y selecciona una certificaciÃ³n para empezar.</p>
       </div>
     </ng-template>
   `
@@ -152,8 +152,8 @@ export class QuizComponent {
     const unansweredCount = totalQuestions - answeredCount;
 
     const message = unansweredCount > 0
-      ? `¿Estás seguro de que quieres terminar el examen?\n\nHas respondido ${answeredCount} de ${totalQuestions} preguntas.\nQuedan ${unansweredCount} preguntas sin responder.`
-      : `¿Estás seguro de que quieres terminar el examen?\n\nHas respondido todas las ${answeredCount} preguntas.`;
+      ? `Â¿EstÃ¡s seguro de que quieres terminar el examen?\n\nHas respondido ${answeredCount} de ${totalQuestions} preguntas.\nQuedan ${unansweredCount} preguntas sin responder.`
+      : `Â¿EstÃ¡s seguro de que quieres terminar el examen?\n\nHas respondido todas las ${answeredCount} preguntas.`;
 
     if (confirm(message)) {
       // Save current answer if there is one selected and not yet saved

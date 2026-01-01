@@ -14,6 +14,7 @@ import { QuizService } from '../../services/quiz.service';
       <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
         <a class="button" routerLink="/">Nuevo examen</a>
         <button class="button secondary" (click)="goToReview()">Ver todas las preguntas con respuestas</button>
+        <button class="button warning" (click)="retryIncorrect()" *ngIf="hasIncorrectAnswers()">Repetir no acertadas ({{ getIncorrectCount() }})</button>
       </div>
     </div>
 
@@ -144,5 +145,66 @@ export class ResultsComponent {
 
   goToReview() {
     this.router.navigate(['/review']);
+  }
+
+  hasIncorrectAnswers(): boolean {
+    return this.review.some(item => {
+      const userAnswer = item.userAnswer;
+      // Include questions with no answer or incorrect answer
+      return !userAnswer || userAnswer !== item.q.correctAnswerId;
+    });
+  }
+
+  getIncorrectCount(): number {
+    return this.review.filter(item => {
+      const userAnswer = item.userAnswer;
+      // Include questions with no answer or incorrect answer
+      return !userAnswer || userAnswer !== item.q.correctAnswerId;
+    }).length;
+  }
+
+  retryIncorrect() {
+    const state = this.quiz.getState();
+    if (!state) return;
+
+    // Filter questions that were not answered or answered incorrectly
+    const incorrectQuestions = this.review
+      .filter(item => {
+        const userAnswer = item.userAnswer;
+        return !userAnswer || userAnswer !== item.q.correctAnswerId;
+      })
+      .map(item => item.q);
+
+    if (incorrectQuestions.length === 0) {
+      alert('No hay preguntas falladas para repetir.');
+      return;
+    }
+
+    const incorrectAnsweredCount = this.review.filter(item =>
+      item.userAnswer && item.userAnswer !== item.q.correctAnswerId
+    ).length;
+    const unansweredCount = this.review.filter(item => !item.userAnswer).length;
+
+    let message = '¿Quieres repetir las preguntas que no has acertado?\n\n';
+    if (incorrectAnsweredCount > 0 && unansweredCount > 0) {
+      message += `Preguntas falladas: ${incorrectAnsweredCount}\nPreguntas sin responder: ${unansweredCount}\nTotal a repetir: ${incorrectQuestions.length}`;
+    } else if (incorrectAnsweredCount > 0) {
+      message += `Preguntas falladas: ${incorrectAnsweredCount}`;
+    } else {
+      message += `Preguntas sin responder: ${unansweredCount}`;
+    }
+
+    if (!confirm(message)) {
+      return;
+    }
+
+    // Create a new quiz with only the incorrect questions
+    const config = {
+      ...state.config,
+      numberOfQuestions: incorrectQuestions.length
+    };
+
+    this.quiz.startQuizWithQuestions(config, incorrectQuestions);
+    this.router.navigate(['/quiz']);
   }
 }

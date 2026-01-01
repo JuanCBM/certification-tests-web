@@ -46,11 +46,11 @@ import { QuizService } from '../../services/quiz.service';
         <div *ngIf="mode !== 'review'">
           <label>Nº de preguntas</label>
           <input type="number" [(ngModel)]="count" min="1" [max]="maxCount" />
-          <div class="badge">Máx: {{ maxCount }}</div>
+          <div class="badge question-count-badge">Máx: {{ maxCount }}</div>
         </div>
         <div *ngIf="mode === 'review'">
           <label>Modo Revisión</label>
-          <div class="badge">Se mostrarán todas las {{ maxCount }} preguntas</div>
+          <div class="badge question-count-badge">Se mostrarán todas las {{ maxCount }} preguntas</div>
         </div>
         <div>
           <label>Modo de feedback</label>
@@ -78,6 +78,10 @@ import { QuizService } from '../../services/quiz.service';
       color: #1565c0;
       line-height: 1.5;
       display: block;
+    }
+    
+    .question-count-badge {
+      margin-top: 8px;
     }
   `]
 })

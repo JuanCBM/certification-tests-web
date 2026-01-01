@@ -34,6 +34,7 @@ import { Question } from '../../models';
         <button class="button secondary" (click)="prev()" [disabled]="index === 0">Anterior</button>
         <button class="button" (click)="next()" *ngIf="index < total - 1">Siguiente</button>
         <button class="button" (click)="finish()" *ngIf="index === total - 1">Finalizar</button>
+        <button class="button warning" (click)="finishEarly()" *ngIf="index < total - 1" style="margin-left: auto;">Terminar Examen</button>
       </div>
     </div>
 
@@ -143,5 +144,27 @@ export class QuizComponent {
 
     this.quiz.finish();
     this.router.navigate(['/results']);
+  }
+
+  finishEarly() {
+    const answeredCount = this.quiz.getState()?.answers.length || 0;
+    const totalQuestions = this.total;
+    const unansweredCount = totalQuestions - answeredCount;
+
+    const message = unansweredCount > 0
+      ? `¿Estás seguro de que quieres terminar el examen?\n\nHas respondido ${answeredCount} de ${totalQuestions} preguntas.\nQuedan ${unansweredCount} preguntas sin responder.`
+      : `¿Estás seguro de que quieres terminar el examen?\n\nHas respondido todas las ${answeredCount} preguntas.`;
+
+    if (confirm(message)) {
+      // Save current answer if there is one selected and not yet saved
+      if (this.selectedId && !this.showImmediate) {
+        this.quiz.answerCurrentQuestion(this.selectedId);
+      } else if (this.selectedId && this.showImmediate && !this.revealed) {
+        this.quiz.answerCurrentQuestion(this.selectedId);
+      }
+
+      this.quiz.finish();
+      this.router.navigate(['/results']);
+    }
   }
 }

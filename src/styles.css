@@ -3,6 +3,7 @@
 .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px;margin:12px 0;box-shadow:0 1px 2px rgba(0,0,0,0.04)}
 .button{display:inline-block;padding:10px 14px;border-radius:8px;border:1px solid #1f6feb;background:#1f6feb;color:#fff;text-decoration:none;cursor:pointer}
 .button.secondary{background:#fff;color:#1f6feb}
+.button.warning{background:#fff;color:#dc2626;border-color:#dc2626}
 .row{display:flex;gap:12px;flex-wrap:wrap}
 .row > *{flex:1 1 280px}
 .badge{display:inline-block;background:#eef2ff;color:#3730a3;border-radius:999px;padding:4px 10px;font-size:12px}

@@ -2995,4 +2995,105 @@ B) *Centralized management of seat licenses and policy enforcement for large tea
 C) Higher priority access to Copilot suggestions, reducing suggestion latency in repositories with high traffic
 D) The ability to integrate Copilot with third-party AI code completion tools
 
+Q: How does GitHub Copilot Agent Mode differ fundamentally from traditional AI?assisted coding tools?
+A) It relies exclusively on step?by?step instructions provided by the user to generate code.
+B) *It dynamically analyzes entire projects, autonomously performs multi?step tasks, and iteratively refines its outputs.
+C) It primarily suggests code snippets based on the immediate context of a single open file.
+D) It provides inline real?time suggestions but cannot refactor or execute code autonomously.
 
+Q: Which approach best describes how GitHub Copilot Agent Mode iteratively improves its generated solutions?
+A) It suggests initial solutions and then requires the developer?s manual intervention to run tests and debug.
+B) *It automatically identifies issues through testing, autonomously fixes errors, and repeats the cycle to refine the solution.
+C) It only generates code once per task and relies entirely on manual review for improvements.
+D) It delegates all code improvements to external testing frameworks and does not autonomously correct errors.
+
+Q: You instruct GitHub Copilot Agent Mode to migrate a legacy JavaScript application to a modern framework. Which actions could the agent perform autonomously?
+A) Provide inline completions only for individual files without modifying dependencies or project structure.
+B) *Identify relevant files, update dependencies, refactor existing code across multiple files, and iteratively validate changes by running tests.
+C) Generate new documentation explaining why the migration should occur but leave code implementation to the developer.
+D) Prompt the developer for manual input at every modification step without autonomously executing any tests.
+
+Q: What is the role of project documentation files (such as README.md) when working with GitHub Copilot Agent Mode?
+A) They serve only as developer reference documents and have no influence on Agent Mode behavior.
+B) *They help the agent understand the intended behavior of the project, influencing how it autonomously performs tasks.
+C) They restrict the agent?s access to code files, preventing unwanted modifications.
+D) Agent Mode completely ignores documentation files and relies solely on file structure and source code.
+
+Q: What is a major limitation developers must consider when using GitHub Copilot Agent Mode?
+A) It requires manual configuration after every code generation to be effective.
+B) *It may struggle with highly specialized domain knowledge or nuanced business logic lacking clear patterns.
+C) It only supports generating code snippets and cannot refactor or execute tests autonomously.
+D) It cannot analyze project structure or dependencies and relies solely on user?provided context.
+
+Q: What does MCP stand for in the context of GitHub?s MCP Server?
+A) Model Collaboration Platform
+B) *Model Context Protocol
+C) Multicloud Provider
+D) Modular Code Process
+
+Q: What is the main advantage of using the GitHub MCP Server instead of local MCP servers?
+A) It requires manual configuration for each project.
+B) *It removes the need for configuration files or Docker.
+C) It only works on mobile devices.
+D) It lacks enterprise authentication support.
+
+Q: Which authentication methods does the GitHub MCP Server support in Visual Studio Code?
+A) OAuth only
+B) Personal Access Token (PAT) only
+C) *OAuth and PAT
+D) Username and password
+
+Q: Why would you use a local MCP Server configuration with Docker?
+A) To avoid using a PAT for authentication
+B) *To access restricted resources or APIs blocked by enterprise policy
+C) To enable OAuth?only authentication
+D) To disable all external integrations
+
+Q: What is the purpose of Copilot Agent Mode when combined with the MCP Server?
+A) To run security audits only
+B) *To allow Copilot to autonomously plan and execute multi?step workflows
+C) To limit Copilot to single?step commands
+D) To restrict Copilot to code summarization only
+
+Q: How do you ensure the Personal Access Token (PAT) is used securely in an MCP Server configuration?
+A) Hard?coding the token in source files
+B) *Entering the token through a secure input prompt
+C) Sharing the token publicly in the repository
+D) Storing the token in plaintext inside the workspace
+
+Q: What troubleshooting step should you try first if MCP Server tools are not working in VS Code?
+A) Reinstall Docker
+B) *Confirm that you?re signed in to your GitHub account in VS Code
+C) Delete the PAT
+D) Remove all server configurations
+
+Q: Which is an example of how the MCP Server extends Copilot capabilities in Agent Mode?
+A) Copilot can only suggest code completions
+B) *Copilot can open issues, manage workflows, and run cross?platform tasks
+C) Copilot cannot interact with GitHub repositories
+D) Copilot disables semantic search
+
+Q: How does GitHub Copilot work?
+A) *GitHub Copilot uses natural?language prompts you write to provide suggestions based on what you type.
+B) GitHub Copilot uses flashing lights to tell you what to write.
+C) GitHub Copilot accepts radio?encoded prompts and generates suggestions accordingly.
+
+Q: What are some characteristics of GitHub Copilot Free?
+A) It is an unrestricted free AI tool that works independently of code editors.
+B) *It provides a limited number of suggestions and chats per month directly in the IDE and on GitHub.com.
+C) It provides an option to slow responses to conserve Copilot Pro quota.
+
+Q: How can you accept GitHub Copilot suggestions?
+A) *Press the Tab key.
+B) Press F1.
+C) Press F4.
+
+Q: Identify the valid definition of a prompt:
+A) A prompt, which is our output, is a collection of songs that instructs GitHub Copilot what to generate.
+B) *A prompt, which is our input, is a collection of instructions or guidelines that tells GitHub Copilot what to generate.
+C) A prompt, which is a standalone document, is a collection of instructions telling GitHub Copilot what to generate.
+
+Q: What does the quality of GitHub Copilot?s output depend on?
+A) Your code editor
+B) How well extensions were installed
+C) *The quality of your prompt design

@@ -40,26 +40,24 @@ import { QuizService } from '../../services/quiz.service';
             </ng-container>
           </select>
         </div>
-        <div *ngIf="mode !== 'review'">
+        <div>
           <label>Nº de preguntas</label>
           <input type="number" [(ngModel)]="count" min="1" [max]="maxCount" />
           <div class="badge">Máx: {{ maxCount }}</div>
-        </div>
-        <div *ngIf="mode === 'review'">
-          <label>Modo Revisión</label>
-          <div class="badge">Se mostrarán todas las {{ maxCount }} preguntas</div>
         </div>
         <div>
           <label>Modo de feedback</label>
           <select [(ngModel)]="mode">
             <option value="immediate">Mostrar al responder</option>
             <option value="end">Mostrar al final</option>
-            <option value="review">Modo Revisión (ver todas las respuestas)</option>
           </select>
         </div>
       </div>
       <hr />
-      <button class="button" (click)="start()" [disabled]="totalQuestions === 0">Comenzar</button>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <button class="button" (click)="start()" [disabled]="totalQuestions === 0">Comenzar</button>
+        <button class="button secondary" (click)="startReview()" [disabled]="totalQuestions === 0">Modo Revision ({{ maxCount }} preguntas)</button>
+      </div>
     </div>
   `
 })
@@ -97,7 +95,7 @@ export class HomeComponent {
   currentBlocks: any[] = [];
   block: number | 'all' = 'all';
   count = 10;
-  mode: 'immediate' | 'end' | 'review' = 'immediate';
+  mode: 'immediate' | 'end' = 'immediate';
   totalQuestions = 0;
 
   constructor(
@@ -160,33 +158,30 @@ export class HomeComponent {
 
   start() {
     if (!this.selectedCertId) return;
-
-    // Si es modo revisión, usar todas las preguntas disponibles según el bloque seleccionado
-    if (this.mode === 'review') {
-      const allQuestions = this.quiz.getQuestionBank();
-      const filteredCount = this.block === 'all'
-        ? allQuestions.length
-        : allQuestions.filter(q => q.blockId === this.block).length;
-
-      const cfg: QuizConfig = {
-        certificationId: this.selectedCertId,
-        blockId: this.block,
-        numberOfQuestions: filteredCount,
-        feedbackMode: 'immediate' // No importa para revisión
-      };
-      this.quiz.startQuiz(cfg);
-      this.router.navigate(['/review']);
-      return;
-    }
-
-    // Modo normal (immediate o end)
     const cfg: QuizConfig = {
       certificationId: this.selectedCertId,
       blockId: this.block,
       numberOfQuestions: Math.max(1, Math.min(this.count, this.maxCount)),
-      feedbackMode: this.mode as 'immediate' | 'end'
+      feedbackMode: this.mode
     };
     this.quiz.startQuiz(cfg);
     this.router.navigate(['/quiz']);
+  }
+
+  startReview() {
+    if (!this.selectedCertId) return;
+    const allQuestions = this.quiz.getQuestionBank();
+    const filteredCount = this.block === 'all'
+      ? allQuestions.length
+      : allQuestions.filter(q => q.blockId === this.block).length;
+
+    const cfg: QuizConfig = {
+      certificationId: this.selectedCertId,
+      blockId: this.block,
+      numberOfQuestions: filteredCount,
+      feedbackMode: 'immediate'
+    };
+    this.quiz.startQuiz(cfg);
+    this.router.navigate(['/review']);
   }
 }

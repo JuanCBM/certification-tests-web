@@ -315,6 +315,25 @@ C) Disable duplication detection.
 D) Delete all .yaml files to be safe.
 
 
+Q: Which GitHub Copilot plan includes enterprise-grade security and privacy?
+A) Pro
+B) Business
+C) Enterprise
+D) *Both B and C
+
+Q: What should you do if GitHub Copilot isn't providing code suggestions?
+A) Restart the computer
+B) *Check the internet connection
+C) Disable the Copilot extension
+D) Change the programming language
+
+Q: What is the purpose of the content exclusion feature in GitHub Copilot?
+A) To enhance code completion accuracy
+B) *To prevent specific files or repositories from being used for code suggestions
+C) To increase the speed of code suggestions
+D) To provide legal protection against IP claims
+
+
 #BLOCK 0
 Q: Which command opens Copilot Chat?
 A) `/open chat`
@@ -2915,4 +2934,65 @@ A) *Tab
 B) Ctrl + Enter
 C) Shift + Tab
 D) Alt + C
+
+Q: Which Microsoft ethical AI principle is aimed at ensuring AI systems treat all people equally?
+A) Privacy and Security
+B) *Fairness
+C) Reliability and Safety
+D) Inclusiveness
+
+Q: What can be done during AI development to minimize bias?
+A) Collect massive amounts of data for training.
+B) Focus on accuracy of the data.
+C) *Use diverse data, fairness metrics, and human oversight.
+D) Improve on the computational efficiency and speed.
+
+Q: Why is it important to ensure the security of the code used in Generative AI (Gen AI) tools?
+A) *Ensuring code security prevents unauthorized access and potential data breaches.
+B) Ensuring code security enables the AI system to handle larger datasets effectively.
+C) Ensuring code security maintains the integrity of the AI system.
+D) Ensuring code security supports the development of more advanced AI features.
+
+Q: A social media manager wants to use AI to filter content. How can they promote transparency in the platform's AI operations?
+A) *By providing clear explanations about the types of content the AI is designed to filter and how it arrives at its conclusion.
+B) By relying on a well-regarded AI development company.
+C) By regularly updating the AI filtering algorithm.
+D) By focusing on user satisfaction with the content filtering
+
+Q: What is the primary role of the '/optimize' slash command in Visual Studio?
+A) Translates code into a more performant language.
+B) Automatically formats the code according to the selected style guide.
+C) Summarizes your documentation into more maintainable and readable formats.
+D) *Enhances the performance of the selected code by analyzing its runtime complexity.
+
+Q: You are working on a web application that handles sensitive user data, including Personally Identifiable Information (PII) such as names, email addresses, and social security numbers (SSNs). To comply with privacy regulations like GDPR, you want to ensure that sensitive data is anonymized or excluded in certain contexts, such as logging or analytics. GitHub Copilot suggests code for logging user information during a troubleshooting process. Here is the initial function: def log_user_data(user): print(f"User data: {user.name}, {user.email}, {user.ssn}")
+A) def log_user_data(user): print(f"User data: {user.name}, {user.email}")
+B) def log_user_data(user): log_data = {"name": user.name, "email": user.email, "ssn": user.ssn if "debug" in user.role else "hidden"}; print(f"User data: {log_data}")
+C) def log_user_data(user): log_data = {"name": user.name, "email": user.email, "ssn": hash(user.ssn)}; print(f"User data: {log_data}")
+D) *def log_user_data(user): print(f"User data: {user.name}, {user.email}, 'ssn': '***'")
+
+Q: What is the process behind identifying public code matches when using a public code filter enabled in GitHub Copilot?
+A) *Running code suggestions through filters designed to detect public code
+B) Comparing suggestions against public code using machine learning.
+C) Analyzing the context and structure of the code being written
+D) Reviewing the user's browsing history to identify public repositories
+
+Q: You are working on a Python project in your integrated development environment (IDE), and you activate GitHub Copilot to assist you with code suggestions. As you begin typing, Copilot provides a series of code snippets. You want to understand how GitHub Copilot generates these suggestions and handles data at each step. Which of the following best describes the lifecycle of how GitHub Copilot processes your input and provides a code suggestion?
+A) GitHub Copilot retrieves the code from a pre-trained local database on your machine, matches it to similar code snippets from your previous projects, and presents suggestions based on your coding style.
+B) GitHub Copilot transmits your code to an AI model hosted in the cloud, which analyzes both your code and GitHub repositories you've starred, presenting suggestions tailored to these repositories.
+C) *GitHub Copilot sends your code and surrounding context to a large language model hosted on a remote server, which processes it through machine learning models trained on public GitHub repositories and other sources, returning contextually relevant code suggestions.
+D) GitHub Copilot sends your code to a remote server, which compares it with existing open-source repositories hosted on GitHub, and generates suggestions by copy-pasting code from the most popular projects.
+
+Q: You are a freelance developer using GitHub Copilot under the Individual plan. You want to maximize your use of Copilot's features to speed up your work on a project in Visual Studio Code (VS Code). What are the main features of GitHub Copilot Individual that you can use within VS Code?
+A) GitHub Copilot provides deep integration with version control systems, automatically managing commits and branches.
+B) GitHub Copilot allows real-time code collaboration between multiple users, similar to a shared coding environment.
+C) *GitHub Copilot provides suggestions for entire functions or code blocks based on your comments or existing code in the editor.
+D) GitHub Copilot automatically fixes bugs in your code without requiring any user input.
+
+Q: You are a lead developer at a company that is considering upgrading to GitHub Copilot Business to enhance developer productivity. The engineering manager asks you to highlight the main features of GitHub Copilot Business and how it differs from other GitHub Copilot plans. Which of the following is an accurate feature of GitHub Copilot Business?
+A) Copilot Chat, which allows developers to ask natural language questions and get AI-generated responses within their IDE
+B) *Centralized management of seat licenses and policy enforcement for large teams
+C) Higher priority access to Copilot suggestions, reducing suggestion latency in repositories with high traffic
+D) The ability to integrate Copilot with third-party AI code completion tools
+
 

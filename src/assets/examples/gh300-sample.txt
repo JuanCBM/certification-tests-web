@@ -1784,10 +1784,10 @@ C) *To detail expected functionality and improve accuracy
 D) To simplify the user interface
 
 Q: Which GitHub Copilot feature strengthens code predictions by learning from user interactions within command line sessions?
-A) Command Feedback Loop
+A) *Command Feedback Loop
 B) Interactive Command History
 C) Predictive Analysis Learning
-D) *Behavioral Pattern Recognition
+D) Behavioral Pattern Recognition
 
 Q: For a prompt to generate a Fibonacci sequence in Python, what should be the key emphasis in the prompt?
 A) Usage of list comprehensions

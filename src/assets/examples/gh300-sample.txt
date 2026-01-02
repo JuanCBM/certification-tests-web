@@ -1220,8 +1220,8 @@ C) *It enriches the input prompt with additional context before passing it to th
 D) It directly generates a response based on the user's input prompt
 
 Q: What are the additional checks that need to pass before the GitHub Copilot responses are submitted to the user?
-A) Code quality
-B) *Compatibility with user-specific settings
+A) *Code quality
+B) Compatibility with user-specific settings
 C) Performance benchmarking
 D) *Suggestions matching public code (optional based on settings)
 

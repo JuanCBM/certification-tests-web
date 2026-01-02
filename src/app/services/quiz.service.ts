@@ -64,7 +64,7 @@ export class QuizService {
     return !!(q && this.isQuestionLocked(q.id));
   }
 
-  answerCurrentQuestion(answerId: string): UserAnswer | null {
+  answerCurrentQuestion(answerId: string | string[]): UserAnswer | null {
     if (!this.state) return null;
     const q = this.getCurrentQuestion();
     if (!q) return null;
@@ -73,8 +73,30 @@ export class QuizService {
       const existing = this.state.answers.find(a => a.questionId === q.id) || null;
       return existing;
     }
-    const isCorrect = q.correctAnswerId === answerId;
-    const ua: UserAnswer = { questionId: q.id, selectedAnswerId: answerId, isCorrect };
+
+    let isCorrect: boolean;
+    let ua: UserAnswer;
+
+    if (q.isMultiSelect && Array.isArray(answerId)) {
+      // Multi-select question
+      const correctSet = new Set(q.correctAnswerIds || []);
+      const selectedSet = new Set(answerId);
+      // Check if sets are equal
+      isCorrect = correctSet.size === selectedSet.size &&
+                  [...correctSet].every(id => selectedSet.has(id));
+      ua = {
+        questionId: q.id,
+        selectedAnswerId: answerId[0] || '', // Keep for compatibility
+        selectedAnswerIds: answerId,
+        isCorrect
+      };
+    } else {
+      // Single-select question
+      const selectedId = Array.isArray(answerId) ? answerId[0] : answerId;
+      isCorrect = q.correctAnswerId === selectedId;
+      ua = { questionId: q.id, selectedAnswerId: selectedId, isCorrect };
+    }
+
     // Record or update
     const idx = this.state.answers.findIndex(a => a.questionId === q.id);
     if (idx >= 0) this.state.answers[idx] = ua; else this.state.answers.push(ua);

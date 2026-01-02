@@ -11,7 +11,10 @@ import { Question } from '../../models';
   template: `
     <div class="card" *ngIf="question; else empty">
       <div class="badge">Pregunta {{ index + 1 }} / {{ total }}</div>
-      <div class="question">{{ question.text }}</div>
+      <div class="question">
+        {{ question.text }}
+        <span *ngIf="question.isMultiSelect" class="multiselect-badge">(Multiselección)</span>
+      </div>
       <div class="images" *ngIf="question.imageUrls?.length">
         <img *ngFor="let url of question.imageUrls" [src]="url" alt="Referencia" style="max-width: 100%; margin: 8px 0; border: 1px solid #ddd; border-radius: 4px;" />
       </div>
@@ -20,12 +23,15 @@ import { Question } from '../../models';
           class="answer"
           [ngClass]="{
             'correct': showImmediate && revealed && isCorrect(opt.id),
-            'incorrect': showImmediate && revealed && selectedId === opt.id && !isCorrect(opt.id),
-            'selected': selectedId === opt.id && (!showImmediate || !revealed)
+            'incorrect': showImmediate && revealed && isSelected(opt.id) && !isCorrect(opt.id),
+            'selected': isSelected(opt.id) && (!showImmediate || !revealed)
           }"
           *ngFor="let opt of question.options"
           (click)="select(opt.id)"
         >
+          <span *ngIf="question.isMultiSelect" class="checkbox">
+            <input type="checkbox" [checked]="isSelected(opt.id)" [disabled]="locked || (showImmediate && revealed)" />
+          </span>
           <strong>{{ opt.id }})</strong> {{ opt.text }}
         </div>
       </div>
@@ -44,14 +50,37 @@ import { Question } from '../../models';
         <p>Vuelve al inicio y selecciona una certificación para empezar.</p>
       </div>
     </ng-template>
-  `
+  `,
+  styles: [`
+    .multiselect-badge {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 8px;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 4px;
+      font-size: 0.85em;
+      font-weight: bold;
+    }
+    .checkbox {
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .checkbox input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+  `]
 })
 export class QuizComponent {
   showImmediate = false;
   question: Question | null = null;
   index = 0;
   total = 0;
-  selectedId: string | null = null;
+  selectedId: string | null = null; // For single-select questions
+  selectedIds: Set<string> = new Set(); // For multi-select questions
   revealed = false; // show feedback only after pressing Siguiente/Finalizar in immediate mode
   locked = false;
 
@@ -72,7 +101,15 @@ export class QuizComponent {
     this.index = state.currentIndex;
     this.total = state.questions.length;
     const ua = state.answers.find(a => a.questionId === this.question?.id);
-    this.selectedId = ua?.selectedAnswerId || null;
+
+    if (this.question?.isMultiSelect) {
+      this.selectedIds = new Set(ua?.selectedAnswerIds || []);
+      this.selectedId = null;
+    } else {
+      this.selectedId = ua?.selectedAnswerId || null;
+      this.selectedIds.clear();
+    }
+
     this.revealed = this.showImmediate && !!ua; // reveal if this question was already answered
     this.locked = this.question ? this.quiz.isQuestionLocked(this.question.id) : false;
   }
@@ -82,11 +119,31 @@ export class QuizComponent {
     if (this.locked || (this.showImmediate && this.revealed)) {
       return;
     }
-    // Only select; do not answer/evaluate until pressing Siguiente/Finalizar
-    this.selectedId = id;
+
+    if (this.question?.isMultiSelect) {
+      // Toggle selection for multi-select
+      if (this.selectedIds.has(id)) {
+        this.selectedIds.delete(id);
+      } else {
+        this.selectedIds.add(id);
+      }
+    } else {
+      // Single selection
+      this.selectedId = id;
+    }
   }
 
-  isCorrect(id: string) {
+  isSelected(id: string): boolean {
+    if (this.question?.isMultiSelect) {
+      return this.selectedIds.has(id);
+    }
+    return this.selectedId === id;
+  }
+
+  isCorrect(id: string): boolean {
+    if (this.question?.isMultiSelect) {
+      return this.question.correctAnswerIds?.includes(id) || false;
+    }
     return this.question?.correctAnswerId === id;
   }
 
@@ -96,16 +153,29 @@ export class QuizComponent {
 
     if (this.showImmediate) {
       if (!this.revealed) {
-        if (this.selectedId) {
-          this.quiz.answerCurrentQuestion(this.selectedId);
+        // Save answer before revealing
+        if (this.question?.isMultiSelect) {
+          if (this.selectedIds.size > 0) {
+            this.quiz.answerCurrentQuestion(Array.from(this.selectedIds));
+          }
+        } else {
+          if (this.selectedId) {
+            this.quiz.answerCurrentQuestion(this.selectedId);
+          }
         }
         this.revealed = true; // show feedback, stay on current question
         return;
       }
     } else {
       // end mode: record answer when moving forward
-      if (this.selectedId) {
-        this.quiz.answerCurrentQuestion(this.selectedId);
+      if (this.question?.isMultiSelect) {
+        if (this.selectedIds.size > 0) {
+          this.quiz.answerCurrentQuestion(Array.from(this.selectedIds));
+        }
+      } else {
+        if (this.selectedId) {
+          this.quiz.answerCurrentQuestion(this.selectedId);
+        }
       }
     }
 
@@ -130,15 +200,28 @@ export class QuizComponent {
 
     if (this.showImmediate) {
       if (!this.revealed) {
-        if (this.selectedId) {
-          this.quiz.answerCurrentQuestion(this.selectedId);
+        // Save answer before revealing
+        if (this.question?.isMultiSelect) {
+          if (this.selectedIds.size > 0) {
+            this.quiz.answerCurrentQuestion(Array.from(this.selectedIds));
+          }
+        } else {
+          if (this.selectedId) {
+            this.quiz.answerCurrentQuestion(this.selectedId);
+          }
         }
         this.revealed = true; // show feedback before finishing
         return;
       }
     } else {
-      if (this.selectedId) {
-        this.quiz.answerCurrentQuestion(this.selectedId);
+      if (this.question?.isMultiSelect) {
+        if (this.selectedIds.size > 0) {
+          this.quiz.answerCurrentQuestion(Array.from(this.selectedIds));
+        }
+      } else {
+        if (this.selectedId) {
+          this.quiz.answerCurrentQuestion(this.selectedId);
+        }
       }
     }
 
@@ -157,10 +240,22 @@ export class QuizComponent {
 
     if (confirm(message)) {
       // Save current answer if there is one selected and not yet saved
-      if (this.selectedId && !this.showImmediate) {
-        this.quiz.answerCurrentQuestion(this.selectedId);
-      } else if (this.selectedId && this.showImmediate && !this.revealed) {
-        this.quiz.answerCurrentQuestion(this.selectedId);
+      const hasSelection = this.question?.isMultiSelect
+        ? this.selectedIds.size > 0
+        : !!this.selectedId;
+
+      if (hasSelection && !this.showImmediate) {
+        if (this.question?.isMultiSelect) {
+          this.quiz.answerCurrentQuestion(Array.from(this.selectedIds));
+        } else if (this.selectedId) {
+          this.quiz.answerCurrentQuestion(this.selectedId);
+        }
+      } else if (hasSelection && this.showImmediate && !this.revealed) {
+        if (this.question?.isMultiSelect) {
+          this.quiz.answerCurrentQuestion(Array.from(this.selectedIds));
+        } else if (this.selectedId) {
+          this.quiz.answerCurrentQuestion(this.selectedId);
+        }
       }
 
       this.quiz.finish();

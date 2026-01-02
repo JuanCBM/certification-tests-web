@@ -34,19 +34,30 @@ export class QuestionParserService {
     let currentBlock: number | undefined = 0;
     let qText: string | null = null;
     let options: AnswerOption[] = [];
-    let correctId: string | null = null;
+    let correctIds: string[] = []; // Changed to array to support multiple correct answers
     let imageUrls: string[] = [];
 
     const flush = () => {
-      if (qText && options.length >= 2 && correctId) {
+      if (qText && options.length >= 2 && correctIds.length > 0) {
         const id = `${questions.length + 1}`;
-        const q: Question = { id, text: qText.trim(), options: [...options], correctAnswerId: correctId, blockId: currentBlock };
+        const isMultiSelect = correctIds.length > 1;
+        const q: Question = {
+          id,
+          text: qText.trim(),
+          options: [...options],
+          correctAnswerId: correctIds[0], // Keep for backwards compatibility
+          blockId: currentBlock
+        };
+        if (isMultiSelect) {
+          q.isMultiSelect = true;
+          q.correctAnswerIds = [...correctIds];
+        }
         if (imageUrls.length) q.imageUrls = [...imageUrls];
         questions.push(q);
       }
       qText = null;
       options = [];
-      correctId = null;
+      correctIds = [];
       imageUrls = [];
     };
 
@@ -82,7 +93,7 @@ export class QuestionParserService {
         const isCorrect = !!optMatch[2];
         const text = optMatch[3].trim();
         options.push({ id, text });
-        if (isCorrect) correctId = id;
+        if (isCorrect) correctIds.push(id); // Add to array
         continue;
       }
       // If none matched and we have qText, treat as continuation of question text

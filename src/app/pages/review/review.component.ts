@@ -17,7 +17,10 @@ import { Question } from '../../models';
         <div class="question-header">
           <div class="badge">Pregunta {{ startIndex + i + 1 }}</div>
         </div>
-        <div class="question">{{ question.text }}</div>
+        <div class="question">
+          {{ question.text }}
+          <span *ngIf="question.isMultiSelect" class="multiselect-badge">(Multiselección)</span>
+        </div>
         
         <div class="images" *ngIf="question.imageUrls?.length">
           <img *ngFor="let url of question.imageUrls" 
@@ -70,6 +73,17 @@ import { Question } from '../../models';
     </ng-template>
   `,
   styles: [`
+    .multiselect-badge {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 8px;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 4px;
+      font-size: 0.85em;
+      font-weight: bold;
+    }
+    
     .review-question {
       margin-bottom: 32px;
       padding-bottom: 16px;
@@ -173,6 +187,9 @@ export class ReviewComponent {
   }
 
   isCorrect(question: Question, optionId: string): boolean {
+    if (question.isMultiSelect) {
+      return question.correctAnswerIds?.includes(optionId) || false;
+    }
     return question.correctAnswerId === optionId;
   }
 

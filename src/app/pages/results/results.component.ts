@@ -22,7 +22,10 @@ import { QuizService } from '../../services/quiz.service';
       <div class="question-header">
         <div class="badge">Pregunta {{ i + 1 }}</div>
       </div>
-      <div class="question">{{ item.q.text }}</div>
+      <div class="question">
+        {{ item.q.text }}
+        <span *ngIf="item.q.isMultiSelect" class="multiselect-badge">(Multiselección)</span>
+      </div>
       <div class="images" *ngIf="item.q.imageUrls?.length">
         <img *ngFor="let url of item.q.imageUrls" [src]="url" alt="Referencia" style="max-width: 100%; margin: 8px 0; border: 1px solid #ddd; border-radius: 4px;" />
       </div>
@@ -31,16 +34,16 @@ import { QuizService } from '../../services/quiz.service';
           class="answer answer-with-badge"
           *ngFor="let opt of item.q.options"
           [ngClass]="{
-            'correct-answer': opt.id === item.q.correctAnswerId,
-            'incorrect-answer': opt.id === item.userAnswer && opt.id !== item.q.correctAnswerId,
-            'selected': opt.id === item.userAnswer && opt.id !== item.q.correctAnswerId
+            'correct-answer': isCorrectAnswer(item.q, opt.id),
+            'incorrect-answer': isUserAnswer(item, opt.id) && !isCorrectAnswer(item.q, opt.id),
+            'selected': isUserAnswer(item, opt.id) && !isCorrectAnswer(item.q, opt.id)
           }"
         >
           <span class="answer-text">
             <strong>{{ opt.id }})</strong> {{ opt.text }}
           </span>
-          <span class="correct-badge" *ngIf="opt.id === item.q.correctAnswerId">Correcta</span>
-          <span class="user-badge" *ngIf="opt.id === item.userAnswer && opt.id !== item.q.correctAnswerId">Tu respuesta</span>
+          <span class="correct-badge" *ngIf="isCorrectAnswer(item.q, opt.id)">Correcta</span>
+          <span class="user-badge" *ngIf="isUserAnswer(item, opt.id) && !isCorrectAnswer(item.q, opt.id)">Tu respuesta</span>
         </div>
       </div>
       <div class="explanation" *ngIf="item.q.explanation">
@@ -56,6 +59,17 @@ import { QuizService } from '../../services/quiz.service';
     </ng-template>
   `,
   styles: [`
+    .multiselect-badge {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 8px;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 4px;
+      font-size: 0.85em;
+      font-weight: bold;
+    }
+    
     .question-header {
       margin-bottom: 12px;
     }
@@ -125,17 +139,35 @@ import { QuizService } from '../../services/quiz.service';
 export class ResultsComponent {
   loaded = false;
   score = { correct: 0, total: 0 };
-  review: { q: any, userAnswer: string | null }[] = [];
+  review: { q: any, userAnswer: string | null, userAnswers: string[] | null }[] = [];
 
   constructor(private quiz: QuizService, private router: Router) {
     const state = this.quiz.getState();
     if (!state) return;
     this.score = this.quiz.getScore();
-    this.review = state.questions.map(q => ({
-      q,
-      userAnswer: state.answers.find(a => a.questionId === q.id)?.selectedAnswerId || null
-    }));
+    this.review = state.questions.map(q => {
+      const answer = state.answers.find(a => a.questionId === q.id);
+      return {
+        q,
+        userAnswer: answer?.selectedAnswerId || null,
+        userAnswers: answer?.selectedAnswerIds || null
+      };
+    });
     this.loaded = true;
+  }
+
+  isCorrectAnswer(question: any, optionId: string): boolean {
+    if (question.isMultiSelect) {
+      return question.correctAnswerIds?.includes(optionId) || false;
+    }
+    return question.correctAnswerId === optionId;
+  }
+
+  isUserAnswer(item: any, optionId: string): boolean {
+    if (item.q.isMultiSelect) {
+      return item.userAnswers?.includes(optionId) || false;
+    }
+    return item.userAnswer === optionId;
   }
 
   getPercent(): string {
@@ -149,17 +181,29 @@ export class ResultsComponent {
 
   hasIncorrectAnswers(): boolean {
     return this.review.some(item => {
-      const userAnswer = item.userAnswer;
-      // Include questions with no answer or incorrect answer
-      return !userAnswer || userAnswer !== item.q.correctAnswerId;
+      if (item.q.isMultiSelect) {
+        const correctSet = new Set<string>(item.q.correctAnswerIds || []);
+        const userSet = new Set<string>(item.userAnswers || []);
+        return !item.userAnswers ||
+               correctSet.size !== userSet.size ||
+               !Array.from(correctSet).every(id => userSet.has(id));
+      } else {
+        return !item.userAnswer || item.userAnswer !== item.q.correctAnswerId;
+      }
     });
   }
 
   getIncorrectCount(): number {
     return this.review.filter(item => {
-      const userAnswer = item.userAnswer;
-      // Include questions with no answer or incorrect answer
-      return !userAnswer || userAnswer !== item.q.correctAnswerId;
+      if (item.q.isMultiSelect) {
+        const correctSet = new Set<string>(item.q.correctAnswerIds || []);
+        const userSet = new Set<string>(item.userAnswers || []);
+        return !item.userAnswers ||
+               correctSet.size !== userSet.size ||
+               !Array.from(correctSet).every(id => userSet.has(id));
+      } else {
+        return !item.userAnswer || item.userAnswer !== item.q.correctAnswerId;
+      }
     }).length;
   }
 
@@ -170,8 +214,15 @@ export class ResultsComponent {
     // Filter questions that were not answered or answered incorrectly
     const incorrectQuestions = this.review
       .filter(item => {
-        const userAnswer = item.userAnswer;
-        return !userAnswer || userAnswer !== item.q.correctAnswerId;
+        if (item.q.isMultiSelect) {
+          const correctSet = new Set<string>(item.q.correctAnswerIds || []);
+          const userSet = new Set<string>(item.userAnswers || []);
+          return !item.userAnswers ||
+                 correctSet.size !== userSet.size ||
+                 !Array.from(correctSet).every(id => userSet.has(id));
+        } else {
+          return !item.userAnswer || item.userAnswer !== item.q.correctAnswerId;
+        }
       })
       .map(item => item.q);
 
@@ -180,10 +231,25 @@ export class ResultsComponent {
       return;
     }
 
-    const incorrectAnsweredCount = this.review.filter(item =>
-      item.userAnswer && item.userAnswer !== item.q.correctAnswerId
-    ).length;
-    const unansweredCount = this.review.filter(item => !item.userAnswer).length;
+    const incorrectAnsweredCount = this.review.filter(item => {
+      if (item.q.isMultiSelect) {
+        if (!item.userAnswers) return false;
+        const correctSet = new Set<string>(item.q.correctAnswerIds || []);
+        const userSet = new Set<string>(item.userAnswers);
+        return correctSet.size !== userSet.size ||
+               !Array.from(correctSet).every(id => userSet.has(id));
+      } else {
+        return item.userAnswer && item.userAnswer !== item.q.correctAnswerId;
+      }
+    }).length;
+
+    const unansweredCount = this.review.filter(item => {
+      if (item.q.isMultiSelect) {
+        return !item.userAnswers;
+      } else {
+        return !item.userAnswer;
+      }
+    }).length;
 
     let message = '¿Quieres repetir las preguntas que no has acertado?\n\n';
     if (incorrectAnsweredCount > 0 && unansweredCount > 0) {

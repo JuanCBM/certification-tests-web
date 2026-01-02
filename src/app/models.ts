@@ -20,7 +20,9 @@ export interface Question {
   id: string;
   text: string;
   options: AnswerOption[];
-  correctAnswerId: string;
+  correctAnswerId: string; // For single-answer questions
+  correctAnswerIds?: string[]; // For multi-answer questions
+  isMultiSelect?: boolean; // Indicates if multiple answers are allowed
   blockId?: number; // 1..6 per TOGAF block
   explanation?: string;
   imageUrls?: string[]; // optional reference images shown with the question
@@ -37,7 +39,8 @@ export interface QuizConfig {
 
 export interface UserAnswer {
   questionId: string;
-  selectedAnswerId: string;
+  selectedAnswerId: string; // For single-answer questions
+  selectedAnswerIds?: string[]; // For multi-answer questions
   isCorrect: boolean;
 }
 

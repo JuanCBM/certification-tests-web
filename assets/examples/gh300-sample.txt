@@ -546,8 +546,8 @@ C) Remove GitHub integration.
 D) Disable telemetry.
 
 Q: Which command generates documentation from IDE?
-A) `/doc`
-B) *`/explain`
+A) *`/doc`
+B) `/explain`
 C) `/deploy`
 D) `/test`
 

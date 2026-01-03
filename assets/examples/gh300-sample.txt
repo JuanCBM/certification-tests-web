@@ -999,9 +999,9 @@ C) It requires extensive manual training on specific tasks.
 D) It cannot learn and adapt based on user interactions.
 
 Q: Which of the following is NOT a step in the process of GitHub Copilot processing a user's prompt into a code suggestion?
-A) Statistical analysis and pattern recognition.
+A) *Statistical analysis and pattern recognition.
 B) Secure prompt transmission and context gathering.
-C) *Content filtering to ensure safety and security.
+C) Content filtering to ensure safety and security.
 D) Context analysis to understand the user's intent.
 
 Q: How does the Fill-in-the-Middle (FIM) technique enhance GitHub Copilot's code suggestions?
@@ -2879,3 +2879,33 @@ Q: What does the quality of GitHub Copilot?s output depend on?
 A) Your code editor
 B) How well extensions were installed
 C) *The quality of your prompt design
+
+Q: Which of the following subscription plans are available for GitHub Copilot?
+A) GitHub Copilot Free, Pro, and Team
+B) GitHub Copilot Personal, Business, and Enterprise
+C) GitHub Copilot Starter, Professional, and Enterprise
+D) *GitHub Copilot Individual, Business, and Enterprise
+
+Q: What functionality isn't supported in GitHub Copilot for Individuals?
+A) *VPN Proxy support via self-signed certificates
+B) Offers multi-line function suggestions
+C) Editor integration
+D) Blocks suggestions matching public code
+
+Q: What is one way GitHub Copilot automates routine coding tasks for developers?
+A) By deploying applications to production environments automatically.
+B) *By generating boilerplate code for common functionalities, such as setting up a REST API.
+C) By managing database migrations and schema changes automatically.
+D) By conducting performance testing and optimization of code automatically.
+
+Q: When troubleshooting GitHub Copilot in your environment, which of the following statements about accessing and viewing logs is incorrect?
+A) The GitHub Copilot logs can be accessed from Visual Studio Code (VS Code) through the Output pane, by selecting "GitHub Copilot" from the dropdown menu.
+B) You can enable detailed logging in VS Code by adding the github.copilot.enableLogging setting in the settings.json file to true.
+C) GitHub Copilot logs provide detailed error information, including the request payloads sent to GitHub’s servers, which can be shared with GitHub support for investigation.
+D) *Copilot logs in your environment are only stored locally and are not transmitted or shared with GitHub unless explicitly uploaded by the user via the "Report an issue" feature in the Copilot extension.
+
+Q: Which of the following correctly describes the behavior of content exclusion settings for GitHub Copilot?
+A) *You can exclude specific content from GitHub Copilot’s suggestions by adding custom keywords or phrases to the exclusion list in the organization’s settings.
+B) Content exclusion settings for GitHub Copilot can be configured at the organization level, allowing administrators to enforce exclusions across all repositories in the organization.
+C) The content exclusion configuration automatically applies to both code suggestions and text completions in GitHub Copilot, with no need for further customization based on content type.
+D) Excluded content, once configured, is logged and auditable, allowing administrators to review which content was excluded and ensure compliance with the organization’s policies.

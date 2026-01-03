@@ -15,6 +15,19 @@ export class QuizService {
     return this.questionBank;
   }
 
+  /**
+   * Fisher-Yates shuffle algorithm for uniform randomization
+   * This ensures truly random distribution, unlike sort(() => Math.random() - 0.5)
+   */
+  private shuffleArray<T>(array: T[]): T[] {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
   startQuiz(config: QuizConfig) {
     // Filter by block
     let pool = this.questionBank;
@@ -23,8 +36,8 @@ export class QuizService {
     if (config.blockId !== 'all') {
       pool = pool.filter(q => q.blockId === config.blockId);
     }
-    // Randomize
-    const shuffled = [...pool].sort(() => Math.random() - 0.5);
+    // Randomize using Fisher-Yates algorithm
+    const shuffled = this.shuffleArray(pool);
     const selected = shuffled.slice(0, Math.min(config.numberOfQuestions, shuffled.length));
 
     this.state = {

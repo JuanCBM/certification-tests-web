@@ -2909,3 +2909,10 @@ A) *You can exclude specific content from GitHub Copilot’s suggestions by addi
 B) Content exclusion settings for GitHub Copilot can be configured at the organization level, allowing administrators to enforce exclusions across all repositories in the organization.
 C) The content exclusion configuration automatically applies to both code suggestions and text completions in GitHub Copilot, with no need for further customization based on content type.
 D) Excluded content, once configured, is logged and auditable, allowing administrators to review which content was excluded and ensure compliance with the organization’s policies.
+
+Q: What two options navigate to configure duplicate detection? Each correct answer presents part of the solution. (Choose two.)
+A) *Organization settings → Copilot → Policies
+B) *Enterprise settings → Copilot → Policies
+C) Repository settings → Copilot → Policies
+D) User settings → Copilot → Policies
+

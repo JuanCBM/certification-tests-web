@@ -1269,9 +1269,9 @@ D) Reviewing and storing user-specific private repository data for future sugges
 
 Q: How does GitHub Copilot utilize chat history to enhance its code completion capabilities?
 A) By sharing chat history with third-party services to improve integration and functionality.
-B) *By analyzing past chat interactions to identify common programming patterns and errors.
+B) By analyzing past chat interactions to identify common programming patterns and errors.
 C) By logging chat history to monitor user activity and ensure compliance with coding standards.
-D) By using chat history to offer personalized code snippets based on previous prompts
+D) *By using chat history to offer personalized code snippets based on previous prompts
 
 Q: What is the main purpose of the duplication detection filter in GitHub Copilot?
 A) To compare user-generated code against a private repository for potential matches.

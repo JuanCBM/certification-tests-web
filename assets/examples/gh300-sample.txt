@@ -1686,9 +1686,9 @@ D) Automated bug fixes in real-time
 
 Q: How can machine learning algorithms used in GitHub Copilot statistically evaluate the likelihood of code correctness?
 A) By using regression analysis to fit the code to expected outputs
-B) Through likelihood estimation of predetermined code patterns
+B) *Through likelihood estimation of predetermined code patterns
 C) By employing reinforcement learning for continuous improvement
-D) *With Bayesian inference based on historical coding data
+D) With Bayesian inference based on historical coding data
 
 Q: What is a key advantage of utilizing GitHub Copilot's advanced features for code refactoring?
 A) It automatically deploys the code

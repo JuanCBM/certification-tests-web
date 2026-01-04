@@ -2954,4 +2954,33 @@ B) *Code completion
 C) Database configuration
 D) *Security filter
 
+Q: If you click on the GitHub Copilot Chat icon at the top right side of VS Code while the main Chat window is already opened on the right side of the IDE, what will happen?
+A) The quick chat window will open
+B) The inline chat window will open
+C) *Nothing will happen
+D) The manage copilot window will open
 
+Q: What will happen if you use the up arrow in the main Chat window?
+A) Nothing will happen
+B) A new window will open
+C) The current file will now be the context for the prompt
+D) *The last prompt will return if one was used
+
+Q: Which search criteria would be entered in the VS Code Settings search bar to customize GitHub Copilot?
+A) *GitHub Copilot
+B) GitHub
+C) Copilot customizations
+D) Settings
+
+Q: Which of these functions are available via the In-Editor or inline chat?
+A) *Real-time comments
+B) *Code on the fly
+C) *Add a unit test
+D) Propagate changes to multiple files
+E) Change a Copilot setting
+
+Q: What is the italicized text that appear when Copilot is active called?
+A) *Ghost text
+B) Next Edit
+C) Comments
+D) Sparkle

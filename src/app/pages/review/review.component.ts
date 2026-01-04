@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { QuizService } from '../../services/quiz.service';
 import { Question } from '../../models';
@@ -7,7 +8,7 @@ import { Question } from '../../models';
 @Component({
   selector: 'app-review',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   template: `
     <div class="card" *ngIf="questions.length > 0; else empty">
       <div class="badge">Modo Revisión - {{ questions.length }} preguntas totales</div>
@@ -50,12 +51,26 @@ import { Question } from '../../models';
       </div>
 
       <div class="actions">
-        <button class="button secondary" (click)="prevPage()" [disabled]="currentPage === 0">
-          &lt; Anterior ({{ pageSize }} preguntas)
+        <button class="button secondary" (click)="goToFirstPage()" [disabled]="currentPage === 0" title="Ir a la primera página">
+          &lt;&lt; Primera
         </button>
-        <span style="margin: 0 16px; font-weight: 600;">Página {{ currentPage + 1 }} de {{ totalPages }}</span>
+        <button class="button secondary" (click)="prevPage()" [disabled]="currentPage === 0">
+          &lt; Anterior
+        </button>
+        <div class="page-selector">
+          <span style="font-weight: 600; margin-right: 8px;">Página:</span>
+          <select [(ngModel)]="currentPage" (change)="onPageChange()" class="page-select">
+            <option *ngFor="let page of pageNumbers" [value]="page">
+              {{ page + 1 }} (preguntas {{ getPageStartIndex(page) + 1 }}-{{ getPageEndIndex(page) }})
+            </option>
+          </select>
+          <span style="font-weight: 600; margin-left: 8px;">de {{ totalPages }}</span>
+        </div>
         <button class="button" (click)="nextPage()" [disabled]="currentPage === totalPages - 1">
-          Siguiente ({{ pageSize }} preguntas) &gt;
+          Siguiente &gt;
+        </button>
+        <button class="button" (click)="goToLastPage()" [disabled]="currentPage === totalPages - 1" title="Ir a la última página">
+          Última &gt;&gt;
         </button>
       </div>
       
@@ -147,6 +162,33 @@ import { Question } from '../../models';
       margin-top: 24px;
       flex-wrap: wrap;
     }
+    
+    .page-selector {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    
+    .page-select {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      background-color: white;
+      cursor: pointer;
+      min-width: 200px;
+    }
+    
+    .page-select:hover {
+      border-color: #4a90e2;
+    }
+    
+    .page-select:focus {
+      outline: none;
+      border-color: #4a90e2;
+      box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+    }
   `]
 })
 export class ReviewComponent {
@@ -186,6 +228,18 @@ export class ReviewComponent {
     return this.questions.slice(this.startIndex, this.endIndex);
   }
 
+  get pageNumbers(): number[] {
+    return Array.from({ length: this.totalPages }, (_, i) => i);
+  }
+
+  getPageStartIndex(page: number): number {
+    return page * this.pageSize;
+  }
+
+  getPageEndIndex(page: number): number {
+    return Math.min((page + 1) * this.pageSize, this.questions.length);
+  }
+
   isCorrect(question: Question, optionId: string): boolean {
     if (question.isMultiSelect) {
       return question.correctAnswerIds?.includes(optionId) || false;
@@ -205,6 +259,20 @@ export class ReviewComponent {
       this.currentPage--;
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+  }
+
+  goToFirstPage() {
+    this.currentPage = 0;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  goToLastPage() {
+    this.currentPage = this.totalPages - 1;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  onPageChange() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   goHome() {

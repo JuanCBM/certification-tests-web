@@ -2916,3 +2916,42 @@ B) *Enterprise settings → Copilot → Policies
 C) Repository settings → Copilot → Policies
 D) User settings → Copilot → Policies
 
+Q: Responsible use of GitHub Copilot is a combination of validation techniques and mitigation strategies. Which would be examples of this practice?
+A) *Checking for secrets in the final response
+B) Referencing a repository
+C) Showing citation links to videos
+D) *Using human verification
+
+Q: Which are the broad categories with the most common troubleshooting issues?
+A) *Network and connectivity issues
+B) *Accessing the service via authentication
+C) Browser not updated
+D) *Environmental issues like missing files
+E) OS not updated
+
+Q: Which are the first three principles of responsible AI?
+A) *Treat all users in a fair manner
+B) Categorize users into age groups
+C) *Responses must be consistent, reliable and safe
+D) Engage in small talk
+E) *LLM must respect privacy, earn trust and display security
+
+Q: One way to invoke inline chat is to highlight one or more lines of code, right-click and select Copilot Inline Chat. What other methods can be used?
+A) Shift+L
+B) *Command+i
+C) *Ctrl+Shift+I
+D) Command+ILC
+
+Q: How is GitHub Copilot installed in VS Code running in a Windows environment?
+A) *As an extension in VS Code
+B) It is installed as an executable file
+C) As a browser plugin
+D) It is installed as a DLL
+
+Q: Which are Copilot capabilities?
+A) Network filter
+B) *Code completion
+C) Database configuration
+D) *Security filter
+
+

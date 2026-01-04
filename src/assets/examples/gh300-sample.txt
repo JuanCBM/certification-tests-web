@@ -2984,3 +2984,73 @@ A) *Ghost text
 B) Next Edit
 C) Comments
 D) Sparkle
+
+Q: Which setting for a repository is used to ensure that its files are available as part of the knowledge base of Copilot?
+A) *Pages
+B) Rules
+C) Codespaces
+D) Webhooks
+
+Q: Which link/setting on GitHub.com is used to hide a repository file from GitHub Copilot search?
+A) Access
+B) Policies
+C) Models
+D) *Content exclusion
+
+Q: Which security features can be found at the enterprise level of GitHub Copilot?
+A) *Dependabot alerts
+B) Payment options
+C) *Usage data
+D) Subscription check
+
+Q: Which Copilot license offers the most advanced security features?
+A) Business
+B) Free
+C) Professional
+D) *Enterprise
+
+Q: Which is NOT one of the Copilot individual plans?
+A) Copilot Free
+B) Copilot Pro+
+C) *Business
+D) Copilot Pro
+
+Q: What is the main purpose of offering the GitHub Copilot CLI within the IDE?
+A) To provide a comprehensive graphical user interface for the user
+B) *The developer can interact with GitHub without opening another app
+C) The developer does not have to engage the OS
+D) To add more tools in the future
+
+
+Q: Which tasks are suitable for GitHub Copilot?
+A) *Adding business logic
+B) Creating and starting a mock server
+C) *Creating sample data like a JSON file
+D) *Initializing a boilerplate application
+E) Adding a record to a database
+
+Q: Which tasks are suitable for GitHub Copilot?
+A) Adding business logic
+B) *Creating and starting a mock server
+C) *Creating sample data like a JSON file
+D) *Initializing a boilerplate application
+E) Adding a record to a database
+
+Q: Which commands are currently part of the slash commands offered in Copilot?
+A) */explain
+B) /correct
+C) */fix
+D) /edit
+E) /file
+
+Q: What is the name of the file we use to give instructions to Copilot, and where is it stored?
+A) *The copilot-instructions.md file is stored in the hidden GitHub folder
+B) The copilot-instructions.md file is stored in the project folder
+C) The copilot.instructions.md file is stored in the GitHub folder
+D) The copilot-instructions.md file is stored in the GitHub folder
+
+Q: When you engage the code review process within VS Code, where does Copilot put its suggestions?
+A) As a comment in the code itself
+B) Terminal window
+C) *Comments section of VS Code
+D) Chat window

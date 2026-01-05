@@ -3659,3 +3659,257 @@ C) *Refine prompts from general to specific
 D) Avoid experimenting
 
 
+Q: When adding context in the chat, it is possible to add single files, but not entire folders. This statement is:
+A) *False
+B) True
+
+Q: Which statement correctly describes GitHub Copilot's CLI command functionality?
+A) The 'gh copilot explain' command modifies system files without showing the explanation
+B) Suggested commands are directly executed without being copied to the clipboard first
+C) Commands are automatically executed without user confirmation when using 'gh copilot suggest'
+D) *Users can get command explanations using 'gh copilot explain' and command suggestions using 'gh copilot suggest'
+
+Q: What are some of the principles of Prompt Engineering? (Choose three.)
+A) Write long, complex instructions
+B) *Ensure instructions are detailed and explicit
+C) *Focus on a single, well-defined task
+D) *Provide rich context for AI
+
+Q: Which steps occur when GitHub Copilot's proxy service processes a prompt?
+A) *Tests for toxic language, relevance checks, and detection of prompt hacking attempts
+B) Translation to multiple programming languages and syntax validation
+C) Direct transmission to public repositories for reference checking
+D) Automatic code compilation and execution in a sandbox environment
+
+Q: What are the post-processing checks performed on GitHub Copilot's responses?
+A) *Toxic language, relevancy, code quality (including security vulnerabilities), unique identifiers, and optional public code matching
+B) Only syntax validation and code formatting checks
+C) Performance benchmarking and memory usage optimization
+D) Just checking for compilation errors and runtime exceptions
+
+Q: Which of the following is NOT a selectable mode in GitHub Copilot Chat?
+A) Edit
+B) *Translate
+C) Agent
+D) Ask
+
+Q: How can you exclude specific files from GitHub Copilot?
+A) Using a command in the terminal
+B) Editing the file .gitignore
+C) *Browsing to the repository settings on GitHub and adding the paths to exclude
+D) *Configuring exclusions in the Copilot configuration file
+
+Q: Which set of principles correctly represents Microsoft's six key principles for Responsible AI that guide GitHub Copilot's development?
+A) Efficiency, Speed, Accuracy, Innovation, Reliability, and Security
+B) *Fairness, Reliability and Safety, Privacy and Security, Inclusiveness, Transparency, and Accountability
+C) Security, Development, Operations, Maintenance, Support, and Documentation
+D) Privacy, Performance, Accessibility, Scalability, Maintainability, and Testing
+
+Q: Which of the following integrates GitHub Copilot Chat with external tools?
+A) *GitHub Copilot Extensions
+B) GitHub Copilot Marketplace
+C) GitHub Copilot Integrations
+D) GitHub Copilot Open
+
+Q: Which is true about Copilot's Content exclusions? (Choose two)
+A) Content exclusions do not affect code completion
+B) *Context exclusions can be configured at the repository and organization level
+C) Copilot completely ignores excluded files
+D) Content exclusions are applied instantly
+E) *Copilot offers different plans with privacy considerations
+
+Q: What command is used to install the GitHub Copilot extension on the CLI?
+A) *gh extension install github/gh-copilot
+B) gh copilot setup
+C) gh copilot install
+D) gh extension add copilot
+
+Q: Which option below is NOT a possible way to grant access to Copilot for members of an organization?
+A) Via your Enterprise settings, enable GitHub Copilot for selected organizations or all organizations.
+B) *As a member of an Organization, you can enable Copilot directly from your account settings.
+C) You can use GitHub's REST API to grant access to GitHub Copilot for teams, or specific users, in your organization.
+D) Via your Organizations settings, enable GitHub Copilot for either selected teams or users or the entire organization.
+
+Q: What are smart actions?
+A) *Smart actions are common and predefined tasks such as explaining code, fixing code or generating tests and docs that can be performed by GitHub Copilot Chat without the need to draft a prompt for them.
+B) Smart actions is an advanced GitHub Copilot modality used for debugging and fixing failing tests.
+C) Smart actions are predefined tasks designed to assist with common coding tasks inside an organization, which can be set on repository and organization level.
+
+Q: You are developing an application in Kotlin. What do you have to keep in mind when using GitHub Copilot?
+A) None is correct as Kotlin is included in the languages where GitHub Copilot offers strong support.
+B) Kotlin is not included in the languages where GitHub Copilot offers strong support. As a result, GitHub Copilot won't be able to explain or fix code.
+C) Kotlin is not included in the languages where GitHub Copilot offers strong support. As a result, GitHub Copilot can still explain or fix code, but will not be able to provide code suggestions.
+D) *Kotlin is not included in the languages where GitHub Copilot offers strong support. As a result, code suggestion might not be of the same quality as code suggestions in a better-supported language, such as Ruby, Java or C#.
+
+Q: Which of the GitHub Copilot subscription plans let you specify coding guidelines for code reviews?
+A) Copilot Business and Copilot Enterprise
+B) Copilot Pro+, Copilot Business and Copilot Enterprise
+C) Copilot Pro, Copilot Pro+, Copilot Business and Copilot Enterprise
+D) *Copilot Enterprise
+
+Q: What happens when you exclude content from GitHub Copilot? (Choose two)
+A) The content in affected files will continue to inform GitHub Copilot Chat's responses.
+B) *The content in affected files will not inform code completion suggestions in other files.
+C) *Code completion will not be available in the affected files.
+D) Code completion will be unaffected in the affected files.
+
+Q: What is the easiest way to get started with GitHub Copilot?
+A) Request access from GitHub Support and wait for approval before using GitHub Copilot.
+B) Use the Copilot website and paste your code when asking for suggestions.
+C) Create a new public GitHub repo and enable Copilot to scan your code and make suggestions.
+D) *Install the Copilot extension in your preferred environment, such as Visual Studio Code.
+
+Q: How is seat usage calculated for GitHub Copilot at the enterprise level during a billing cycle?
+A) *Number of seats × (Days elapsed / Total days in billing cycle)
+B) Number of code suggestions × Number of accepted completions
+C) Total repository size × Number of organizations
+D) Total number of commits × Number of active developers
+
+
+Q: Which of the sentences is correct? (Select two.)
+A) *Slash commands (such as /tests, /fix or /explain) are a way to concisely tell what you would like to achieve with the prompt.
+B) Chat participants can only be used to tag other members in the same organization.
+C) It is not possible to combine chat participants, commands and chat variables in a single prompt.
+D) *Chat participants (such as @workspace or @vscode) can be used to provide extra context about the code base, a specific domain or technology.
+
+Q: Can GitHub Copilot use semantic information from a file that is ignored by GitHub Copilot content exclusions?
+A) *Yes, if the information is provided by the IDE indirectly.
+B) No, it will ignore all information from excluded files.
+
+Q: Which of the following can be added as context for your prompt in GitHub Copilot Chat? (Select three.)
+A) *Test failures
+B) External repositories
+C) *Symbols
+D) Environment variables (such as PATH)
+E) *Terminal command output
+
+Q: Which elements can GitHub Copilot use as context when generating suggestions?
+A) Only the current line of code being edited without any surrounding context
+B) Exclusively external documentation from the internet
+C) *Content in the current file, neighboring files, repository URLs, file paths, and previous chat interactions
+D) Just the project's README file and nothing else
+
+Q: Is GitHub Copilot free to use for everyone?
+A) No
+B) *Yes
+
+Q: Which of the following describes how to use the GitHub Copilot's Productivity API?
+A) To exclude specific files
+B) To collect audit logs
+C) *To collect usage metrics from organization members
+D) To automatically update Copilot
+
+Q: How does GitHub Copilot's matching public code feature work?
+A) It only matches code from repositories that were created in the last 24 hours
+B) It checks code against external code hosting platforms outside of GitHub
+C) It performs real-time searches across all GitHub repositories, including private ones
+D) *It searches for matches by comparing code suggestions against an index of public GitHub repositories, which is refreshed every few months
+
+
+Q: Which of the following describes the GitHub Copilot Editor configuration file?
+A) An XML file with deploy settings
+B) A YAML file with build instructions
+C) *A Markdown file with natural language instructions for customizing Copilot Chat responses
+D) A JSON file with security settings
+
+
+Q: What is the primary purpose of the '/tests' slash command in GitHub Copilot?
+A) *It generates a suite of unit tests for the currently open file, using context from existing test files if available
+B) It permanently removes all existing test files to start fresh
+C) It only validates the syntax of existing test files without creating new tests
+D) It runs all existing unit tests in the project without generating new ones
+
+Q: How can you provide GitHub Copilot with context to generate tailored responses for your repository?
+A) *By creating a file named .github/copilot-instructions.md in the repository
+B) By modifying the .gitconfig file to include custom instructions
+C) By sending an email to GitHub support with your project details
+D) By creating a GitHub issue named copilot-instructions in the repository with the necessary context
+
+Q: Which of the following options best describes GitHub Copilot?
+A) A version control system that tracks and manages changes in a codebase.
+B) A tool that automatically tests and deploys code to production environments.
+C) *An AI coding assistant that helps developers by suggesting code and completing code snippets.
+D) A code editor that provides debugging and error-checking features.
+
+Q: Which statements are correct regarding the usage of @workspace and #codebase? (Select two.)
+A) *The #codebase keyword can be used in all chat modes.
+B) The @workspace keyword is in charge of the user prompt and can therefore use other tools.
+C) The @workspace keyword can be used in all chat modes.
+D) *Even though @workspace and #codebase both enable to ask questions about the entire codebase, the usage of #codebase is recommended.
+
+
+Q: Where can you find information about concerns related to security, intellectual property and privacy regarding the usage of GitHub Copilot?
+A) GitHub Copilot Legal Center
+B) GitHub Copilot Compliance Center
+C) GitHub Copilot Legal and Trust Center
+D) *GitHub Copilot Trust Center
+E) GitHub Copilot Compliance Hub
+
+Q: How does GitHub Copilot handle data retention for code suggestions in the IDE?
+A) Suggestions are automatically saved to GitHub repositories for version control
+B) All suggestions are permanently stored in a local database for future reference
+C) Code snippets are cached on disk for 30 days before being deleted
+D) *Suggestions are held temporarily in memory and discarded after use, not written to disk
+
+
+Q: What IDEs does GitHub Copilot support? (Choose two.)
+A) *Visual Studio Code, Xcode, Vim/NeoVim
+B) Visual Studio, BlueJ, NetBeans
+C) Visual Studio, NetBeans, Eclipse
+D) *Azure Data Studio, Visual Studio, IntelliJ IDEA
+
+Q: Which features are available in GitHub Copilot and GitHub Copilot Chat?
+A) Code line completions, inline chat, code container, quick chat
+B) *Code line completions, inline chat, chat view, quick chat, smart actions
+C) Code line completions, inline chat, chat view, smart actions, code research
+
+Q: What does GitHub Copilot analyze to offer relevant suggestions as you are developing new code?
+A) Analyzes only the context within the current line of code.
+B) Analyzes the context in all files within the repository.
+C) Analyzes only the context within the current file.
+D) *Analyzes the context in the current file and related files.
+
+Q: Which of the following is a potential benefit of using GitHub Copilot to enhance developer workflows?
+A) *It can suggest code snippets to increase developer productivity.
+B) It completely replaces the need for code review in every project.
+C) It automatically merges pull requests without human approval.
+D) It only works with software written in a single programming language.
+
+Q: Which statements are correct about GitHub Copilot CLI? (Select four.)
+A) *It is possible to opt out of optional usage analytics.
+B) Both prompts and usage analytics are retained by default.
+C) *GitHub Copilot CLI can only explain or suggest commands but not execute them on a user's behalf.
+D) *Prompts are not retained, whereas usage analytics are retained by default.
+E) It is not possible to opt out of optional usage analytics because they are anonymized.
+F) *Responses generated by Copilot CLI can be reviewed after each suggestion.
+
+Q: What is an alias used for when using GitHub Copilot?
+A) *Using an alias lets you indicate in Git commits that GitHub Copilot authored changes.
+B) Using an alias enables GitHub Copilot CLI to automatically execute commands in the command line.
+C) Using an alias allows GitHub to review and author pull requests on your behalf.
+
+Q: Which options are used as context when prompting Copilot?
+A) *Any highlighted code
+B) *The currently open file
+C) The browser URL
+D) Microsoft Word
+E) *Your workspace
+
+Q: What is the difference between a prompt and a suggestion?
+A) Suggestions are queries sent via Chat; prompts are the AI-generated responses to a prompt
+B) *Prompts are queries sent via Chat; suggestions are the AI-generated responses to a prompt
+C) There is no difference between a prompt and a suggestion
+D) Suggestions provide context; prompts sanitize the response
+
+Q: Which environments are available for prompting GitHub Copilot?
+A) *A terminal window
+B) An Operating System
+C) *An IDE
+D) *GitHub repositories
+E) A browser console window
+
+Q: When a prompt is split into separate words, chunks, or even individual letters, what is this process called?
+A) Semantics
+B) Contextual embedding
+C) Probabilistic prediction
+D) *Tokenization

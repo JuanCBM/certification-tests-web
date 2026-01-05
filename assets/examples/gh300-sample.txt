@@ -3542,12 +3542,6 @@ D) Exclude style instructions
 
 Q: Which two privacy configurations are available at the individual plan level for GitHub Copilot?
 A) IP indemnity
-B) Data exclusion from training
-C) Cross site scripting
-D) Public code filter
-
-Q: Which two privacy configurations are available at the individual plan level for GitHub Copilot?
-A) IP indemnity
 B) *Data exclusion from training
 C) Cross site scripting
 D) *Public code filter
@@ -3598,11 +3592,11 @@ D) Onboarding
 E) *Brainstorming ideas
 
 Q: What security issues should a developer be concerned about when using Copilot?
-A) Proprietary patterns
-B) Bias and stereotyping
+A) *Proprietary patterns
+B) *Bias and stereotyping
 C) SQL injection
 D) Hacking
-E) Outdated code suggestions
+E) *Outdated code suggestions
 
 Q: What security issues should a developer be concerned about when using Copilot?
 A) *Proprietary patterns
@@ -3616,4 +3610,12 @@ A) Translation
 B) *Modernization
 C) Comments
 D) Documentation
+
+
+
+
+
+
+
+
 

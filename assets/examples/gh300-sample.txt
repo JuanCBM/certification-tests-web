@@ -3611,11 +3611,51 @@ B) *Modernization
 C) Comments
 D) Documentation
 
+Q: What are some ways to adapt Copilot's suggestions to the language you are working with?
+A) *Language-specific IDE settings
+B) Let Copilot figure it out
+C) *Enable or disable Copilot-specific settings
+D) Prompt in Spanish
+E) *Mention the programming language in the prompt
 
+Q: What are the three usual classifications Copilot uses to define prompts?
+A) *Actionable
+B) *Support oriented
+C) *Informational
+D) Gibberish
+E) Ambiguous
 
+Q: Which options can be considered good practices when constructing prompts?
+A) Copy and paste the error
+B) *Provide examples
+C) *Include relevant context
+D) Use comedy in the prompt
+E) *Define the purpose of the prompt
 
+Q: Which suggestions are considered effective for constructing prompts?
+A) Use dates
+B) Add proper punctuation
+C) *Be clear and specific
+D) *Give examples
+E) *Provide as much context as needed
 
+Q: Which type of prompt is best suited for chatbots?
+A) Chain-of-thought
+B) Zero-shot
+C) *One-shot
+D) Few-shot
 
+Q: Which of these prompts refer to the existing Chat history?
+A) *Remind me of the color we chose for the banner
+B) Help me build a footer
+C) *Were there any prompts that affected page width
+D) Write a test case for the function called X
+E) *Show me all the prompts used in the project so far
 
+Q: Which options can be considered good prompt engineering principles?
+A) *Provide examples
+B) Be as ambiguous as you can
+C) *Refine prompts from general to specific
+D) Avoid experimenting
 
 

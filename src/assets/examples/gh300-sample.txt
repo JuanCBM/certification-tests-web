@@ -9,8 +9,8 @@
 // 5: Developer use cases for AI (14%)
 // 6: Testing with GitHub Copilot (9%)
 // 7: Privacy fundamentals and context exclusions (15%)
-#BLOCK 1
 
+#BLOCK 1
 
 Q: What is the primary goal of Responsible AI?
 A) To maximize profits from AI systems.
@@ -1284,7 +1284,6 @@ A) Keep the prompt as short as possible, using single words or brief phrases.
 B) *Provide examples of expected input and output within the prompt.
 C) Avoid mentioning the programming language to allow for more flexible suggestions.
 D) Write the prompt in natural language without any programming language
-
 
 #BLOCK -1
 
@@ -3373,7 +3372,6 @@ B) Custom knowledge bases and organizational policies
 C) *IDE integration, suggestion capabilities, and defined usage limitations
 D) Team collaboration features and shared workspaces
 
-
 Q: What should organizations consider when selecting GitHub Copilot subscription levels?
 A) *Different privacy implications associated with each subscription level
 B) Feature capabilities and privacy settings with subscription costs being evaluated based on organizational scale
@@ -3398,7 +3396,6 @@ A) Through workflow optimization that focuses on settings configuration rather t
 B) Through implementation with essential commands but without customizable settings
 C) Through implementation that emphasizes advanced commands over essential workflow basics
 D) *Through implementation with essential commands and settings for workflow optimization
-
 
 Q: What is essential when incorporating AI-generated code into production systems?
 A) Deploying to production immediately for user feedback
@@ -3430,7 +3427,6 @@ B) By improving outputs through pattern recognition while context maintenance is
 C) *By maintaining context to improve outputs
 D) By maintaining context though outputs remain independent of historical information
 
-
 Q: How can developers optimize their prompts for GitHub Copilot?
 A) By applying coding experience to prompt creation without specific crafting methodologies
 B) By experimenting with different approaches to discover personal optimization strategies
@@ -3454,4 +3450,170 @@ A) Comprehensive security management with duplication and collection features be
 B) Duplication detection with suggestion collection settings providing additional privacy control options
 C) *Duplication detection and suggestion collection options
 D) Security configuration options with duplication detection and collection settings being primary privacy controls
+
+Q: Copilot can help test an entire component, such as React component. How exactly can a component be tested?
+A) *The component is rendered in memory
+B) Copilot can only help with integration tests
+C) Copilot can only help with unit tests
+D) Copilot uses the assert() function
+
+Q: Copilot can be used to add an assertion library and tests to your web application. Which main function is used in these cases?
+A) validate ( )
+B) toBe ( )
+C) describe ( )
+D) *expect ( )
+
+Q: How can Copilot help improve testing efficiency in a team environment?
+A) It can find similar tests on the web
+B) *It can add boilerplate testing
+C) Copilot can perform integration tests
+D) *Copilot can perform tests faster than humans
+E) *Copilot can standardize testing
+
+Q: When asking Copilot to test for edge cases, what responses can you expect?
+A) *A command to run the edge test cases may be suggested
+B) Another library may be added to the project
+C) *One or more test cases may be added to a test file
+D) Testing libraries may be added to the development dependencies in the package.json file
+E) *A new test file may be added to the project if one does not already exist
+
+Q: Which performance optimization suggestions can Copilot offer?
+A) *Refactor and simplify code
+B) *More efficient solutions
+C) *Best practices
+D) Libraries
+E) Smoke testing
+
+Q: Which tasks can GitHub Copilot perform when testing a web application?
+A) *Add specific test files
+B) *Execute testing commands
+C) *Add testing libraries
+D) Build a database
+E) Remove unused code
+
+Q: In a cross-site scripting occurrence, what might Copilot suggest to a developer?
+A) Watch for SQL injection attacks
+B) Avoid using JavaScript within the HTML document
+C) *Use the text content of an HTML element instead of its innerHTML property
+D) Use the innerHTML of an HTML element instead of its text content property
+
+Q: Which type of testing can you add to your web development project using Copilot?
+A) Control tests
+B) *Unit tests
+C) *Integration tests
+D) System tests
+
+Q: Which is a typical place to put your github-instructions.md file?
+A) In any file of the project
+B) At the host of your website
+C) In a repository on GitHub.com
+D) *In the root of the project
+
+Q: Which most likely falls under the "Terms of Service" of GitHub Copilot?
+A) *Indemnification
+B) Misuse of public code
+C) *Responsibility and compliance
+D) Loss of data
+
+Q: When content exclusion does not work as intended, which file should be checked?
+A) *settings.json
+B) index.js
+C) package.json
+D) home.html
+
+Q: With agent mode in Copilot introducing a new level of security, what can now be controlled?
+A) *Web search
+B) *Copilot coding agent access
+C) File access
+D) *Alternative AI models
+E) Browser's local storage
+
+Q: Which steps do you take to get to the GitHub Copilot specific item-value pairs in VS Code?
+A) *From the gear icon, choose settings then type in GitHub Copilot in the search bar
+B) From the gear icon, choose settings then type in GitHub in the search bar
+C) From the gear icon, choose extensions then type in GitHub in the search bar
+D) From the gear icon, choose extensions then type in GitHub Copilot in the search bar
+
+Q: Which is a good reason to apply content exclusion in GitHub Copilot?
+A) *Hide deprecated or outdated code
+B) Remove repositories
+C) Filter blocks of code
+D) Exclude style instructions
+
+Q: Which two privacy configurations are available at the individual plan level for GitHub Copilot?
+A) IP indemnity
+B) Data exclusion from training
+C) Cross site scripting
+D) Public code filter
+
+Q: Which two privacy configurations are available at the individual plan level for GitHub Copilot?
+A) IP indemnity
+B) *Data exclusion from training
+C) Cross site scripting
+D) *Public code filter
+
+Q: When converting an application from one language to another, code in the editor window may change. What is the name of the button that Copilot uses for this task?
+A) Run
+B) Cancel
+C) Install
+D) *Keep
+E) Continue
+
+Q: Which types of documentation can you typically add to a project using Copilot?
+A) *Add a readme file
+B) *Insert comments about a particular file
+C) Compose a "how to" document about the app
+D) Develop a marketing document for your application
+
+Q: What does context switching mean to Copilot?
+A) Copilot understands content switching
+B) *It responds appropriately to the currently opened file
+C) Copilot understands which language to use based on your environment
+D) *It responds appropriately to the currently opened project
+
+Q: The IDE can help developers with finding syntax errors. Which type of error is difficult to find, but Copilot is good at detecting?
+A) OS based errors
+B) *Logical errors
+C) Runtime errors
+D) Typographical errors
+
+Q: Which option can be considered good prompts to get started learning a language using GitHub Copilot?
+A) *I am new to JavaScript in the browser, help me create simple code to learn the language
+B) I want to learn C#
+C) Help me learn databases
+You got it right.
+D) *I am new to Python, help me start a project to learn the language
+
+Q: What would a typical prompt be to add a JSON file to your project?
+A) *Add a sample .json file with an employee object
+B) Build a sample data file for this project
+C) Use sample data for this project
+D) *Add a sample JSON file with an array of employee objects
+
+Q: Which aspects of the planning and design stages can Copilot help with when building a new application?
+A) *Working prototype
+B) *Directory structure
+C) Deployment
+D) Onboarding
+E) *Brainstorming ideas
+
+Q: What security issues should a developer be concerned about when using Copilot?
+A) Proprietary patterns
+B) Bias and stereotyping
+C) SQL injection
+D) Hacking
+E) Outdated code suggestions
+
+Q: What security issues should a developer be concerned about when using Copilot?
+A) *Proprietary patterns
+B) *Bias and stereotyping
+C) SQL injection
+D) Hacking
+E) *Outdated code suggestions
+
+Q: Copilot can improve our application and code in several ways. Which improvement method is demonstrated in the video?
+A) Translation
+B) *Modernization
+C) Comments
+D) Documentation
 

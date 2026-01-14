@@ -1285,7 +1285,6 @@ B) *Provide examples of expected input and output within the prompt.
 C) Avoid mentioning the programming language to allow for more flexible suggestions.
 D) Write the prompt in natural language without any programming language
 
-#BLOCK -1
 
 Q: How can using GitHub Copilot align with ethical AI practices, particularly regarding the generation of biased code?
 A) Avoid relying on Copilot for any AI-related tasks to prevent bias.

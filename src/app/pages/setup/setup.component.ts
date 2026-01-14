@@ -63,8 +63,7 @@ export class SetupComponent {
         { id: 4, name: 'Prompt Crafting and Prompt Engineering (9%)' },
         { id: 5, name: 'Developer use cases for AI (14%)' },
         { id: 6, name: 'Testing with GitHub Copilot (9%)' },
-        { id: 7, name: 'Privacy fundamentals and context exclusions (15%)' },
-        { id: 8, name: 'Koenig Questions (100%)' }
+        { id: 7, name: 'Privacy fundamentals and context exclusions (15%)' }
       ]
     },
     {
